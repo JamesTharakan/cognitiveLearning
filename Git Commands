@@ -1,0 +1,6 @@
+
+
+git checkout -b branchname origin/branchname
+
+Here, by default we are setting the upstream branch, so you will not be facing the mentioned issue.
+***********************************
