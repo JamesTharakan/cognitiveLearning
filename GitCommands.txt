@@ -12,7 +12,7 @@ git commit
 ... work ...
 git commit
 git push origin HEAD:refs/heads/your_branch
-*************************************
+**************************************
 		If we push the changes to a <branch> using "-u" , then all your future pushes will be done to that <branch>
 =============================================================
 $ git push origin officeBranch
