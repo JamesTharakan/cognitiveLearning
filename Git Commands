@@ -1,6 +1,11 @@
-
+git log --branches --not --remotes=origin
+Shows all commits that are in any of local branches but not in any of remote-tracking branches for origin
+ (what you have that origin doesn’t).
+======================================================================================
 
 git checkout -b branchname origin/branchname
 
 Here, by default we are setting the upstream branch, so you will not be facing the mentioned issue.
 ***********************************
+check the diff
+here is the 2nd line

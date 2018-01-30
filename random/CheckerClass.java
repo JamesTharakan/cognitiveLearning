@@ -10,7 +10,7 @@ import utils.JUtil;
 public class CheckerClass {
 
 	public static void main(String[] args) {
-
+		logarithm();
 		
 	/*
 		NoPloymorphismInGenerics(new ArrayList<String>());  //Should pass Object !!
@@ -25,6 +25,25 @@ public class CheckerClass {
 	}
 	
 	/**
+	 *  In logarithm graph time curve decelerates as n increases
+	 */
+	private static void logarithm() {
+		 int n =100;
+		 int linear =0;
+		 int log =0;
+		 
+		 System.out.println("CheckerClass.logarithm()");
+		for (float i = 1; i < n; i++) {
+			for (float j = 1; j <= i; j = j * 2) {
+				log++;
+			}
+			int percent =(int) ((log/i)*100);
+			System.out.println("i :"+(i+0)+" Log: "+ log + "--> executes the statement "+percent+" %");
+			log=0;
+		}
+	}
+
+	/**
 	 * This no Ploymorphism is to make sure only one Type of data exists in the list.
 	 * Just to avoid a third party from adding a different type of data
 	 */
@@ -33,7 +52,7 @@ public class CheckerClass {
 		
 		//But the below is possible
 		List <Object>myList = new ArrayList<Object>();   
-		myList.add("abc");
+		myList.add("abc"); 
 		
 	}
 	/**
