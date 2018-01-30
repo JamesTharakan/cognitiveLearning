@@ -4,7 +4,7 @@ git checkout -b your_branch
 After that, you can work locally in your branch, when you are ready to share the branch, push it. 
 The next command pushes the branch to the remote repository origin and tracks it.
 
-git push -u origin your_branch
+git push -origin your_branch
 Your Teammates/colleagues can push to your branch by doing commits and then push explicitly
 
 ... work ...
@@ -12,6 +12,9 @@ git commit
 ... work ...
 git commit
 git push origin HEAD:refs/heads/your_branch
+
+
+If we push the changes to a <branch> using "-u" , then all your future pushes will be done to that <branch>
 =============================================================
 $ git push origin officeBranch
 
