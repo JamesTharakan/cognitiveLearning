@@ -1,0 +1,50 @@
+First, you need to create your branch locally
+
+git checkout -b your_branch
+After that, you can work locally in your branch, when you are ready to share the branch, push it. 
+The next command pushes the branch to the remote repository origin and tracks it.
+
+git push -origin your_branch
+Your Teammates/colleagues can push to your branch by doing commits and then push explicitly
+
+... work ...
+git commit
+... work ...
+git commit
+git push origin HEAD:refs/heads/your_branch
+**************************************
+		If we push the changes to a <branch> using "-u" , then all your future pushes will be done to that <branch>
+=============================================================
+$ git push origin officeBranch
+
+This pushed the completed branch. That is my local branch(officeBranch) was moved to gitHub. 
+So now there are 2 branches in gitHub. Master and officeBranch.
+==================================================================
+Revisit
+https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+	:Showing Your Remotes
+$ git remote
+origin
+
+To see which remote servers you have configured, you can run the git remote command.It lists the shortnames of each remote handle you’ve specified.
+If you’ve cloned your repository, you should at least see origin,that is the default name Git gives to the server you cloned from.
+
+$ git remote -v
+origin  https://github.com/JamesTharakan/cognitiveLearning.git (fetch)
+origin  https://github.com/JamesTharakan/cognitiveLearning.git (push)
+
+shows you the URLs that Git has stored for the shortname(origin) to be used when reading and writing to that remote
+===================================================================
+git checkout -- <filePath> 
+git reset HEAD <filePath>
+======================================================================================
+git log --branches --not --remotes=origin
+Shows all commits that are in any of local branches but not in any of remote-tracking branches for origin
+ (what you have that origin doesn’t).
+======================================================================================
+
+git checkout -b branchname origin/branchname
+
+Here, by default we are setting the upstream branch, so you will not be facing the mentioned issue.
+***********************************
+
