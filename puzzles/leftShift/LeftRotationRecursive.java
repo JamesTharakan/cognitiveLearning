@@ -4,7 +4,6 @@ public class LeftRotationRecursive {
 
 	public static void main(String[] args) {
 
-		int n = 5;// Array size
 		int k = 4;// Number of shifts
 		
 		int a[]={1,2,3,4,5};	

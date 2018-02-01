@@ -1,6 +1,17 @@
-$ git push origin --delete <branch_name>
+***********
+Branch
+***********
+$ git branch -d branch_name
+$ git branch -D branch_name
 
+
+$ git push origin --delete <branch_name>
 deletes the remote branch
+==========================================================================================
+
+
+
+
 ===========================================================================================
 First, you need to create your branch locally
 

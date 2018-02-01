@@ -6,13 +6,19 @@ import java.util.Iterator;
 import java.util.List;
 
 import utils.JUtil;
+import java.lang.reflect.*;
+
 
 public class CheckerClass {
 
 	public static void main(String[] args) {
-		logarithm();
+		
+		methodsOfClass();
+		
 		
 	/*
+		logarithm();
+		
 		NoPloymorphismInGenerics(new ArrayList<String>());  //Should pass Object !!
 		
 		nonGenericCollection();
@@ -24,12 +30,24 @@ public class CheckerClass {
 
 	}
 	
+	 static void methodsOfClass() {
+		 try {
+	            Class c = Class.forName("java.util.Stack");
+	            Method m[] = c.getDeclaredMethods();
+	            for (int i = 0; i < m.length; i++)
+	            System.out.println(m[i].toString());
+	         }
+	         catch (Throwable e) {
+	            System.err.println(e);
+	         }
+		
+	}
+
 	/**
 	 *  In logarithm graph time curve decelerates as n increases
 	 */
 	private static void logarithm() {
 		 int n =100;
-		 int linear =0;
 		 int log =0;
 		 
 		 System.out.println("CheckerClass.logarithm()");
@@ -47,7 +65,7 @@ public class CheckerClass {
 	 * This no Ploymorphism is to make sure only one Type of data exists in the list.
 	 * Just to avoid a third party from adding a different type of data
 	 */
-	private static void NoPloymorphismInGenerics(List <Object>List) {
+	  static void NoPloymorphismInGenerics(List <Object>List) {
 		// List <Object>myList = new ArrayList<String>();   //this line also gives compiler error
 		
 		//But the below is possible
@@ -58,7 +76,7 @@ public class CheckerClass {
 	/**
 	 * Is this useful to retrieve specific kind of Object from non-generic collection ?
 	 */
-	private static void nonGenericCollection() {
+	  static void nonGenericCollection() {
 		List myList = new ArrayList();
 
 		myList.add(5);

@@ -7,6 +7,7 @@ public class evenOddSplit {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in); 
 		int num = Integer.parseInt(scan.nextLine());
+		scan.close();
         String []input= new String[num];
         
         for (int i = 0; i < num; i++) {
@@ -21,7 +22,7 @@ public class evenOddSplit {
 
 	}
 
-	private static void one(String[] input, int num) {
+	 static void one(String[] input, int num) {
 		for (int i = 0; i < input.length; i++) {
         	for(int j=0; j<=(input[i].length()-1) ;j++){
         		if(j%2==0){
