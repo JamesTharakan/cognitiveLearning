@@ -4,7 +4,6 @@ public class LeftShiftLoop {
 
 	public static void main(String[] args) {
 
-		int n = 4;// Array size
 		int k = 2;// Number of shifts
 		
 		int a[]={1,2,3,4};	
