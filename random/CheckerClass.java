@@ -6,13 +6,19 @@ import java.util.Iterator;
 import java.util.List;
 
 import utils.JUtil;
+import java.lang.reflect.*;
+
 
 public class CheckerClass {
 
 	public static void main(String[] args) {
-		logarithm();
+		
+		methodsOfClass();
+		
 		
 	/*
+		logarithm();
+		
 		NoPloymorphismInGenerics(new ArrayList<String>());  //Should pass Object !!
 		
 		nonGenericCollection();
@@ -24,6 +30,19 @@ public class CheckerClass {
 
 	}
 	
+	 static void methodsOfClass() {
+		 try {
+	            Class c = Class.forName("java.util.Stack");
+	            Method m[] = c.getDeclaredMethods();
+	            for (int i = 0; i < m.length; i++)
+	            System.out.println(m[i].toString());
+	         }
+	         catch (Throwable e) {
+	            System.err.println(e);
+	         }
+		
+	}
+
 	/**
 	 *  In logarithm graph time curve decelerates as n increases
 	 */

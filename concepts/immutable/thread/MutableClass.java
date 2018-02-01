@@ -9,7 +9,11 @@ public class MutableClass implements Runnable {
 	MutableClass(int k) {
 		this.k = k;
 	}
-
+	
+	MutableClass(Hashtable table) {
+		this.table = (Hashtable)table.clone();
+	}
+ 
 	public void run() {
 		try {
 			if (k == 1) {
@@ -27,4 +31,7 @@ public class MutableClass implements Runnable {
 		}
 	}
 
+	
+	
+	
 }
