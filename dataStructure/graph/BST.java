@@ -6,13 +6,13 @@ public class BST {
 
 	public static void main(String[] args) {
 
-		Node root= null;
+		Node <Integer>root= null;
 		
 		
 		int input[]={2,4,9,6,1,10,-1,1};
 		
 		for (int i = 0; i < input.length; i++) {
-			root = BSTUtil.insert(root, new Node(null,input[i],null));
+			root = BSTUtil.insert(root, new Node <Integer>(null,input[i],null));
 		}
 		
 		BSTUtil.traverse(root);

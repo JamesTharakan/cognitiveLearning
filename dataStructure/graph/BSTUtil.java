@@ -4,7 +4,7 @@ import dataStructure.node.Node;
 
 public class BSTUtil {
 
-	public static Node insert(Node root, Node newNode) {
+	public static Node <Integer> insert(Node <Integer> root, Node <Integer> newNode) {
 		if (root == null) {
 			root = newNode;
 			return root;
