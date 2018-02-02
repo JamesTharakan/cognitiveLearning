@@ -1,14 +1,12 @@
 package dataStructure.node;
 
-public class Node {
+public class Node <T>{
 
-	
-	
-	Integer data;
-	Node left;
-	Node right;
+	T data;
+	Node <T> left;
+	Node <T> right;
 
-	public Node(Node left,Integer data,  Node right) {
+	public Node(Node <T> left,T data,  Node <T> right) {
 		this.data = data;
 		this.left = left;
 		this.right = right;
@@ -18,22 +16,22 @@ public class Node {
 		return "Data:"+this.data;
 	}
 	
-	public Integer getData() {
+	public T getData() {
 		return data;
 	}
-	public void setData(Integer data) {
+	public void setData(T data) {
 		this.data = data;
 	}
 	public Node getLeft() {
 		return left;
 	}
-	public void setLeft(Node left) {
+	public void setLeft(Node <T>  left) {
 		this.left = left;
 	}
 	public Node getRight() {
 		return right;
 	}
-	public void setRight(Node right) {
+	public void setRight(Node <T> right) {
 		this.right = right;
 	}
 
