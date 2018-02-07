@@ -10,5 +10,20 @@ O(log n) running times are very common in any sort of divide-and-conquer applica
 Then why not log(N/2)
 
 
-What is the complexity of recursive left shift operator
+---->>What is the complexity of recursive left shift operator
+
+---->>prime number with root n complexity 
 =================================================================
+
+1. Sort methodsd in collection
+2. add() addAll() 
+3. remove() removeALL() 
+4. Retain() clear()
+5. For loop in collection
+6. NavigationSet, NavigationMap
+========================================================================
+---->>Iterator vs Iterable ; because iterable classes return Iterator object using the Iterator().
+
+========================================================================
+Collection col = new HashSet()	is better than	HashSet set = new Hashset() because we should code to the interface.
+But what if, i want to use the methods that are declared and defined in HashSet
