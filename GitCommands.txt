@@ -29,11 +29,6 @@ git commit
 git push origin HEAD:refs/heads/your_branch
 **************************************
 		If we push the changes to a <branch> using "-u" , then all your future pushes will be done to that <branch>
-=============================================================
-$ git push origin officeBranch
-
-This pushed the completed branch. That is my local branch(officeBranch) was moved to gitHub. 
-So now there are 2 branches in gitHub. Master and officeBranch.
 ==================================================================
 Revisit
 https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
@@ -50,7 +45,6 @@ origin  https://github.com/JamesTharakan/cognitiveLearning.git (push)
 
 shows you the URLs that Git has stored for the shortname(origin) to be used when reading and writing to that remote
 ===================================================================
-git checkout -- <filePath> 
 git reset HEAD <filePath>
 ======================================================================================
 git log --branches --not --remotes=origin

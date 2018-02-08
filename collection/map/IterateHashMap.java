@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class IterateMap {
+public class IterateHashMap {
 	private static HashMap <Integer,Integer> createMap() {
 		HashMap <Integer,Integer>map = new HashMap<Integer,Integer>();
 		map.put(222,222);
