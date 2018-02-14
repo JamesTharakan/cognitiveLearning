@@ -1,12 +1,11 @@
 package puzzles.hanckerRank;
 
 public class Prime {
-
-	/**
-	 * FIND a solution with root n complexity
-	 * @param args
-	 */
+	static int input[] = { 1000000000, 1000000001, 1000000002, 1000000003, 1000000004, 1000000005, 1000000006,
+			1000000007, 1000000008, 1000000009};
     public static void main(String[] args) {
+    	
+    	
 
         for(int a0 = 0; a0 < input.length; a0++){
             int n = input[a0];
@@ -33,15 +32,6 @@ public class Prime {
 		return isPrime;
 	}
 	
-	static int input []= {1000000000,
-			1000000001,
-			1000000002,
-			1000000003,
-			1000000004,
-			1000000005,
-			1000000006,
-			1000000007,
-			1000000008,
-			1000000009};
+	
 }
 
