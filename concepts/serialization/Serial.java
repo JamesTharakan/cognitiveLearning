@@ -2,29 +2,49 @@ package concepts.serialization;
 
 import java.io.*;
 
-class Company implements Serializable{
+class Company {
 	String name;
-	Company(String name){this.name=name;}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 }
 
-class Emp  implements Serializable{
+class Emp extends Company implements Serializable{
 
 	
 	private static final long serialVersionUID = 683452581122892189L;
 	private int age;
 	transient int a;
 	static int b = -5;
-	Company c ;
 
-	public Emp(int age, int a, int b,Company company) {
+	public Emp(int age, int a, int b,String company) {
 		this.age = age;
 		this.a = a;
 		Emp.b = b;
-		this.c=company;
+		setName(company);
+	}
+	
+	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException{
+		ois.defaultReadObject();
+		System.out.println("Emp.readObject()");
+		//notice the order of read and write should be same
+		setName((String) ois.readObject());	
+	}
+	
+	private void writeObject(ObjectOutputStream oos) throws IOException{
+		oos.defaultWriteObject();
+		System.out.println("Emp.writeObject()");
+		oos.writeObject(getName());
 	}
 
 	public String toString() {
-		return " age = " + age + " transient a = " + a + " static b = " + Emp.b+" name: "+c.name;
+		return " age = " + age + " transient a = " + a + " static b = " + Emp.b+" name: "+getName();
 	}
 
 }
@@ -32,7 +52,7 @@ class Emp  implements Serializable{
 public class Serial {
 
 	public static void main(String[] args) {
-		Emp serial = new Emp(32, 1, 2, new Company("LT"));
+		Emp serial = new Emp(32, 1, 2, "LT");
 		System.out.println("Before :: " + serial);
 
 		try {

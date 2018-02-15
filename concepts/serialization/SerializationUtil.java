@@ -10,9 +10,10 @@ import java.io.ObjectOutputStream;
 public class SerializationUtil {
 	
 	
-	public static void serialize(Object object, String fileName) throws FileNotFoundException, IOException{
+	public static ObjectOutputStream serialize(Object object, String fileName) throws FileNotFoundException, IOException{
 		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName));
 		out.writeObject(object);
+		return out;
 		
 	}
 	
