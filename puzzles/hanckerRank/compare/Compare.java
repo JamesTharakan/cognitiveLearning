@@ -3,7 +3,7 @@ package puzzles.hanckerRank.compare;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Solution {
+class Compare {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
