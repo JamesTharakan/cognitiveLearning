@@ -1,4 +1,4 @@
-package puzzles.random;
+package puzzles.hanckerRank.code30days;
 
 import java.util.Scanner;
 

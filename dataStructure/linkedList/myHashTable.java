@@ -20,7 +20,7 @@ public class myHashTable {
 				putInTable(inputNumbers[i], index);
 			}
 		}
-		
+		System.out.println("Table Contents : ");
 		for(int i=0; i<=9;i++){
 			System.out.print("Coloum "+ i+" ::");
 			printMyDDL(index[i]);
@@ -98,7 +98,7 @@ public class myHashTable {
 				System.out.print(temp.data+ " ");
 				temp=temp.rightNode;
 			}
-			System.out.println("");
+//			System.out.println("");
 		}
 	}
 
