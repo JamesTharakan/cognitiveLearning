@@ -1,18 +1,15 @@
 package sorting;
 
-import puzzles.hanckerRank.ctci.InversionCount;
+import sorting.heap.HeapSort;
 
 public class TestSorting {
 
 	public static void main(String[] args) {
-		int input[]={2 ,1 ,3 ,1, 2};//4
+		int arr[]={12 ,10 ,3 ,11, 2,100};
 		
-		
-		int temp[]=new int[input.length];
-		
-		long count = InversionCount.mergeSort(input, temp, 0, input.length - 1);
-		
-		System.out.println("Number of Inversions :: "+count);
+		for (int i = arr.length / 2 - 1; i >= 0; i--) {
+			HeapSort.buildHeap(arr, arr.length, i);
+		}
 	}
 
 }
