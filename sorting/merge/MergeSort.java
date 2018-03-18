@@ -1,6 +1,12 @@
 package sorting.merge;
 
 public class MergeSort {
+	
+	public static void sort(int  input[]){
+		int[]temp = new int[input.length];
+		mergeSort(input,temp,0,input.length-1);
+	}
+	
 	/**
 	 * 
 	 * @param input
@@ -50,7 +56,8 @@ public class MergeSort {
 		}
 
 		int size = rightEnd + 1 - leftStart;
-		System.arraycopy(temp, leftStart, input, leftStart, size);
+		System.arraycopy(temp, leftStart, input, leftStart, size); //Copy size number of elements from temp array starting from leftStart to 
+																	//	input array at leftStart
 		
 		/*
 		System.out.print(" Copying "+size +" elements from "+ leftStart +" :: " );
