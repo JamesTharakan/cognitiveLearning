@@ -1,12 +1,14 @@
 package sorting.heap;
 
+import sorting.strategyPattern.Sort;
+
 /**
  * 
  * Build the MaxHeap. Exchange the root with the last element. Repeat
  */
-public class HeapSort {
+public class HeapSort implements Sort{
 
-	public static void  sort(int arr[]) {
+	public void  sort(int arr[]) {
 		int n = arr.length;
 		// Build heap for all non-leaf nodes
 		for (int i = n / 2 - 1; i >= 0; i--) {		//  0 to (n/2)-1 nodes are non leaf nodes. Leaf nodes are considered as hepified.
@@ -22,6 +24,13 @@ public class HeapSort {
 			buildHeap(arr, i, 0);			// again build the heap excluding(controlled by i) the elements that are sorted
 		}
 	}
+	
+	/**
+	 * MaxHeap
+	 * @param arr
+	 * @param n
+	 * @param currentRootIndex
+	 */
 	public static void buildHeap(int arr[], int n, int currentRootIndex) {
 		// Find largest among root, left child and right child
 		int largest = currentRootIndex; //current root

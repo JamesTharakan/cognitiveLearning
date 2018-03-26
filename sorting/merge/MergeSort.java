@@ -1,8 +1,10 @@
 package sorting.merge;
 
-public class MergeSort {
+import sorting.strategyPattern.Sort;
+
+public class MergeSort implements Sort{
 	
-	public static void sort(int  input[]){
+	public void sort(int  input[]){
 		int[]temp = new int[input.length];
 		mergeSort(input,temp,0,input.length-1);
 	}

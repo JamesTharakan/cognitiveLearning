@@ -7,10 +7,10 @@ import java.util.Map;
 public class IterateHashMap {
 	private static HashMap <Integer,Integer> createMap() {
 		HashMap <Integer,Integer>map = new HashMap<Integer,Integer>();
-		map.put(222,222);
-		map.put(1,1);
-		map.put(3,3);
-		map.put(3,100);
+		map.put(2,222);
+		map.put(1,111);
+		map.put(3,333);
+		map.put(4,4);
 		map.put(null, 999);
 //		System.out.println("Created  a new HashMap ::"+map);
 		return map;
@@ -18,13 +18,15 @@ public class IterateHashMap {
 	public static void main(String[] args) {
 		HashMap <Integer,Integer>map =createMap();
 		
-		Iterator itr = map.entrySet().iterator();
+		Iterator itr = map.entrySet().iterator();//basically getting an iterator for Set because map is not implementing iterable
 		while(itr.hasNext()){
-			itr.next();
+			System.out.print(itr.next()+",");
 			itr.remove();//Removes the Object last accessed by next()
-//			map.remove(222);	//this throws ConcurrentModificationException
+//			map.remove(222);	//this throws ConcurrentModificationException, 
+								//because the structure has changed without iterator's knowledge
 		}
-		System.out.println("After remve ::"+map);
+		System.out.println();
+		System.out.println("Print and removed::"+map);
 		
 		printMap(createMap());
 		
@@ -34,6 +36,7 @@ public class IterateHashMap {
 
 	public static void printMap(Map mp) {
 	    Iterator it = mp.entrySet().iterator();
+	    System.out.println("\nIndependent handling using Entry class");
 	    while (it.hasNext()) {
 	        Map.Entry pair = (Map.Entry)it.next();
 	        System.out.print(pair.getKey() + " = " + pair.getValue());
@@ -44,8 +47,8 @@ public class IterateHashMap {
 	
 	public static void forEach(HashMap map){
 		map=createMap();
-		System.out.println("ForEach :When i want to handle key value independently");
-		map.forEach((k,v) -> System.out.println(k+","+v));
+		System.out.println("\nIndependent handling using ForEach");
+		map.forEach((k,v) -> System.out.print(k+","+v+ "  "));
 		 
 	}
 }
