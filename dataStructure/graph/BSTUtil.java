@@ -8,7 +8,8 @@ public class BSTUtil {
 		if (root == null) {
 			root = newNode;
 			return root;
-		} else {
+		} 
+//		else {
 			if (root.getData() == newNode.getData()) {
 				System.out.println("BSTUtil.insert():: No duplicates!!");
 				return root;
@@ -19,7 +20,7 @@ public class BSTUtil {
 			} else {
 				root.setRight(insert(root.getRight(), newNode));
 			}
-		}
+//		}
 		return root;
 	}
 
@@ -29,9 +30,9 @@ public class BSTUtil {
 	 * @param root
 	 */
 	public static void traverse(Node root) {
-		if (root == null) {
+		if (root == null) //{
 			return;
-		} else {
+//		} else {
 			if (root.getLeft() != null) {
 				traverse(root.getLeft());
 			}
@@ -39,7 +40,7 @@ public class BSTUtil {
 			if (root.getRight() != null) {
 				traverse(root.getRight());
 			}
-		}
+//		}
 
 	}
 

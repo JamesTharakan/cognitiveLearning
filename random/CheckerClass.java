@@ -13,11 +13,14 @@ public class CheckerClass {
 
 	public static void main(String[] args) {
 		
-		methodsOfClass();
+		checkArrayClass();
 		
 		
 	/*
+	 
 		logarithm();
+		
+		methodsOfClass();
 		
 		NoPloymorphismInGenerics(new ArrayList<String>());  //Should pass Object !!
 		
@@ -119,7 +122,7 @@ public class CheckerClass {
 		Arrays.sort(check);
 		JUtil.printIntArray("Sorted", check);
 		
-		
+		//if not found, it will return the position where it should be inserted
 		System.out.println("position of 10 : "+ Arrays.binarySearch(check, 10));
 		System.out.println("position of 44 : "+ Arrays.binarySearch(check, 55));
 
