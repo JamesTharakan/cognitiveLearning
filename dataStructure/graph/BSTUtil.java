@@ -4,23 +4,21 @@ import dataStructure.node.Node;
 
 public class BSTUtil {
 
-	public static Node <Integer> insert(Node <Integer> root, Node <Integer> newNode) {
+	public static Node<Integer> insert(Node<Integer> root, Node<Integer> newNode) {
 		if (root == null) {
 			root = newNode;
 			return root;
-		} 
-//		else {
-			if (root.getData() == newNode.getData()) {
-				System.out.println("BSTUtil.insert():: No duplicates!!");
-				return root;
-			}
+		}
+		if (root.getData() == newNode.getData()) {
+			System.out.println("Duplicate :: "+newNode.getData());
+			return root;
+		}
 
-			if (root.getData() > newNode.getData()) {
-				root.setLeft(insert(root.getLeft(), newNode));
-			} else {
-				root.setRight(insert(root.getRight(), newNode));
-			}
-//		}
+		if (root.getData() > newNode.getData()) {
+			root.setLeft( insert(root.getLeft(), newNode) );
+		} else {
+			root.setRight(insert(root.getRight(), newNode));
+		}
 		return root;
 	}
 
@@ -30,18 +28,32 @@ public class BSTUtil {
 	 * @param root
 	 */
 	public static void traverse(Node root) {
-		if (root == null) //{
+		if (root == null)
 			return;
-//		} else {
-			if (root.getLeft() != null) {
-				traverse(root.getLeft());
-			}
-			System.out.print(" " + root.getData());
-			if (root.getRight() != null) {
-				traverse(root.getRight());
-			}
-//		}
+		
+		if (root.getLeft() != null) {
+			traverse(root.getLeft());
+		}
+		
+		System.out.print(" " + root.getData());
+		
+		if (root.getRight() != null) {
+			traverse(root.getRight());
+		}
 
+	}
+	
+	/**
+	 * Deletes the key and return the new root
+	 * @param root
+	 * @param key
+	 * @return
+	 */
+	public static Node delete(Node root ,Node key){
+		Node found= null;
+		
+		return found;
+		
 	}
 
 }
