@@ -8,7 +8,7 @@ public class Capacity {
 
 	
 	public static void main(String args[]) throws Exception{
-	   ArrayList list = new ArrayList (5);
+	   ArrayList list = new ArrayList (2);
 	   int input []={1,2,3,4,5,6};
 	   
 	   for (int i = 0; i < input.length; i++) {

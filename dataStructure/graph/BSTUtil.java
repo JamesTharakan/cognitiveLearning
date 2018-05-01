@@ -22,6 +22,7 @@ public class BSTUtil {
 		return root;
 	}
 
+	
 	/**
 	 * In-Order Traversal
 	 * 
@@ -49,8 +50,19 @@ public class BSTUtil {
 	 * @param key
 	 * @return
 	 */
-	public static Node delete(Node root ,Node key){
+	public static  Node delete(Node  root ,int key){
 		Node found= null;
+		
+		if(root == null)
+			return null;
+		
+		else if((Integer)root.getData() <  key){
+			root.setLeft(delete(root.getLeft(),key));;
+		}else{
+			
+		}
+			
+		
 		
 		return found;
 		
