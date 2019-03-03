@@ -5,8 +5,6 @@ import java.util.ArrayList;
 
 public class Capacity {
 
-
-	
 	public static void main(String args[]) throws Exception{
 	   ArrayList list = new ArrayList (2);
 	   int input []={1,2,3,4,5,6};
@@ -15,6 +13,8 @@ public class Capacity {
 		   list.add(i);
 		   System.out.println("Capacity = " + getCapacity(list)+" "+"Size = "+list.size());
 	   }
+//	   If the size is full while adding , the ensureCapacity() increases the size by half 
+//	   and copies the arraylist in the new ArrayList(Using Arrays.copyOf())
 	   System.out.println("Remove and check the size");
 	   list.remove(5);
 	   System.out.println("Capacity = " + getCapacity(list)+" "+"Size = "+list.size());

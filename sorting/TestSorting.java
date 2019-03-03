@@ -2,6 +2,7 @@ package sorting;
 
 import sorting.bubble.BubbleSort;
 import sorting.heap.HeapSort;
+import sorting.insertion.InsertionSort;
 import sorting.merge.MergeSort;
 import sorting.quick.QuickSort;
 import sorting.strategyPattern.Sort;
@@ -19,7 +20,7 @@ public class TestSorting {
 				{13,9,2,25,5}
 		};
 		
-		Sort sortStrategy = getSortObject(Sort.BUBBLE_SORT);
+		Sort sortStrategy = getSortObject(Sort.INSERTION_SORT);
 		
 		
 		for (int i = 0; i < arr.length; i++) {
@@ -61,6 +62,10 @@ public class TestSorting {
 		case Sort.BUBBLE_SORT:
 			object = new BubbleSort();
 			break;	
+		case Sort.INSERTION_SORT:
+			object = new InsertionSort();
+			break;	
+			
 		default:
 			break;
 		}

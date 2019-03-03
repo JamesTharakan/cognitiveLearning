@@ -12,6 +12,7 @@ public class BreadthFirstSearch {
 		PriorityQueue <Node<Integer>>pq = new PriorityQueue<Node<Integer>>(root);
 		if(root !=null)
 			pq.offer(root);
+		
 		breadthFirstSearch(pq);
 
 	}

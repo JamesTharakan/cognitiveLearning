@@ -6,6 +6,7 @@ public interface Sort {
 	int HEAP_SORT = 2;
 	int QUICK_SORT = 3;
 	int BUBBLE_SORT = 4;
+	int INSERTION_SORT = 5;
 	
 	public void sort(int input[]) ;
 

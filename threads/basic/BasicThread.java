@@ -7,10 +7,12 @@ public class BasicThread {
 		Thread worker = new Thread(new JobOne(), "James");
 		worker.start();
 
-		worker = new Thread(new JobTwo(), "Tharakan");
+		worker = new Thread(new JobTwo());
+		worker.setName("Tharakan");
 		worker.start();
 
 		System.out.println("Is Alive : " + worker.isAlive());
+		
 	}
 }
 
