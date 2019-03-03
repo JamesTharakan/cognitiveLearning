@@ -28,7 +28,7 @@ public class FinalMutable {
 		System.out.println("when r1 name is changed to :" + r1 + " final variable has :" + r);
 
 		r1 = r2;
-		System.out.println("If I point r1 to r2 , the my final variable points to:" + r);
+		System.out.println("If I point r1 to r2 , the my final variable points to:" + r +" and r1 points to "+r1);
 
 		// Final variable just hold only one object even if the object is
 		// immutable

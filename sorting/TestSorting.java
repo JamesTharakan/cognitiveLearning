@@ -1,18 +1,76 @@
 package sorting;
 
-import puzzles.hanckerRank.ctci.InversionCount;
+import sorting.bubble.BubbleSort;
+import sorting.heap.HeapSort;
+import sorting.insertion.InsertionSort;
+import sorting.merge.MergeSort;
+import sorting.quick.QuickSort;
+import sorting.strategyPattern.Sort;
 
 public class TestSorting {
 
 	public static void main(String[] args) {
-		int input[]={2 ,1 ,3 ,1, 2};//4
 		
 		
-		int temp[]=new int[input.length];
+		int arr[][]= {
+					{ 12, 10, 3, 11, -1, 2, 2, 100 },
+					{ 77,22,23 },
+					{1,2,3,4,5,6,7},
+					{7,6,5,4,3,2,1},
+				{13,9,2,25,5}
+		};
 		
-		long count = InversionCount.mergeSort(input, temp, 0, input.length - 1);
+		Sort sortStrategy = getSortObject(Sort.INSERTION_SORT);
 		
-		System.out.println("Number of Inversions :: "+count);
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j]+",");
+			}
+			System.out.println(" ");
+		}
+		
+
+		for (int i = 0; i < arr.length; i++) {
+			sortStrategy.sort(arr[i]);
+		}
+		
+		System.out.println("\nAfter Sorting\n");
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j]+",");
+			}
+			System.out.println(" ");
+		}
+		
+		
 	}
 
+	static Sort getSortObject(int strategy) {
+		Sort object = null;
+		switch (strategy) {
+		case Sort.HEAP_SORT:
+			object = new HeapSort();
+			break;
+		case Sort.MERGE_SORT:
+			object = new MergeSort();
+			break;
+		case Sort.QUICK_SORT:
+			object = new QuickSort();
+			break;
+		case Sort.BUBBLE_SORT:
+			object = new BubbleSort();
+			break;	
+		case Sort.INSERTION_SORT:
+			object = new InsertionSort();
+			break;	
+			
+		default:
+			break;
+		}
+
+		return object;
+
+	}
 }

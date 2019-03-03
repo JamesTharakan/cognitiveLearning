@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 /*
- There is no point in implementing the Comparator in the target class it self. 
-because it will restrict  in only one type of comparison
+ There is no point in implementing the Comparator in the target class itself. 
+because it will restrict in only one type of comparison
 */
 
 public class CollectionCompare implements Comparable<CollectionCompare> , Comparator<CollectionCompare>  {
@@ -17,11 +17,14 @@ public class CollectionCompare implements Comparable<CollectionCompare> , Compar
 		i=j;
 	}
 	
-	public int compareTo(CollectionCompare obj2){
+	/**
+	 * Beacuse i am trying to sort custom objects , i should define how it should be compared
+	 */
+	public int compareTo(CollectionCompare obj2){System.out.println("compareTo");
 		return this.s1.compareTo(obj2.s1);
 	}
 	
-	public int compare(CollectionCompare obj1, CollectionCompare obj2){
+	public int compare(CollectionCompare obj1, CollectionCompare obj2){System.out.println("compare");
 		return obj1.i.compareTo(obj2.i);
 	}
 	
@@ -35,11 +38,11 @@ public class CollectionCompare implements Comparable<CollectionCompare> , Compar
 		list.add(r1);
 		list.add(r2);
 		list.add(r3);
-		
+		System.out.println("Listed Created");
 		Collections.sort(list);
 		System.out.println(" String sort : "+list);
 		
-		Collections.sort(list, new CollectionCompare("",2));
+		Collections.sort(list, new CollectionCompare("",2));//i just need to pass a dummy object of the Comparator
 		System.out.println(" number sort : "+list);
 
 	}

@@ -52,6 +52,7 @@ public class InversionCount {
 
 			} else {
 				temp[index++] = input[right++];
+				//  merge count= the number of elements in the left array 
 				mergecount = mergecount + (leftEnd - left + 1);
 			}
 		}

@@ -3,82 +3,63 @@ package puzzles.hanckerRank.ctci;
 import java.util.Scanner;
 
 public class Median {
-
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int t = in.nextInt();
-		int []input = null;
+		int n = in.nextInt();
+		int input[]= new int[n];
+		for (int i = 0; i < n; i++) {
+			
+			input[i]=in.nextInt();
+			int size=(i+1);
 		
-		int[] a = new int[t];
-        for(int a_i=0; a_i < t; a_i++){
-            a[a_i] = in.nextInt();
-            
-            	input = new int[a_i+1];
-            	for(int j=0;j<input.length;j++){
-                	input[j]=a[j];
-                }
-            
-            
-            mergeSort(input, new int[input.length], 0, input.length - 1); // this input array has unfilled data hence wrong
-           
-			System.out.println(getMedianValue(input));
-        }
-		
-        in.close();
-		
+			for (int j = (size/2)-1; j >= 0; j--) {    
+				buildHeap(input, size, j);
+			}	
+				for (int k = size-1; k >= 0; k--) {
+					int temp = input[0];
+					input[0] = input[k];
+					input[k] = temp;
+					
+					// Heapify root element
+					buildHeap(input, k, 0);
+				}
+			
+			System.out.println(getMedianValue(input,0,i));
+			
+		}
+		in.close();
 	}
-
-	public static void mergeSort(int input[], int[] temp, int left, int right) {
-
-		if (left >= right) { // Untill the size of array is 2
-			return;
+	public static float getMedianValue(int input[],int start,int size) {
+		float median=0;
+		size++;
+		if(size%2  == 0){
+			median = (float) ((input[size/2]+input[size/2-1])/2.0);
+		}else{
+			median = (float) (input[size/2]);
 		}
-		int mid = (left + right) / 2;
-
-		mergeSort(input, temp, left, mid);
-		mergeSort(input, temp, mid + 1, right);
-		merge(input, temp, left, right);
-
+	//	System.out.print("size : "+start+" end :" +size+"-> "+median);JUtil.printIntArray("-------------------", input);//odd this this-1
+		return median;
 	}
+	
+	public static void buildHeap(int arr[], int arraySize, int currentRootIndex) {	// Find largest among root, left child and right child
+		int largest = currentRootIndex; //current root
+		int leftChildIndex = 2 * currentRootIndex + 1;
+		int rightChildIndex = 2 * currentRootIndex + 2;
 
-	private static void merge(int[] input, int[] temp, int leftStart, int rightEnd) {
+		if (leftChildIndex < arraySize && arr[leftChildIndex] > arr[largest])
+			largest = leftChildIndex;
 
-		int leftEnd = (leftStart + rightEnd) / 2;
-		int rightStart = leftEnd + 1;
+		if (rightChildIndex < arraySize && arr[rightChildIndex] > arr[largest])
+			largest = rightChildIndex;
 
-		int left = leftStart;
-		int index = leftStart;
-		int right = rightStart;
-
-		while (left <= leftEnd && right <= rightEnd) {
-			if (input[left] <= input[right]) {
-				temp[index++] = input[left++];
-			} else {
-				temp[index++] = input[right++];
-			}
-		}
-
-		while (left <= leftEnd) {
-			temp[index++] = input[left++];
-		}
-		while (right <= rightEnd) {
-			temp[index++] = input[right++];
-		}
-
-		int size = rightEnd + 1 - leftStart;
-		System.arraycopy(temp, leftStart, input, leftStart, size);
-	}
-
-	public static float getMedianValue(int[] input) {
-		if (input.length == 0) {
-			return 0;
-		} else if (input.length % 2 == 1) { //odd
-			return input[input.length / 2];
-		} else {
-			return (
-					input[(input.length / 2)] + input[(input.length / 2)-1]
-					) / 2f;
+		// Swap and continue heapifying if root is not largest
+		if (largest != currentRootIndex) {
+			int swap = arr[currentRootIndex];
+			arr[currentRootIndex] = arr[largest];
+			arr[largest] = swap;
+			buildHeap(arr, arraySize, largest);
 		}
 	}
 
+	
 }
