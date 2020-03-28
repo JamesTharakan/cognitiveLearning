@@ -8,7 +8,7 @@ package designPatterns.creational.singleton;
 
  * Check These cases:
  * understand what is reflection and how it is effecting the singleton
- * what if cloing is done before/after the actual object
+ * what if cloning is done before/after the actual object
  * 
  */
 
