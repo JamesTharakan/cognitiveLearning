@@ -13,23 +13,23 @@ public class CheckerClass {
 
 	public static void main(String[] args) {
 		
-		checkArrayClass();
-		
-		
-	/*
-	 
-		logarithm();
-		
-		methodsOfClass();
-		
-		NoPloymorphismInGenerics(new ArrayList<String>());  //Should pass Object !!
-		
-		nonGenericCollection();
-		
+//		floatDivision();
+//		
+//		
+//	
+//	 
+//		logarithm();
+//		
+//		methodsOfClass();
+//		
+//		NoPloymorphismInGenerics(new ArrayList<String>());  //Should pass Object !!
+//		
+//		nonGenericCollection();
+//		
 		floatDivision();
-		
-		checkArrayClass();
-	*/		
+//		
+//		checkArrayClass();
+//			
 
 	}
 	

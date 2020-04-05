@@ -8,8 +8,8 @@ public class Interrupter implements Runnable{
 
 	public static void main(String[] args) {
 		
-		Thread t1 = new Thread(new Interrupter("I1"));
-		Thread t2 = new Thread(new Interrupter("\t\tI2"));
+		Thread t1 = new Thread(new Interrupter("T1"));
+		Thread t2 = new Thread(new Interrupter("\t\tT2"));
 		
 		t1.start();
 		t1.interrupt();
@@ -17,14 +17,14 @@ public class Interrupter implements Runnable{
 		t2.start();
 		
 		try {
-			t1.join();
+			t1.join();		//Asking main to wait for t1 and t2 for its completion
 			t2.join();
 		} catch (InterruptedException e) {
 			System.out.println("NeverMind");
 		}
 		
-		System.out.println(t1.isInterrupted()+" : "+t2.isInterrupted()); //false because,the thread was sleeping 
-																		//	and not alive
+		System.out.println(t1.isInterrupted()+" : "+t2.isInterrupted()); 
+		//false because,the thread was sleeping and not alive. i.e isInterrupted will only be true if the thread is running
 		System.out.println("run() cannot throw exception ");
 		
 

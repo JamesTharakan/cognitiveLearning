@@ -12,7 +12,7 @@ public class MyStack {
 		return top == -1;
 	}
 	
-	public void push(Object obj){
+	public int push(Object obj){
 		if(top < data.length-1){
 			top++;
 			data[top]=obj;
@@ -20,6 +20,7 @@ public class MyStack {
 		}else{
 			//System.out.println("Stack over flow");
 		}
+		return top;
 	}
 	
 	public Object pop(){

@@ -27,6 +27,7 @@ public class InsertionSortLearn {
 				System.out.println("");
 			}
 			input[pointer + 1]=key;
+			
 			System.out.print("\t");
 			for (int k = 0; k < input.length; k++) {
 				System.out.print(input[k] + " ");

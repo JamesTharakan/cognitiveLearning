@@ -11,11 +11,11 @@ public class myHashTable {
 		
 		MyDLL[] index = new MyDLL[10];
 		
-		int[] inputNumbers = {4,55,2,83,88,6,-1,35,34,36};
+		int[] inputNumbers = {4,55,2,83,88,85,6,-1,35,34,36};
 		
 		for (int i = 0; i < inputNumbers.length; i++) {
 			if(inputNumbers[i] >99 || inputNumbers[i]< 0){
-				System.out.println("Input range is 0-99 , hence ignoring "+inputNumbers[i]);
+				System.out.println("Input range is 0-99 , hence ign    oring "+inputNumbers[i]);
 			}else{
 				putInTable(inputNumbers[i], index);
 			}

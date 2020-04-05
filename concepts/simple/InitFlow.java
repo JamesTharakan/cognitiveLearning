@@ -9,6 +9,9 @@ public class InitFlow {
 		System.out.println("Static block");
 	}
 	
+	
+	
+	
 	InitFlow(){
 		System.out.println("Deafult constructor");
 	}

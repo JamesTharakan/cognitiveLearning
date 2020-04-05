@@ -20,10 +20,10 @@ public class TestSorting {
 				{13,9,2,25,5}
 		};
 		
-		Sort sortStrategy = getSortObject(Sort.INSERTION_SORT);
+		Sort sortStrategy = getSortObject(Sort.BUBBLE_SORT);
 		
 		
-		for (int i = 0; i < arr.length; i++) {
+		/*for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
 				System.out.print(arr[i][j]+",");
 			}
@@ -31,9 +31,9 @@ public class TestSorting {
 		}
 		
 
-		for (int i = 0; i < arr.length; i++) {
-			sortStrategy.sort(arr[i]);
-		}
+		for (int i = 0; i < arr.length; i++) {*/
+			sortStrategy.sort(arr[0]);
+		/*}
 		
 		System.out.println("\nAfter Sorting\n");
 		
@@ -42,7 +42,7 @@ public class TestSorting {
 				System.out.print(arr[i][j]+",");
 			}
 			System.out.println(" ");
-		}
+		}*/
 		
 		
 	}
