@@ -1,5 +1,5 @@
 https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactlyIn
-In logarithm graph time curve decelerates as n increases.
+ In logarithm graph time curve decelerates as n increases.
 
 Logarithm is essentially the inverse of exponentiation.
 
