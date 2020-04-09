@@ -1,22 +1,28 @@
 package random;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
 import utils.JUtil;
-import java.lang.reflect.*;
-
-
+ 
 public class CheckerClass {
 
+	final static int interest=0;;
+	final int NonStaticInterest=0;;
+	void test(){
+		int x = interest;
+		int y = NonStaticInterest;
+	}
+	static void  Statictest(){
+		int x = interest;
+//		int y = NonStaticInterest;
+	}
+
 	public static void main(String[] args) {
-		
 //		floatDivision();
-//		
-//		
-//	
 //	 
 //		logarithm();
 //		
@@ -26,12 +32,10 @@ public class CheckerClass {
 //		
 //		nonGenericCollection();
 //		
-		floatDivision();
-//		
-//		checkArrayClass();
-//			
+//		floatDivision();
 
-	}
+//		checkArrayClass();
+	}		
 	
 	 static void methodsOfClass() {
 		 try {
@@ -125,9 +129,5 @@ public class CheckerClass {
 		//if not found, it will return the position where it should be inserted
 		System.out.println("position of 10 : "+ Arrays.binarySearch(check, 10));
 		System.out.println("position of 44 : "+ Arrays.binarySearch(check, 55));
-
-
-		
 	}
-
 }

@@ -27,3 +27,4 @@ Then why not log(N/2)
 ========================================================================
 Collection col = new HashSet()	is better than	HashSet set = new Hashset() because we should code to the interface.
 But what if, i want to use the methods that are declared and defined in HashSet
+Answer : Type Cast works. 

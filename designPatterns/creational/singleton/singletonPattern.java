@@ -1,5 +1,6 @@
 package designPatterns.creational.singleton;
 
+
 /**
  * Examples of singleton :
  * Runtime - Java runtime
@@ -13,5 +14,30 @@ package designPatterns.creational.singleton;
  */
 
 public class singletonPattern {
+	private singletonPattern() {
+		System.out.println("singletonPattern.singletonPattern()");
+	}
 
+	public static singletonPattern Instance() {
+		return instance;
+	}
+
+	private static singletonPattern instance = new singletonPattern();
+	
+	//If Class is not loaded , object is not created
+//	public static void main(String[] args){}
+}
+
+
+class Singleton					
+{
+ private static final Singleton instance = new Singleton();	//Can we substitute the double lock mechanism 
+																//By creating the object while loading the class
+	private Singleton() {
+		if (instance != null)
+			throw new IllegalStateException("Trying to create second instance of this class.No Reflection please");
+	}
+ public static Singleton getInstance() {
+   return instance;
+ }
 }
