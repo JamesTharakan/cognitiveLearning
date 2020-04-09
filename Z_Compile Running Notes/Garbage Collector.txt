@@ -1,5 +1,0 @@
-
-
-Automatic Garbage collection is a process of looking at the Heap memory, identifying(also known as “marking”) the unreachable objects, and destroying(Sweep) them with compaction. An issue with this approach is that, as the number of objects increases, the Garbage Collection time keeps on increasing, as it needs to go through the entire list of objects, looking for the unreachable object.Since most of the objects are short-lived the Heap space is divided into generations like Young Generation, Old or Tenured Generation, and Permanent Generation.
-
-
