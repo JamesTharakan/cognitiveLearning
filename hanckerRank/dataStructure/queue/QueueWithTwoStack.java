@@ -3,6 +3,9 @@ package hanckerRank.dataStructure.queue;
 import java.util.Scanner;
 import java.util.Stack;
 
+//https://www.hackerrank.com/challenges/queue-using-two-stacks/problem
+//	Queue with 2 Stacks
+//Status : Completed
 public class QueueWithTwoStack {
 
 	public static void main(String[] args) {

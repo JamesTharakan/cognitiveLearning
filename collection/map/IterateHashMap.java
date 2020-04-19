@@ -22,8 +22,9 @@ public class IterateHashMap {
 		while(itr.hasNext()){
 			System.out.print(itr.next()+",");
 			itr.remove();//Removes the Object last accessed by next()
-//			map.remove(222);	//this throws ConcurrentModificationException, 
-								//because the structure has changed without iterator's knowledge
+//			map.remove(2);	//this throws ConcurrentModificationException, 
+							//because the structure has changed without iterator's knowledge
+//			break; //but if i break right after remove(),then no problem because iterator is not used after that
 		}
 		System.out.println();
 		System.out.println("Print and removed::"+map);

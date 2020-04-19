@@ -3,6 +3,7 @@ package random;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -22,6 +23,12 @@ public class CheckerClass {
 	}
 
 	public static void main(String[] args) {
+		int []a = new 
+		arrayReference();
+		
+		
+//		maploading();
+		
 //		floatDivision();
 //	 
 //		logarithm();
@@ -35,9 +42,21 @@ public class CheckerClass {
 //		floatDivision();
 
 //		checkArrayClass();
-	}		
+	}	
 	
-	 static void methodsOfClass() {
+	
+	
+	 private static void maploading() {
+		 HashMap<String, Integer> map = new HashMap<String,Integer>();
+		 
+		 map.put("aba", 1);
+		 System.out.println(map.containsKey("aba"));
+		 System.out.println(map.get("aba"));
+		 map.put("aba", 2);
+		 System.out.println(map);
+		
+	}
+	static void methodsOfClass() {
 		 try {
 	            Class c = Class.forName("java.util.Stack");
 	            Method m[] = c.getDeclaredMethods();
