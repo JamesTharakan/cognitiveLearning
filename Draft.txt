@@ -1,0 +1,11 @@
+examples of : 
+Software as a service 
+infrastructure as a service
+platform as a service 
+
+
+***********************
+The State Pattern allows an object to alter its behavior when its internal state changes.
+ 
+	
+ 

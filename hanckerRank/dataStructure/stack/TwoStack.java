@@ -12,6 +12,7 @@ package hanckerRank.dataStructure.stack;
 	
 	static int twoStacks(int x, int[] a, int[] b) {
 		int count = 0;
+		int sum = 0;
 		int i = 0, j = 0;
 
 		do {
