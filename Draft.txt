@@ -6,6 +6,18 @@ platform as a service
 
 ***********************
 The State Pattern allows an object to alter its behavior when its internal state changes.
+
+Instead of seetting the next state by the current state object. Its better for each state to use a factory or some other means to set the next state.
+Ex: to set the nextstate : getProcessingState()	
+
+Stratergy and state have similar UML.
+
+State Machine is different from state design pattern
+
+
+Code an example of State Pattern:
+
+Game. Make the character to walk,talk,run,fight. Pass command and change the state. Change state A-> B, A->A 
  
 	
  
