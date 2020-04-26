@@ -5,6 +5,37 @@ platform as a service
 ********************************************************************************************************************
 
 Is it good to use volatile?
+
+When a thread is invoked, there will be two paths of execution. One path will execute the thread and the other path will follow the statement after the thread invocation. There will be a separate stack and memory space for each thread.
+
+A program in execution is often referred as process.
+A process consists of multiple threads. 
+A process has its own address space. A thread uses the process’s address space and share it with the other threads of that process.
+A thread can communicate with other thread (of the same process) directly by using methods like wait(), notify(), notifyAll().
+A process can communicate with other process by using inter-process communication. 
+
+
+If you just want to achieve basic functionality of a thread you can simply implement Runnable interface and override run() method. But if you want to do something serious with thread object as it has other methods like suspend(), resume(), ..etc which are not available in Runnable interface then you may prefer to extend the Thread class. -----------------------What !!!
+
+
+https://www.javaworld.com/article/2074217/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html
+
+
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+
+
+
+
+
 **********************************************Patterns that i should code:**********************************************
 Abstract Factory Pattern
 Iterator
@@ -44,8 +75,4 @@ The Command Pattern encapsulates a request as an object, thereby letting you par
 
 The Adapter Pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
 
-The Template Method Pattern defi nes the skeleton
-of an algorithm in a method, deferring some steps to
-subclasses. Template Method lets subclasses redefi ne
-certain steps of an algorithm without changing the
-algorithm’s structure
+The Template Method Pattern defi nes the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure
