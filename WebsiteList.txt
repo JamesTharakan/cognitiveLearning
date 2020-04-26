@@ -1,0 +1,21 @@
+http://www.crazyforcode.com/design-patterns/
+
+
+
+ 
+java concurrency in practice by brian goetz
+
+
+4. SQL Database Queries + JDBC Mgmt
+6. JVM + Java Memory Management
+
+7. Build Management ANT/Maven
+
+=====================
+Cracking the coding interview
+Effective Java - Joshua Bloch
+Java Puzzler
+
+
+demonetiztion
+Corona - Lockdown
