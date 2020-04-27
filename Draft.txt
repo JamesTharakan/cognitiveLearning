@@ -21,58 +21,11 @@ If you just want to achieve basic functionality of a thread you can simply imple
 https://www.javaworld.com/article/2074217/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html
 
 
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-
-
-
-
-
 **********************************************Patterns that i should code:**********************************************
 Abstract Factory Pattern
 Iterator
-State
+State:Game. Make the character to walk,talk,run,fight. Pass command and change the state. Change state A-> B, A->A 
 Decorator
 Bridge
 
 *****************************************************************************************************************
-The State Pattern allows an object to alter its behavior when its internal state changes.
-
-Instead of seetting the next state by the current state object. Its better for each state to use a factory or some other means to set the next state.
-Ex: to set the nextstate : getProcessingState()	
-
-Stratergy and state have similar UML.
-
-State Machine is different from state design pattern
-
-
-Code an example of State Pattern:
-
-Game. Make the character to walk,talk,run,fight. Pass command and change the state. Change state A-> B, A->A 
- 
-	
-***********************************************************************************************************
-The Observer Pattern defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically. 
-
-
-The Decorator Pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
-
-
-The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
-
-The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
-
-The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
-
-
-The Adapter Pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
-
-The Template Method Pattern defi nes the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure
