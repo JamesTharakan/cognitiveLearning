@@ -1,3 +1,4 @@
+http://tutorials.jenkov.com/java-concurrency/index.html
 http://www.crazyforcode.com/design-patterns/
 
 
@@ -19,3 +20,4 @@ Java Puzzler
 
 demonetiztion
 Corona - Lockdown
+
