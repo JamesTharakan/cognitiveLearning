@@ -23,7 +23,6 @@ public class CheckerClass {
 	}
 
 	public static void main(String[] args) {
-		int []a = new 
 
 //		maploading();
 		

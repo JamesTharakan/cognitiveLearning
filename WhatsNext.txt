@@ -1,34 +1,30 @@
-
-update the definition of design Patterns in excel
-
-
 ***************************************************
 1. Core Java
-a. OOPS concepts and UML Notations
-b. Exception Handling
-c. Collections
-d. IO and Serialization
-e. garbage Collection
-f. Marker Interface
+	a. OOPS concepts and UML Notations
+	b. Exception Handling
+	c. Collections
+	d. IO and Serialization
+	e. garbage Collection
+	f. Marker Interface
 
 2. DS and Algos
-Data Structures and Algorithms Made Easy : Narsimha
-Videos: Princeton and Stanford
+	Data Structures and Algorithms Made Easy : Narsimha
+	Videos: Princeton and Stanford
 
 3. MultiThreading
-java concurrency in practice by brian goetz
-New executor framework
+	java concurrency in practice by brian goetz
+	New executor framework
 
 4. SQL Database Queries + JDBC Mgmt
 
 5. Design Patterns and Principles
-a. Head First Design Patterns
+	a. Head First Design Patterns
 
 6. JVM + Java Memory Management
 
 7. Build Management ANT/Maven
 
-=====================
-Cracking the coding interview
-Effective Java - Joshua Bloch
-Java Puzzlers
+8. Books
+	Cracking the coding interview
+	Effective Java - Joshua Bloch
+	Java Puzzlers

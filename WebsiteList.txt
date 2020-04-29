@@ -1,5 +1,8 @@
 http://tutorials.jenkov.com/java-concurrency/index.html
+
 http://www.crazyforcode.com/design-patterns/
+
+https://www.ibm.com/developerworks/library/j-jtp02183/index.html
 
 
 
@@ -10,14 +13,11 @@ java concurrency in practice by brian goetz
 4. SQL Database Queries + JDBC Mgmt
 6. JVM + Java Memory Management
 
-7. Build Management ANT/Maven
+7. Build Management ANT/Maven   CICD
+
+Microservice
 
 =====================
 Cracking the coding interview
 Effective Java - Joshua Bloch
 Java Puzzler
-
-
-demonetiztion
-Corona - Lockdown
-
