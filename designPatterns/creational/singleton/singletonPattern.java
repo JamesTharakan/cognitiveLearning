@@ -33,6 +33,7 @@ class Singleton
 {
  private static final Singleton instance = new Singleton();	//Can we substitute the double lock mechanism 
 																//By creating the object while loading the class
+ 															// yes, depends on the requirment
 	private Singleton() {
 		if (instance != null)
 			throw new IllegalStateException("Trying to create second instance of this class.No Reflection please");
