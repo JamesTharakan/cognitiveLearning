@@ -1,18 +1,3 @@
-examples of : 
-Software as a service 
-infrastructure as a service
-platform as a service 
-********************************************************************************************************************
-
-Is it good to use volatile?
- 
-
-
-If you just want to achieve basic functionality of a thread you can simply implement Runnable interface and override run() method. 
-But if you want to do something serious with thread object as it has other methods like suspend(), resume(), ..etc which are not available in Runnable interface then you may prefer to extend the Thread class. -----------------------What !!!
-
-
-https://www.javaworld.com/article/2074217/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html
 
 
 **********************************************Patterns that i should code:**********************************************
@@ -21,49 +6,17 @@ Iterator
 State:Game. Make the character to walk,talk,run,fight. Pass command and change the state. Change state A-> B, A->A 
 Decorator
 Bridge
+********************************************************************************************************************
+
+https://www.javaworld.com/article/2074217/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html
+http://tutorials.jenkov.com/java-util-concurrent/index.html
+http://tutorials.jenkov.com/java-multithreaded-servers/index.html
 
 *****************************************************************************************************************
 
-Java threads are objects like any other Java objects. Threads are instances of class java.lang.Thread, or instances of subclasses of this class. In addition to being objects, java threads can also execute code. ,like a virtual CPU that can execute your Java code - inside your Java application.
 
-A race condition is a special condition that may occur inside a critical section.
 
-Locking parts of critical section using different locks.
-http://tutorials.jenkov.com/java-concurrency/race-conditions-and-critical-sections.html#critical-section-throughput
+
 What is Mutex
 
-
-*******************************
-Thread synchronization can be achieved by :
-	synchronized block of Java code
-	locks
-	atomic variables like AtomicInteger
-
-
-***************************
-Even the reads has to be synchronized, because some major operation would be done based on the current value 
-	
-***************************
-THREAD SAFETY:
-
-The Reference is not Thread Safe!
-
-A class is thread-safe if it behaves correctly when accessed from multiple threads, regardless of the scheduling or interleaving of the execution of those threads by the runtime environment, and with no additional synchronization or other coordination on the part of the calling code.
-
-
-
-
-
-“A piece of code is thread-safe if it functions correctly during simultaneous execution by multiple threads.”
-
-“In particular, it must satisfy the need for multiple threads to access the same shared data, …”
-
-“…and the need for a shared piece of data to be accessed by only one thread at any given time.”	
-
-
-If a resource is created, used and disposed within the control of the same thread,and never escapes the control of this thread,the use of that resource is thread safe.
-BUT
-Thread 1 checks if record X exists. Result = no
-Thread 2 checks if record X exists. Result = no
-Thread 1 inserts record X
-Thread 2 inserts record X
+Why wait(), notify() and notifyAll() are in Object Class ?
