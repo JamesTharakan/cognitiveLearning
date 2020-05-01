@@ -12,7 +12,6 @@ package threads.syncProblems;
  * If the end vale is 1 or -1 then the interference has happened.Run multiple
  * times
  * Losing one thread work because of other thread
- * @author jtharaka
  *
  */
 public class Interference {

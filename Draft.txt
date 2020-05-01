@@ -11,6 +11,7 @@ Bridge
 https://www.javaworld.com/article/2074217/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html
 http://tutorials.jenkov.com/java-util-concurrent/index.html
 http://tutorials.jenkov.com/java-multithreaded-servers/index.html
+https://www.baeldung.com/java-concurrency
 
 *****************************************************************************************************************
 
@@ -20,3 +21,57 @@ http://tutorials.jenkov.com/java-multithreaded-servers/index.html
 What is Mutex
 
 Why wait(), notify() and notifyAll() are in Object Class ?
+
+
+NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED
+********************
+Lock order:If you make sure that all locks are always taken in the same order by any thread
+Lock Timeout
+
+***************************************
+Causes of Starvation:
+high priority , indefinitely  waiting to enter synchronized block, indefinitely waiting for the notify()
+
+***************************************
+public class Lock{
+
+  boolean isLocked = false;
+  Thread  lockedBy = null;
+  int     lockedCount = 0;
+
+  public synchronized void lock()
+  throws InterruptedException{
+    Thread callingThread = Thread.currentThread();
+    while(isLocked && lockedBy != callingThread){
+      wait();
+    }
+    isLocked = true;
+    lockedCount++;
+    lockedBy = callingThread;
+  }
+
+  public synchronized void unlock(){
+    if(Thread.curentThread() == this.lockedBy){
+      lockedCount--;
+
+      if(lockedCount == 0){
+        isLocked = false;
+        notify();
+      }
+    }
+  }
+
+}
+
+With a simple Lock,While isLocked is true, the thread calling lock() is parked waiting in the wait() call. In case the thread should return unexpectedly from the wait() call without having received a notify() call (AKA a Spurious Wakeup) the thread re-checks the isLocked condition to see if it is safe to proceed or not, rather than just assume that being awakened means it is safe to proceed.
+
+Google about Lock Class
+***************************************
+
+Read Access : If no threads are writing, and no threads have requested write access.
+Write Access : If no threads are reading or writing.
+http://tutorials.jenkov.com/java-concurrency/read-write-locks.html
+writeAccesses, writeRequests, writingThread, Map<Thread, Integer> readingThreads = new HashMap<Thread, Integer>();
+
+***************************************
+

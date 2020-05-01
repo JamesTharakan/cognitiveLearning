@@ -11,7 +11,7 @@ public class BasicThread {
 		worker.setName("Tharakan");
 		worker.start();
 
-		System.out.println("Is Alive : " + worker.isAlive());
+		System.out.println(worker.getName() +" Is Alive : " + worker.isAlive());
 		
 	}
 }

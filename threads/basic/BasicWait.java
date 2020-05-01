@@ -8,7 +8,8 @@ public class BasicWait extends Thread {
 		
 		//bw.interrupt();
 	
-		Thread.currentThread().sleep(5000);  	//Sleeping, so that the thread starts
+		System.out.println("About to sleep");
+		Thread.currentThread().sleep(3000);  	//Sleeping, so that the thread starts
 		synchronized (bw) {
 			bw.notify();
 			System.out.println("Notified");
