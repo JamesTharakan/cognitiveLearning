@@ -8,17 +8,17 @@ Decorator
 Bridge
 ********************************************************************************************************************
 
-https://www.javaworld.com/article/2074217/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html
+
 http://tutorials.jenkov.com/java-util-concurrent/index.html
 http://tutorials.jenkov.com/java-multithreaded-servers/index.html
 https://www.baeldung.com/java-concurrency
 
+
+definitions of each terminology
 *****************************************************************************************************************
+update "Happens Before" 
 
-
-
-
-What is Mutex
+What is Mutex, Semaphore and Mutex
 
 Why wait(), notify() and notifyAll() are in Object Class ?
 
@@ -29,7 +29,7 @@ Lock order:If you make sure that all locks are always taken in the same order by
 Lock Timeout
 
 ***************************************
-Causes of Starvation:
+Causes of STARVATION:
 high priority , indefinitely  waiting to enter synchronized block, indefinitely waiting for the notify()
 
 ***************************************
@@ -75,3 +75,58 @@ writeAccesses, writeRequests, writingThread, Map<Thread, Integer> readingThreads
 
 ***************************************
 
+SEMOPHORES:
+***************************************
+
+BLOCKING QUEUE: 
+Threads will wait() until the enqueue or dequeue operation is performable. That is until queue has lessThanLimit or atLeastOne.
+The waiting thread will get notifyAll() to perform there operation. notifyAll() will be called on only one conditon in each enqueue and dequeue 
+***************************************
+
+Thread Pools:
+
+There is a performance overhead associated with starting a new thread and allocating some memory for its stack. So the number of threads running in your application at a time can be handled by thread pool.
+***************************************
+
+Anatomy of SYNCHRONIZER:
+ Also refer Anatomy of a Synchronizer from the book "Java Concurrency in Practice"
+State
+Access Condition
+State Changes
+Notification Strategy
+Test and Set Method
+Set Method
+***************************************
+
+NON-BLOCKING ALGORITHMS
+An algorithm is said to be non-blocking if the suspension of one thread cannot lead to the suspension of other threads involved in the algorithm.
+
+Blocking algorithms block the thread until the requested action can be performed. Non-blocking algorithms notify the thread requesting the action that the action cannot be performed.
+
+If the algorithm guarding a concurrent data structure is non-blocking, it is said to be a non-blocking algorithm. The data structure is thus said to be a non-blocking, concurrent data structure.
+
+
+
+
+Delayed interface
+
+**************************************
+EXECTOR SERVICE:
+
+ExecutorService executorService1 = Executors.newSingleThreadExecutor();
+
+ExecutorService executorService2 = Executors.newFixedThreadPool(10);
+
+ExecutorService executorService3 = Executors.newScheduledThreadPool(10);
+
+
+
+execute(Runnable) :
+submit(Runnable) :future.get();
+submit(Callable) :future.get(); Object call() throws Exception
+invokeAny(...) :If one of the tasks complete (or throws an exception), the rest of the Callable's are cancelled.
+invokeAll(...) : Returns a collection of Future objects. Future.get()
+
+
+FUTURE OBJECT:
+Future object functions as a handle to the result of the asynchronous task. Once the asynchronous task completes, the result can be accessed via the Future object returned when the task was STARTED.
