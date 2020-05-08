@@ -1,5 +1,4 @@
 
-
 **********************************************Patterns that i should code:**********************************************
 Abstract Factory Pattern
 Iterator
@@ -7,11 +6,17 @@ State:Game. Make the character to walk,talk,run,fight. Pass command and change t
 Decorator
 Bridge
 ********************************************************************************************************************
+https://stackoverflow.com/questions/28373729/why-synchronize-a-synchronized-list
+https://stackoverflow.com/questions/9468187/collections-synchronizedlist-and-synchronized
+https://stackoverflow.com/questions/14932034/in-java-vector-and-collections-synchronizedlist-are-all-synchronized-whats-th
+https://stackoverflow.com/questions/13151166/collections-synchronizedmapnew-linkedhashmap-is-not-making-map-threadsafe
+https://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap
+https://web.archive.org/web/20140604083201/http://www.codercorp.com/blog/java/why-concurrenthashmap-is-better-than-hashtable-and-just-as-good-hashmap.html
+https://www.ibm.com/developerworks/java/library/j-jtp08223/j-jtp08223-pdf.pdf
 
 
-http://tutorials.jenkov.com/java-util-concurrent/index.html
-http://tutorials.jenkov.com/java-multithreaded-servers/index.html
-https://www.baeldung.com/java-concurrency
+https://stackoverflow.com/questions/61629383/what-is-encapsulation-in-the-real-world-really
+
 
 
 definitions of each terminology
@@ -22,111 +27,13 @@ What is Mutex, Semaphore and Mutex
 
 Why wait(), notify() and notifyAll() are in Object Class ?
 
+What is ThreadGroup 
 
-NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED
-********************
-Lock order:If you make sure that all locks are always taken in the same order by any thread
-Lock Timeout
+Analyzed Thread Dumps
 
-***************************************
-Causes of STARVATION:
-high priority , indefinitely  waiting to enter synchronized block, indefinitely waiting for the notify()
+Is thread waiting for lock synchronized block FIFO
 
-***************************************
-public class Lock{
-
-  boolean isLocked = false;
-  Thread  lockedBy = null;
-  int     lockedCount = 0;
-
-  public synchronized void lock()
-  throws InterruptedException{
-    Thread callingThread = Thread.currentThread();
-    while(isLocked && lockedBy != callingThread){
-      wait();
-    }
-    isLocked = true;
-    lockedCount++;
-    lockedBy = callingThread;
-  }
-
-  public synchronized void unlock(){
-    if(Thread.curentThread() == this.lockedBy){
-      lockedCount--;
-
-      if(lockedCount == 0){
-        isLocked = false;
-        notify();
-      }
-    }
-  }
-
-}
-
-With a simple Lock,While isLocked is true, the thread calling lock() is parked waiting in the wait() call. In case the thread should return unexpectedly from the wait() call without having received a notify() call (AKA a Spurious Wakeup) the thread re-checks the isLocked condition to see if it is safe to proceed or not, rather than just assume that being awakened means it is safe to proceed.
-
-Google about Lock Class
+Spin lock example. Do we still have to 
 ***************************************
 
-Read Access : If no threads are writing, and no threads have requested write access.
-Write Access : If no threads are reading or writing.
-http://tutorials.jenkov.com/java-concurrency/read-write-locks.html
-writeAccesses, writeRequests, writingThread, Map<Thread, Integer> readingThreads = new HashMap<Thread, Integer>();
-
-***************************************
-
-SEMOPHORES:
-***************************************
-
-BLOCKING QUEUE: 
-Threads will wait() until the enqueue or dequeue operation is performable. That is until queue has lessThanLimit or atLeastOne.
-The waiting thread will get notifyAll() to perform there operation. notifyAll() will be called on only one conditon in each enqueue and dequeue 
-***************************************
-
-Thread Pools:
-
-There is a performance overhead associated with starting a new thread and allocating some memory for its stack. So the number of threads running in your application at a time can be handled by thread pool.
-***************************************
-
-Anatomy of SYNCHRONIZER:
- Also refer Anatomy of a Synchronizer from the book "Java Concurrency in Practice"
-State
-Access Condition
-State Changes
-Notification Strategy
-Test and Set Method
-Set Method
-***************************************
-
-NON-BLOCKING ALGORITHMS
-An algorithm is said to be non-blocking if the suspension of one thread cannot lead to the suspension of other threads involved in the algorithm.
-
-Blocking algorithms block the thread until the requested action can be performed. Non-blocking algorithms notify the thread requesting the action that the action cannot be performed.
-
-If the algorithm guarding a concurrent data structure is non-blocking, it is said to be a non-blocking algorithm. The data structure is thus said to be a non-blocking, concurrent data structure.
-
-
-
-
-Delayed interface
-
-**************************************
-EXECTOR SERVICE:
-
-ExecutorService executorService1 = Executors.newSingleThreadExecutor();
-
-ExecutorService executorService2 = Executors.newFixedThreadPool(10);
-
-ExecutorService executorService3 = Executors.newScheduledThreadPool(10);
-
-
-
-execute(Runnable) :
-submit(Runnable) :future.get();
-submit(Callable) :future.get(); Object call() throws Exception
-invokeAny(...) :If one of the tasks complete (or throws an exception), the rest of the Callable's are cancelled.
-invokeAll(...) : Returns a collection of Future objects. Future.get()
-
-
-FUTURE OBJECT:
-Future object functions as a handle to the result of the asynchronous task. Once the asynchronous task completes, the result can be accessed via the Future object returned when the task was STARTED.
+Spin locks does not release the CPU. So SpinLocks are good when we know that the critical section is of very short time.

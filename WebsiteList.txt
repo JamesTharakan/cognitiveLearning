@@ -4,6 +4,8 @@ http://www.crazyforcode.com/design-patterns/
 
 https://www.ibm.com/developerworks/library/j-jtp02183/index.html
 
+https://stackoverflow.com/questions/61629383/what-is-encapsulation-in-the-real-world-really
+
 
 
  

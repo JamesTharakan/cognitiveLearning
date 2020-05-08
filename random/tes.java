@@ -28,6 +28,13 @@ public class tes {
 		 
 		 
 	 }
+	 
+		public Foo build() {
+			if (name == null)
+				throw Exception();
+			else
+				return new Foo(name, description);
+		}
 
 }
  
