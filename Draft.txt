@@ -20,7 +20,7 @@ https://stackoverflow.com/questions/61629383/what-is-encapsulation-in-the-real-w
 
 
 definitions of each terminology
-*****************************************************************************************************************
+***************************************************************************************************************************************************************************
 update "Happens Before" 
 
 What is Mutex, Semaphore and Mutex
@@ -37,3 +37,18 @@ Spin lock example. Do we still have to
 ***************************************
 
 Spin locks does not release the CPU. So SpinLocks are good when we know that the critical section is of very short time.
+
+***************************************************************************************************************************************************************************
+LAMBDA Expressions
+http://www.techempower.com/blog/2013/03/26/everything-about-java-8/
+
+Lambda expression is a shorter way of writing an implementation of a single abstract method interface.
+
+interface SingleParam {
+	public void print(String param);
+}
+
+SingleParam singleParam = (param) -> {System.out.printf("Hello %s",param);};
+singleParam.print("saurabh");
+
+
