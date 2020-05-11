@@ -1,3 +1,4 @@
+
 package simpleConcepts;
 
 import java.lang.reflect.Method;
@@ -24,7 +25,7 @@ public class CheckerClass {
 
 	public static void main(String[] args) {
 
-//		maploading();
+		maploading();
 		
 //		floatDivision();
 //	 
@@ -49,6 +50,12 @@ public class CheckerClass {
 		 map.put("aba", 1);
 		 System.out.println(map.containsKey("aba"));
 		 System.out.println(map.get("aba"));
+		 
+		 System.out.println(map.get("xyz"));
+		 map.put("xyz", null);
+		 
+		 System.out.println("Its just that Value is NULL:: "+map.get("xyz")); //So use Contains Key
+		
 		 map.put("aba", 2);
 		 System.out.println(map);
 		

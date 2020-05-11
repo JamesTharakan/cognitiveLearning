@@ -3,6 +3,7 @@ package collection.map;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class IterateHashMap {
 	private static HashMap <Integer,Integer> createMap() {
@@ -36,7 +37,8 @@ public class IterateHashMap {
 	}
 
 	public static void printMap(Map mp) {
-	    Iterator it = mp.entrySet().iterator();
+		
+		Iterator it = mp.entrySet().iterator();
 	    System.out.println("\nIndependent handling using Entry class");
 	    while (it.hasNext()) {
 	        Map.Entry pair = (Map.Entry)it.next();

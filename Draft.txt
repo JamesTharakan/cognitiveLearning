@@ -18,7 +18,6 @@ https://www.ibm.com/developerworks/java/library/j-jtp08223/j-jtp08223-pdf.pdf
 https://stackoverflow.com/questions/61629383/what-is-encapsulation-in-the-real-world-really
 
 
-
 definitions of each terminology
 ***************************************************************************************************************************************************************************
 update "Happens Before" 
@@ -39,16 +38,49 @@ Spin lock example. Do we still have to
 Spin locks does not release the CPU. So SpinLocks are good when we know that the critical section is of very short time.
 
 ***************************************************************************************************************************************************************************
+
+
+
+
+Enhanced for Loop
+.For-each loops are not appropriate when you want to modify the looping array :: incase of pirmitive, but for objects ?
+.For-each loops do not keep track of index.
+.For-each only iterates forward over the array in single steps. No reverse order.No jumping
+
+***************************************
+ForEach - Iterable
+
+***************************************
+Method Reference
+
+
+***************************************
+Stream APIs
+https://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
+
+
+***************************************
 LAMBDA Expressions
-http://www.techempower.com/blog/2013/03/26/everything-about-java-8/
+Compiler does Type inference to find why type of lambda/data it is.
+difference between lambda expresssion and regular method of a class ?::: As of now almost nothing. Lets see.
 
-Lambda expression is a shorter way of writing an implementation of a single abstract method interface.
+No new Type is created, like, "LambdaType" interface or class. Because of which backward compatability is acheived. Otherwise all those functionalInterface have to be modified to accept the "LambdaType".
 
-interface SingleParam {
-	public void print(String param);
-}
+the keyword "this" is a reference to an enclosing instance/Scope
+Braces and return statements are optional in one-line lambda bodies.
 
-SingleParam singleParam = (param) -> {System.out.printf("Hello %s",param);};
-singleParam.print("saurabh");
+Local variables used in Lambda expressions must be final of effectively final.
+Any local variable, formal parameter, or exception parameter used but not declared in a lambda expression must either be declared final or be effectively final
+
+understand Exceptions handling.
 
 
+program to understand final and effectively final
+
+Practice the use of 4 of the functional interface, Predicate,Consumer,Supplier and Function
+
+
+
+
+
+Lambda,streams and exceptoins :https://stackoverflow.com/questions/16635398/java-8-iterable-foreach-vs-foreach-loop
