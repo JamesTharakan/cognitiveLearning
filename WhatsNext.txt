@@ -28,3 +28,10 @@
 	Cracking the coding interview
 	Effective Java - Joshua Bloch
 	Java Puzzlers
+	
+
+
+SQL – Oracle, MySQL, IMB DB2 ,Sybase,Microsoft SQL Server, PostgreSQL MicroSoft Azure, MariaDB
+NoSQL – MongoDB, Redis, Casandra, Apache’s CouchDB, HBase, Oracle NoSQL, Riak
+
+https://www.guru99.com/introduction-to-database-sql.html
