@@ -4,34 +4,44 @@
 	b. Exception Handling
 	c. Collections
 	d. IO and Serialization
-	e. garbage Collection
-	f. Marker Interface
+	e. Garbage Collection
+	
+	
 
-2. DS and Algos
-	Data Structures and Algorithms Made Easy : Narsimha
-	Videos: Princeton and Stanford
+2. Data Structure 
 
+
+2  Sorting 
+
+
+2. Searching 
+	
+	
 3. MultiThreading
 	java concurrency in practice by brian goetz
 	New executor framework
 
-4. SQL Database Queries + JDBC Mgmt
+4. JDBC and SQL Database Queries
 
 5. Design Patterns and Principles
-	a. Head First Design Patterns
-
+	
 6. JVM + Java Memory Management
 
-7. Build Management ANT/Maven
+7. CI tools : Jenkins, GitLab
 
-8. Books
+8. Build Management tool : Ant, Maven
+
+9. Books
 	Cracking the coding interview
 	Effective Java - Joshua Bloch
 	Java Puzzlers
 	
 
 
-SQL – Oracle, MySQL, IMB DB2 ,Sybase,Microsoft SQL Server, PostgreSQL MicroSoft Azure, MariaDB
+SQL – MySQL, Oracle, IMB DB2 ,Sybase,Microsoft SQL Server, PostgreSQL MicroSoft Azure, MariaDB
 NoSQL – MongoDB, Redis, Casandra, Apache’s CouchDB, HBase, Oracle NoSQL, Riak
 
 https://www.guru99.com/introduction-to-database-sql.html
+
+
+

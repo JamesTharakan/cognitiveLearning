@@ -5,20 +5,7 @@ Iterator
 State:Game. Make the character to walk,talk,run,fight. Pass command and change the state. Change state A-> B, A->A 
 Decorator
 Bridge
-********************************************************************************************************************
-https://stackoverflow.com/questions/28373729/why-synchronize-a-synchronized-list
-https://stackoverflow.com/questions/9468187/collections-synchronizedlist-and-synchronized
-https://stackoverflow.com/questions/14932034/in-java-vector-and-collections-synchronizedlist-are-all-synchronized-whats-th
-https://stackoverflow.com/questions/13151166/collections-synchronizedmapnew-linkedhashmap-is-not-making-map-threadsafe
-https://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap
-https://web.archive.org/web/20140604083201/http://www.codercorp.com/blog/java/why-concurrenthashmap-is-better-than-hashtable-and-just-as-good-hashmap.html
-https://www.ibm.com/developerworks/java/library/j-jtp08223/j-jtp08223-pdf.pdf
 
-
-https://stackoverflow.com/questions/61629383/what-is-encapsulation-in-the-real-world-really
-
-
-definitions of each terminology
 ***************************************************************************************************************************************************************************
 update "Happens Before" 
 
@@ -30,57 +17,20 @@ What is ThreadGroup
 
 Analyzed Thread Dumps
 
-Is thread waiting for lock synchronized block FIFO
+Is thread waiting for lock of a synchronized block FIFO
 
 Spin lock example. Do we still have to 
-***************************************
 
-Spin locks does not release the CPU. So SpinLocks are good when we know that the critical section is of very short time.
 
 ***************************************************************************************************************************************************************************
+pandeyan
 
 
+cts pc --- system engineering ---raghvendra putty swamy
 
 
-Enhanced for Loop
-.For-each loops are not appropriate when you want to modify the looping array :: incase of pirmitive, but for objects ?
-.For-each loops do not keep track of index.
-.For-each only iterates forward over the array in single steps. No reverse order.No jumping
-
-***************************************
-ForEach - Iterable
-
-***************************************
-Method Reference
-
-
-***************************************
-Stream APIs
-https://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
-
-
-***************************************
-LAMBDA Expressions
-Compiler does Type inference to find why type of lambda/data it is.
-difference between lambda expresssion and regular method of a class ?::: As of now almost nothing. Lets see.
-
-No new Type is created, like, "LambdaType" interface or class. Because of which backward compatability is acheived. Otherwise all those functionalInterface have to be modified to accept the "LambdaType".
-
-the keyword "this" is a reference to an enclosing instance/Scope
-Braces and return statements are optional in one-line lambda bodies.
-
-Local variables used in Lambda expressions must be final of effectively final.
-Any local variable, formal parameter, or exception parameter used but not declared in a lambda expression must either be declared final or be effectively final
-
-understand Exceptions handling.
-
-
-program to understand final and effectively final
-
-Practice the use of 4 of the functional interface, Predicate,Consumer,Supplier and Function
-
-
-
-
-
-Lambda,streams and exceptoins :https://stackoverflow.com/questions/16635398/java-8-iterable-foreach-vs-foreach-loop
+Praveen 
+prabhaker
+*******************************************
+CI tools : Jenkins, GitLab
+Build Management tool : Ant, Maven
