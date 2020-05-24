@@ -23,14 +23,9 @@ Spin lock example. Do we still have to
 
 
 ***************************************************************************************************************************************************************************
-pandeyan
+Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.
 
 
-cts pc --- system engineering ---raghvendra putty swamy
+Telescoping constructor pattern: One constructor with only required fields and many other construtors with different combinations of optional fields. Difficult to mantain and bug prone.
 
-
-Praveen 
-prabhaker
-*******************************************
-CI tools : Jenkins, GitLab
-Build Management tool : Ant, Maven
+JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.

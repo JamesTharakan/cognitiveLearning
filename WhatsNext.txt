@@ -5,33 +5,28 @@
 	c. Collections
 	d. IO and Serialization
 	e. Garbage Collection
-	
-	
 
 2. Data Structure 
 
+3  Sorting 
 
-2  Sorting 
-
-
-2. Searching 
+4. Searching 
 	
-	
-3. MultiThreading
+5. MultiThreading
 	java concurrency in practice by brian goetz
 	New executor framework
 
-4. JDBC and SQL Database Queries
+6. JDBC and SQL Database Queries
 
-5. Design Patterns and Principles
+7. Design Patterns and Principles
 	
-6. JVM + Java Memory Management
+8. JVM + Java Memory Management
 
-7. CI tools : Jenkins, GitLab
+9. CI tools : Jenkins or GitLab
 
-8. Build Management tool : Ant, Maven
+10. Build Management tool : Maven or Ant
 
-9. Books
+11. Books
 	Cracking the coding interview
 	Effective Java - Joshua Bloch
 	Java Puzzlers
