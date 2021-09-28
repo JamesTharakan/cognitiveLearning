@@ -3,7 +3,6 @@ package collection.map;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class IterateHashMap {
 	private static HashMap <Integer,Integer> createMap() {

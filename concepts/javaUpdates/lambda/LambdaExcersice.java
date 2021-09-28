@@ -19,19 +19,23 @@ public class LambdaExcersice {
 		
 		
 		System.out.println("Sort by lastName");
-		//implementation of Comparator
-		Collections.sort(people,
-				(p1, p2) -> p1.getLastName().compareTo(p2.getLastName()));
+		//implementation of Comparator using FuntionalInterface idea
+		//(p1, p2) -> p1.getLastName().compareTo(p2.getLastName())
+		Collections.sort(people, (p1, p2) -> p1.getLastName().compareTo(p2.getLastName()) 	);
 		
-		people.forEach(p -> System.out.println(p));
+		people.forEach(p -> {
+								System.out.println(p);
+							}
+					  );
 		
 		
 		System.out.println("\nSort by lastName starting with C");
 		people.forEach(p -> {
-			if(p.getLastName().startsWith("C")) {
-				System.out.println(p);
-			}
-		});
+								if(p.getLastName().startsWith("C")) {
+									System.out.println(p);
+								}
+							}
+					   );
 		
 		
 		System.out.println("\nImplementation for Condition Functional Interface as lambda expression");
@@ -51,7 +55,7 @@ public class LambdaExcersice {
 							});
 		
 		Condition1 con11 = p -> System.out.println(p);
-		people.forEach(con11);
+		people.forEach(itr ->{ con11.printer(itr);});
 	}
 }
 
@@ -61,5 +65,5 @@ public class LambdaExcersice {
  }
  
  interface Condition1{
-	 void test(Person p);
+	 void printer(Person p);
  }

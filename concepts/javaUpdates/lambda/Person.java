@@ -36,9 +36,9 @@ public class Person {
 		this.age = age;
 	}
 
-	@Override
+	
 	public String toString() {
-		return "Person::" + firstName + " " + lastName + " : " + age ;
+		return /* "Person::" + */firstName + " " + lastName + " : " + age ;
 	}
 
 }

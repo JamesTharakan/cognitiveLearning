@@ -20,6 +20,25 @@ interface ReturningFuncInterface{
 	int display();
 }
 
+@FunctionalInterface
+interface isAnnotationNeeded{
+	void display();
+}
+
+@FunctionalInterface
+interface canHaveOtherMethods {
+	void display();
+
+	default void defaultMethod() {			//the default is not access specifier, it means default implementation
+		System.out.println("It can have default methods");
+	}
+
+	static void staticMethod() {
+		System.out.println("Static methods");
+	}
+
+}
+
 public class Functionalnterface {
 
 	public static void main(String[] args) {
@@ -36,6 +55,20 @@ public class Functionalnterface {
 		ReturningFuncInterface returning = () -> {System.out.println("I return something !!"); return 123;};
 		System.out.println("The value returned is ::"+returning.display());
 		
+		
+		Runnable runnable = () -> {System.out.println("I am a implementation of a FuntionalInterface which does not have any arguments");};
+		runnable.run();
+
+		isAnnotationNeeded annotationNeeded = () -> {System.out.println("No need of annotaion");};
+		annotationNeeded.display();
+		
+		
+		canHaveOtherMethods otherMethods = () -> {System.out.println("canHaveOtherMethods");};
+		otherMethods.defaultMethod();
+		canHaveOtherMethods.staticMethod();
+		
 	}
 
 }
+
+

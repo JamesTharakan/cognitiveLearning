@@ -66,7 +66,7 @@ class Pakistan implements ScoreBoard {
 
 	// Basically this a Iterator class for array
 	class IndiaIterator implements Iterator {
-		int index = 0;
+		int index = 0;	//Taking the responsibility to the iterator object
 		int arrayInt[];
 
 		IndiaIterator(int score[]) {
