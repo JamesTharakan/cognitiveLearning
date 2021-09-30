@@ -1,5 +1,5 @@
 
-package simpleConcepts;
+package concepts.simple;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package simpleConcepts;
+package concepts.simple;
 
 import java.util.Objects;
 

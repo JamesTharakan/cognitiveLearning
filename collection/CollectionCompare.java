@@ -21,12 +21,12 @@ public class CollectionCompare implements Comparable<CollectionCompare> , Compar
 	 * Beacuse i am trying to sort custom objects , i should define how it should be compared
 	 */
 	public int compareTo(CollectionCompare obj2){
-		System.out.println("compareTo");
+		System.out.println("Comparable");
 		return this.s1.compareTo(obj2.s1);
 	}
 	
 	public int compare(CollectionCompare obj1, CollectionCompare obj2){
-		System.out.println("compare");
+		System.out.println("Comparator");
 		return obj1.i.compareTo(obj2.i);
 	}
 	
