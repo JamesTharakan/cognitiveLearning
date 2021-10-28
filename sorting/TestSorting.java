@@ -20,7 +20,7 @@ public class TestSorting {
 				{13,9,2,25,5}
 		};
 		
-		Sort sortStrategy = getSortObject(Sort.BUBBLE_SORT);
+		Sort sortStrategy = getSortObject(SortType.BUBBLE);
 		
 		
 		/*for (int i = 0; i < arr.length; i++) {
@@ -47,29 +47,29 @@ public class TestSorting {
 		
 	}
 
-	static Sort getSortObject(int strategy) {
+	static Sort getSortObject(SortType strategy ) {
 		Sort object = null;
 		switch (strategy) {
-		case Sort.HEAP_SORT:
+		case HEAP:
 			object = new HeapSort();
 			break;
-		case Sort.MERGE_SORT:
+		case MERGE:
 			object = new MergeSort();
 			break;
-		case Sort.QUICK_SORT:
+		case QUICK:
 			object = new QuickSort();
 			break;
-		case Sort.BUBBLE_SORT:
+		case BUBBLE:
 			object = new BubbleSort();
 			break;	
-		case Sort.INSERTION_SORT:
+		case INSERTION:
 			object = new InsertionSort();
 			break;	
 			
 		default:
 			break;
 		}
-
+		System.out.println("Sorting type used :"+strategy);
 		return object;
 
 	}

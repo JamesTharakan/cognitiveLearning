@@ -3,21 +3,23 @@ package random;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.LinkedList;
 
 
 class TestSuper{
 	TestSuper(){
-		System.out.println("TestSuper.TestClass.enclosing_method()");
 	}
 	TestSuper(int TestSupera){
-		
+		System.out.println("TestSuper.TestSuper() :: One parameter");
 	}
 }
 public class TestClass  extends TestSuper implements TestInterface{
+	
+	static int num =1;
 
 	public static void main(String s[]) {
-//		System.out.println("tes.main():: " + Runtime.getRuntime().availableProcessors());
-		TestClass t = new TestClass(1);
+		
+		TestClass t = new TestClass();
 //		t.defaultMethod();
 //		t.defaultMethod(123);
 		
@@ -27,12 +29,13 @@ public class TestClass  extends TestSuper implements TestInterface{
 	public void test() {
 		Hashtable ht = new Hashtable();
 		ht.put(null, null);
+		Collections.synchronizedMap(new HashMap());
 
 		Thread t = new Thread();
 		t.start();
+
 		System.out.println("tes.test()");
 
-		Collections.synchronizedMap(new HashMap());
 	}
 
 	public void abstractmethodOne() {
@@ -46,7 +49,10 @@ public class TestClass  extends TestSuper implements TestInterface{
 	}
 	
 	TestClass(){
-		System.out.println("TestClass.TestClass()");
+		System.out.println("Total Memory : "+num +" ::" + Runtime.getRuntime().totalMemory()
+				+" : "+Runtime.getRuntime().freeMemory());
+		new Integer(num++);
+//		new TestClass();
 	}
 	
 	TestClass(int a ){

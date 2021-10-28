@@ -33,7 +33,7 @@
 	
 
 
-SQL – MySQL, Oracle, IMB DB2 ,Sybase,Microsoft SQL Server, PostgreSQL MicroSoft Azure, MariaDB
+SQL   -	MySQL, Oracle, IMB DB2 ,Sybase,Microsoft SQL Server, PostgreSQL MicroSoft Azure, MariaDB
 NoSQL – MongoDB, Redis, Casandra, Apache’s CouchDB, HBase, Oracle NoSQL, Riak
 
 https://www.guru99.com/introduction-to-database-sql.html

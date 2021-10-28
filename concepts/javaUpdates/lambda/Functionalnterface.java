@@ -57,7 +57,7 @@ public class Functionalnterface {
 		
 		
 		Runnable runnable = () -> {System.out.println("I am a implementation of a FuntionalInterface which does not have any arguments");};
-		runnable.run();
+		runnable.run();// Threads should be stared by calling start()
 
 		isAnnotationNeeded annotationNeeded = () -> {System.out.println("No need of annotaion");};
 		annotationNeeded.display();

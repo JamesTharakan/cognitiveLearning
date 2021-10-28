@@ -28,6 +28,8 @@ public class ForEachIterable {
 			}
 		};
 		numList.forEach(num -> printComsumer.accept(num));
+		
+		
 		System.out.print("\nEven this ");
 		numList.forEach(printComsumer);
 		

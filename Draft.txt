@@ -1,12 +1,11 @@
-
-**********************************************Patterns that i should code:**********************************************
+***********************************************Patterns that i should code**********************************************************
 Abstract Factory Pattern
 Iterator
 State:Game. Make the character to walk,talk,run,fight. Pass command and change the state. Change state A-> B, A->A 
 Decorator
 Bridge
 
-***************************************************************************************************************************************************************************
+************************************************************************************************************************************
 update "Happens Before" 
 
 What is Mutex, Semaphore and Mutex
@@ -21,11 +20,12 @@ Is thread waiting for lock of a synchronized block FIFO
 
 Spin lock example. Do we still have to 
 
-
-***************************************************************************************************************************************************************************
+************************************************************************************************************************************
 Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.
 
 
 Telescoping constructor pattern: One constructor with only required fields and many other construtors with different combinations of optional fields. Difficult to mantain and bug prone.
 
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
+************************************************************************************************************************************
+The number of threads registered to synchronize on a phaser may vary over time. 
