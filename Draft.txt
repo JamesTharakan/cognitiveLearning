@@ -16,10 +16,6 @@ What is ThreadGroup
 
 Analyzed Thread Dumps
 
-Is thread waiting for lock of a synchronized block FIFO
-
-Spin lock example. Do we still have to 
-
 ************************************************************************************************************************************
 Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.
 
@@ -28,4 +24,11 @@ Telescoping constructor pattern: One constructor with only required fields and m
 
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
 ************************************************************************************************************************************
-The number of threads registered to synchronize on a phaser may vary over time. 
+
+Executor, ExecutorService, ThreadPool, and Future in Java
+Parallel Fork/Join Framework In Java
+Thread Factory in Java
+newCachedThreadPool example in Java
+newFixedThreadPool, Callable and Future example in Java
+
+************************************************************************************************************************************
