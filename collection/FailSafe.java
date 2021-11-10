@@ -19,14 +19,20 @@ public class FailSafe {
 		Iterator itr = list.iterator();
 		while (itr.hasNext()) {
 			Integer no = (Integer) itr.next();
-			System.out.println(no +": "+ list.size());
+			System.out.print(no +":"+ list.size()+" , ");
 			if (no == 3)
-
 				// This will not be printed by the iterator as it is working on a separate copy of the list
 				list.add(14);
 		}
 		
-		System.out.println("FailSafe.main():: "+list);
+		System.out.println("\n"+list);
+		
+		//will print in the next iterator
+		Iterator itr2 = list.iterator();
+		while (itr2.hasNext()) {
+			Integer no = (Integer) itr2.next();
+			System.out.print(no +",");
+		}
 	}
 
 }

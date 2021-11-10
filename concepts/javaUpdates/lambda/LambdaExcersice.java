@@ -30,6 +30,7 @@ public class LambdaExcersice {
 		
 		
 		System.out.println("\nSort by lastName starting with C");
+		
 		people.forEach(p -> {
 								if(p.getLastName().startsWith("C")) {
 									System.out.println(p);

@@ -18,18 +18,6 @@ public class JUtil {
 	}
 	
 	public static String generateBinary(int decimal) {
-		MyStack stack = new MyStack(10);
-		String binary = "";
-
-		while (decimal > 0) {
-			stack.push(decimal % 2);
-			decimal = decimal / 2;
-		}
-
-		while (!stack.isEmpty()) {
-			binary += stack.pop();
-		}
-
-		return binary;
+		
 	}
 }

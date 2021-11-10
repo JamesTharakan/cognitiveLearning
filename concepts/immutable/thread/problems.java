@@ -16,7 +16,8 @@ class test implements Runnable{
 	//Unless synchronized , the output is wrong sometime ..That is 'i' is changed to 2
 	//So what does it mean by "Immutable Objects are thread safe"?
 	
-	//Answer:No matter how many threads are there, it cannot change the actual object. An new object is created everytime some one tries to modify.
+	//Answer:No matter how many threads are there, it cannot change the actual object.
+	//An new object is created every time some one tries to modify.
 	//i think that is called thread safe
 					
 	public void run() {

@@ -1,11 +1,14 @@
 package concepts.javaUpdates.lambda;
 
+/**
+ * Variables used inside the lambda should be final or effectivelyFinal.
+ */
 public class EffectivelyFinal {
 
 	public static void main(String[] args) {
-		String finalVariable = "final local variable";
+		String finalVariable; //= "final local variable";
 		
-//		finalVariable = "Can I change non-final variable before anonymous class";
+		finalVariable = "Can I change non-final variable before anonymous class";
        
 		Runnable runnable = () -> {
                 System.out.println("Using final local variable inside Lambda expression");
@@ -15,7 +18,5 @@ public class EffectivelyFinal {
         };
        
 //        finalVariable = "Can I change non-final variable after anonymous class";
-        
-}
-
+	}
 }

@@ -1,29 +1,42 @@
 package random;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.LinkedList;
+import java.util.List;
 
 
-class TestSuper{
-	TestSuper(){
+
+class TestSuper {
+	TestSuper() {
 	}
-	TestSuper(int TestSupera){
+
+	TestSuper(int TestSupera) {
 		System.out.println("TestSuper.TestSuper() :: One parameter");
 	}
 }
-public class TestClass  extends TestSuper implements TestInterface{
-	
-	static int num =1;
+
+public class TestClass extends TestSuper implements TestInterface {
+
+	static int num = 1;
 
 	public static void main(String s[]) {
+
+		List<Integer> list = new ArrayList<Integer>(4);
+
+		list.add(new Integer(10));
+		list.add(new Integer(11));
+		list.add(new Integer(14));
+		list.add(null);
+		list.add(new Integer(15));
+
 		
+
 		TestClass t = new TestClass();
 //		t.defaultMethod();
 //		t.defaultMethod(123);
-		
-		
+
 	}
 
 	public void test() {
@@ -40,22 +53,22 @@ public class TestClass  extends TestSuper implements TestInterface{
 
 	public void abstractmethodOne() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void abstractmethodTwo() {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	TestClass(){
-		System.out.println("Total Memory : "+num +" ::" + Runtime.getRuntime().totalMemory()
-				+" : "+Runtime.getRuntime().freeMemory());
+
+	TestClass() {
+		System.out.println("Total Memory : " + num + " ::" + Runtime.getRuntime().totalMemory() + " : "
+				+ Runtime.getRuntime().freeMemory());
 		new Integer(num++);
 //		new TestClass();
 	}
-	
-	TestClass(int a ){
+
+	TestClass(int a) {
 		super(a);
 		System.out.println("TestClass.TestClass():: a");
 	}

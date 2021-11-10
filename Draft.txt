@@ -24,11 +24,9 @@ Telescoping constructor pattern: One constructor with only required fields and m
 
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
 ************************************************************************************************************************************
-
-Executor, ExecutorService, ThreadPool, and Future in Java
-Parallel Fork/Join Framework In Java
-Thread Factory in Java
-newCachedThreadPool example in Java
-newFixedThreadPool, Callable and Future example in Java
-
 ************************************************************************************************************************************
+If the mapping for a given key doesn't exist, or its value is null, it associates the key with the provided value(second parameter). 
+Otherwise, it calculates a new value using the remapping function and updates the mapping accordingly. In the below case it is calling sum() in Long class. So, the value is 
+
+Map<T, Long> addToValue = new HashMap<>();
+inputList.forEach(e -> resultMap.merge(e, 1L, Long::sum));

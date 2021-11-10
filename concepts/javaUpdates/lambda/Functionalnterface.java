@@ -27,7 +27,7 @@ interface isAnnotationNeeded{
 
 @FunctionalInterface
 interface canHaveOtherMethods {
-	void display();
+	void display();		//Only one abstract method
 
 	default void defaultMethod() {			//the default is not access specifier, it means default implementation
 		System.out.println("It can have default methods");
