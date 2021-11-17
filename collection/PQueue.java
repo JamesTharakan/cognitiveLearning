@@ -29,7 +29,7 @@ public class PQueue {
 			System.out.print(itr.next() + " ");
 		}
 
-		System.out.print("\nUsing queue API POLL, it maintains the ordering(PriorityQueue):: ");
+		System.out.print("\nONLY by using queue API POLL, it maintains the insersion order(Queue behaviour):: ");
 		while (pq.peek() != null) {
 			System.out.print(pq.poll() + " ");
 		}
