@@ -1,5 +1,6 @@
 package random;
 
+import java.lang.ref.SoftReference;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import java.util.List;
 
 
 class TestSuper {
+	int soft;
 	TestSuper() {
 	}
 
@@ -22,7 +24,11 @@ public class TestClass extends TestSuper implements TestInterface {
 	static int num = 1;
 
 	public static void main(String s[]) {
+		
+		TestSuper t = new TestSuper();
+		SoftReference sf = new SoftReference(t);
 
+				
 		List<Integer> list = new ArrayList<Integer>(4);
 
 		list.add(new Integer(10));
