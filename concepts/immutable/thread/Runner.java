@@ -6,7 +6,7 @@ public class Runner {
 
 	public static void main(String[] args) {
 		
-		 Hashtable table = new Hashtable();
+		 Hashtable<Integer,Integer> table = new Hashtable<Integer,Integer>();
 		 table.put(1, 1);
 
 		MutableClass m = new MutableClass(1);

@@ -15,6 +15,7 @@ public class IterateHashMap {
 		return map;
 	}
 	public static void main(String[] args) {
+		
 		HashMap <Integer,Integer>map =createMap();
 		
 		Iterator itr = map.entrySet().iterator();//basically getting an iterator for Set because map is not implementing iterable

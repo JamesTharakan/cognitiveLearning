@@ -46,7 +46,7 @@ public class Functionalnterface {
 		NoArgFuncInterface no = () -> {System.out.println("No :: No argument");};
 		no.display();
 		
-		OneArgFuncInterface one = stringVar -> {System.out.println("One :: "+stringVar);};
+		OneArgFuncInterface one = (stringVar) -> {System.out.println("One :: "+stringVar);};
 		one.display("One");
 		
 		TwoArgFuncInterface two = (stringVar,numVar) -> {System.out.println("Two :: "+stringVar + " "+numVar);};

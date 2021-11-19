@@ -41,12 +41,13 @@ public class CollectionCompare implements Comparable<CollectionCompare> , Compar
 		list.add(r2);
 		list.add(r3);
 		System.out.println("Listed Created");
-		Collections.sort(list);
-		System.out.println(" String sort : "+list);
+		Collections.sort(list);// This will use the Comparable.
+		System.out.println(" String sort : "+list); 
 		
 		Collections.sort(list, new CollectionCompare("",2));//i just need to pass a dummy object of the Comparator
 		System.out.println(" number sort : "+list);
-
+		
+		Collections.sort(list, (s1,s2)->s1.compareTo(s2) );
 	}
 	
 	public String toString(){

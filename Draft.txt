@@ -23,7 +23,6 @@ Telescoping constructor pattern: One constructor with only required fields and m
 
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
 ************************************************************************************************************************************
-
 Simple recursive algorithms
 Backtracking algorithms
 Divide and conquer algorithms
@@ -33,45 +32,3 @@ Branch and bound algorithms
 Brute force algorithms
 Randomized algorithms
 ************************************************************************************************************************************
-
-Basic steps of GC :
-Mark
-Sweep/delete
-Compacting
-
-
-Minor GC referes to the GC that happens in the YoungGeneration and Major GC refers to the GC that happens in entire heap(Young and Old).
-When Major GC happens the application may pause for few seconds.
-
-Every Object is created in the Eden space of YoungGeneration and are moved to surival01 or survial01 after the minorGC.
-
-
-A counter is maninted for each object indicating the number of Minor GC it has survived. Once a threshold(MaxTenureThresold, usually 16) is reached they are moved to oldGeneration.
-
-When Old Generation is about to be full , the Major GC will be triggered.
-
-Performance: Latency and ThroughPut
-
-
-1. Serial collector:
-Runs on a single thread, Hence stop the workd approach
-
-2. Concurrent :
-Run in parallel to application. Stops the world only during Mark and re-Mark(what is re-mark). i.e the sweep and compacting operations runs along with the application.
-
-3. Parallel :
-Almost same as Serial collector but uses multiple threads/core so it will be faster
-Starts only when heap is almost full. Stops the world and uses multiple threads and CPUs to perform mark, sweep and compacting.
-
-4. G1 (garbage first)
-
-
-
-Concurrent is used when Latency is important and more memory and CPU is available.
-
-Parallel is used if latency is acceptable(websites) and memory and CPUs are less
-
-Using JVM config/flags we can specify which type of GC to be used for each generation.
-
-
-Depending on finialze method(which will be called when a object is about to be GCed)to do the clean up is not good as we are unAware when GC would be performed.

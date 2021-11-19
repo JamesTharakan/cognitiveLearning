@@ -25,6 +25,7 @@ public class CheckerClass {
 	}
 
 	public static void main(String[] args) {
+		
 
 //		maploading();
 		
@@ -38,14 +39,10 @@ public class CheckerClass {
 //		
 //		nonGenericCollection();
 //		
-//		floatDivision();
+		floatDivision();
 
 //		checkArrayClass();
-		
-		
 	}	
-	
-	
 	
 	 private static void maploading() {
 		 HashMap<String, Integer> map = new HashMap<String,Integer>();
@@ -134,7 +131,7 @@ public class CheckerClass {
 		System.out.println(23%100);
 		
 		System.out.println(23 / 100.0);
-		System.out.println(23 % 100.0);
+		System.out.println(23 % 100.00);
 		
 		System.out.println(33 / 100.00);
 	}

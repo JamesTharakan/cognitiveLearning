@@ -19,6 +19,9 @@ class test implements Runnable{
 	//Answer:No matter how many threads are there, it cannot change the actual object.
 	//An new object is created every time some one tries to modify.
 	//i think that is called thread safe
+	
+	//Objects are immutable 
+	//Critical section objects are still unsafe/unpredictable without synchronizing.
 					
 	public void run() {
 //		 synchronized (this)  {

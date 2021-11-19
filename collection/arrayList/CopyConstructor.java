@@ -3,19 +3,18 @@ package collection.arrayList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayListMethods {
+public class CopyConstructor {
 
 	public static void main(String[] args) {
-		ArrayListMethods caller = new ArrayListMethods();
+		CopyConstructor caller = new CopyConstructor();
 		
 		caller.copyConstrutors();
-		
 
 	}
 
 	/**
-	 * Passing a list to another list construtor will only copy the reference
-	 * Where by using AddAll , will create a duplicate.
+	 * Passing a list to another list constructor will only copy the reference
+	 * Where as using AddAll, will create a duplicate.
 	 */
 	private void copyConstrutors() {
 		List <Integer> base = new <Integer>ArrayList(10);
@@ -40,25 +39,6 @@ public class ArrayListMethods {
 		System.out.println("Copy" +copy);
 		System.out.println("addAll" +addAll);
 	}
-	
-	
-
 }
 
-class Customer {
 
-	private int id;
-	private String name;
-
-	public String getName() {
-		return name;
-	}
-	Customer(String n){
-		name = n;
-	}
-	
-	public String toString() {
-		return name;
-	}
-
-}
