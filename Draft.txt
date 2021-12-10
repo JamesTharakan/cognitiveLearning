@@ -32,3 +32,5 @@ Branch and bound algorithms
 Brute force algorithms
 Randomized algorithms
 ************************************************************************************************************************************
+you can configure CMS GC with a single-threaded young generation collector, but this option has been deprecated in Java 8 and is removed in Java 9.
+************************************************************************************************************************************

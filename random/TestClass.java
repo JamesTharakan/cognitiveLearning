@@ -24,25 +24,7 @@ public class TestClass extends TestSuper implements TestInterface {
 	static int num = 1;
 
 	public static void main(String s[]) {
-		
-		TestSuper t = new TestSuper();
-		SoftReference sf = new SoftReference(t);
-
-				
-		List<Integer> list = new ArrayList<Integer>(4);
-
-		list.add(new Integer(10));
-		list.add(new Integer(11));
-		list.add(new Integer(14));
-		list.add(null);
-		list.add(new Integer(15));
-
-		
-
-		TestClass t = new TestClass();
-//		t.defaultMethod();
-//		t.defaultMethod(123);
-
+		System.out.println("How are <b>you</b>?");
 	}
 
 	public void test() {

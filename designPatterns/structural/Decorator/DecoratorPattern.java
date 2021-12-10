@@ -111,13 +111,13 @@ public class DecoratorPattern {
 		String temp=candidateOne.getSpecialization();
 		System.out.println(temp);
 		
-		Candidate candidateTwo =new ScriptSpecialization(new CollectionSpecialization(new DotNetCandidate()));
+		Candidate candidateTwo = new ThreadSpecialization(new ScriptSpecialization(new CollectionSpecialization(new DotNetCandidate())));
 		temp=candidateTwo.getSpecialization();
 		System.out.println(temp);
-		
-		Candidate candidateThree =new JavaCandidate();
-		temp=candidateThree.getSpecialization();
-		System.out.println(temp);
+//		
+//		Candidate candidateThree =new JavaCandidate();
+//		temp=candidateThree.getSpecialization();
+//		System.out.println(temp);
 		
 	}
 	

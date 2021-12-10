@@ -48,6 +48,10 @@ public class CollectionCompare implements Comparable<CollectionCompare> , Compar
 		System.out.println(" number sort : "+list);
 		
 		Collections.sort(list, (s1,s2)->s1.compareTo(s2) );
+		
+		if(r1.compareTo(r2) ==1) {
+			System.out.println("CollectionCompare.main()");
+		}
 	}
 	
 	public String toString(){

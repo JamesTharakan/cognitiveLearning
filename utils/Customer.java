@@ -46,7 +46,7 @@ public class Customer {
 
 
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + "]";
+		return "[id=" + id + ", name=" + name + "]";
 	}
 
 }

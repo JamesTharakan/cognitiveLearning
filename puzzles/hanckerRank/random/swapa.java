@@ -22,8 +22,8 @@ public class swapa {
 				i = -1;//Math.max(0, i - 2);
 				count++;
 			}
-			System.out.println("-----"+count);
 			JUtil.printIntArray(i + "::", arr);
+			System.out.println("-----"+count);
 		}
 		return count;
 	}
