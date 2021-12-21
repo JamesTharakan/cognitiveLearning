@@ -10,6 +10,7 @@ public class MaxSubArray {
 		int sum = 0;
 		int j = 0;
 		int max =0;
+		int min =0;
 
 		for (int i = 0; i < input.length; i++) {
 			sum += input[i];
@@ -17,12 +18,13 @@ public class MaxSubArray {
 		
 			if (currentWindowSize == n) {
 				max = sum > max ? sum :max ;
+				min = sum < min ? sum :min ;
 				sum = sum - input[j];
 				j++;currentWindowSize--;
 			} 
 		}
 		
 		System.out.println(max);
+		System.out.println(min);
 	}
-
 }

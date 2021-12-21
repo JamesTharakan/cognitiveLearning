@@ -25,6 +25,8 @@ public class TestClass extends TestSuper implements TestInterface {
 
 	public static void main(String s[]) {
 		System.out.println("How are <b>you</b>?");
+		
+		Runtime.getRuntime().gc();
 	}
 
 	public void test() {

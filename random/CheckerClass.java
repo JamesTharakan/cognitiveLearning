@@ -130,10 +130,12 @@ public class CheckerClass {
 		System.out.println(23/100);
 		System.out.println(23%100);
 		
+		System.out.println();
 		System.out.println(23 / 100.0);
 		System.out.println(23 % 100.00);
 		
-		System.out.println(33 / 100.00);
+		System.out.println();
+		System.out.println(33 / 100.000);
 	}
 
 	/**

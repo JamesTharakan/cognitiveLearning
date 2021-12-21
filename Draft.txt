@@ -8,7 +8,7 @@ Bridge
 ************************************************************************************************************************************
 update "Happens Before" 
 
-What is Mutex, Semaphore and Mutex
+What is Mutex, Semaphore
 
 Why wait(), notify() and notifyAll() are in Object Class ?
 
@@ -23,14 +23,28 @@ Telescoping constructor pattern: One constructor with only required fields and m
 
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
 ************************************************************************************************************************************
-Simple recursive algorithms
-Backtracking algorithms
-Divide and conquer algorithms
-Dynamic programming algorithms
-Greedy algorithms
-Branch and bound algorithms
-Brute force algorithms
-Randomized algorithms
+
 ************************************************************************************************************************************
-you can configure CMS GC with a single-threaded young generation collector, but this option has been deprecated in Java 8 and is removed in Java 9.
+1. Create a text(Sentence)
+2. Make the sentence Bold			String labelText = "How are <b>you</b>?";
+3. Make the sentence Italic	:		String labelText = "How are <i>you</i>?";
+4. Change the text colour
 ************************************************************************************************************************************
+Class loaders are responsible for loading Java classes during runtime dynamically to the JVM when required by the application.
+There are different types of built-in class loaders:
+Application or system loader:
+The system or application class loader loads all the application level classes into the JVM. It loads files found in the classpath environment variable.
+Extension class loader:
+The extension class loader is a child of the bootstrap class loader and takes care of loading the extensions of the standard core Java classes so that it's available to all applications running on the platform.
+
+Bootstrap class loader
+This bootstrap class loader is part of the core JVM and is written in native code. Bootstrap class loader serves as a parent of all the other ClassLoader instances.
+
+when requested to find a class or resource, the below steps are followed:
+
+A ClassLoader instance checks if the class was already loaded.
+If not loaded, it delegate the search for the class or resource to its parent class loader before attempting to find the class or resource itself.
+If parent class loader cannot load class, it attempt to load the class or resource by itself.
+************************************************************************************************************************************
+
+
