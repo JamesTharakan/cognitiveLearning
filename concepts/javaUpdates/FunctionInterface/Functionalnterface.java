@@ -1,4 +1,4 @@
-package concepts.javaUpdates.lambda;
+package concepts.javaUpdates.FunctionInterface;
 
 @FunctionalInterface
 interface NoArgFuncInterface{
@@ -18,6 +18,11 @@ interface TwoArgFuncInterface{
 @FunctionalInterface
 interface ReturningFuncInterface{
 	int display();
+}
+
+@FunctionalInterface
+interface LikePredicateFuncInterface{
+	boolean customTest(int x);
 }
 
 @FunctionalInterface
@@ -54,6 +59,10 @@ public class Functionalnterface {
 		
 		ReturningFuncInterface returning = () -> {System.out.println("I return something !!"); return 123;};
 		System.out.println("The value returned is ::"+returning.display());
+		
+		
+		LikePredicateFuncInterface cust = (x) -> {System.out.println("Testing"); return x > 0;};
+		System.out.println("The value returned is ::"+cust.customTest(5));
 		
 		
 		Runnable runnable = () -> {System.out.println("I am a implementation of a FuntionalInterface which does not have any arguments");};

@@ -1,4 +1,4 @@
-package concepts.javaUpdates.lambda;
+package utils;
 
 public class Person {
 	private String firstName;

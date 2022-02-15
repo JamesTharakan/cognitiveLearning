@@ -20,6 +20,8 @@ class test implements Runnable{
 	//An new object is created every time some one tries to modify.
 	//i think that is called thread safe
 	
+//		mutable objects are not thread safe because multiple threads can write to that data at the same time.
+	
 	//Objects are immutable 
 	//Critical section objects are still unsafe/unpredictable without synchronizing.
 					

@@ -20,7 +20,7 @@ public class TestSorting {
 				{13,9,2,25,5}
 		};
 		
-		Sort sortStrategy = getSortObject(SortType.BUBBLE);
+		Sort sortStrategy = simpleStaticSortFactory(SortType.BUBBLE);
 		
 		
 		/*for (int i = 0; i < arr.length; i++) {
@@ -47,7 +47,7 @@ public class TestSorting {
 		
 	}
 
-	static Sort getSortObject(SortType strategy ) {
+	static Sort simpleStaticSortFactory(SortType strategy ) {
 		Sort object = null;
 		switch (strategy) {
 		case HEAP:

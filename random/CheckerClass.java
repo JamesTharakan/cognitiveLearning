@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import utils.JUtil;
  
@@ -39,12 +38,26 @@ public class CheckerClass {
 //		
 //		nonGenericCollection();
 //		
-		floatDivision();
+//		floatDivision();
 
 //		checkArrayClass();
+		
+//		builtInImmutable();
 	}	
 	
-	 private static void maploading() {
+	 private static void builtInImmutable() {
+		 String S = new String("one");
+			System.out.println("1:"+ S.hashCode());
+			S= S+"two";
+			System.out.println("2:"+ S.hashCode());
+			
+			Integer test = Integer.valueOf(1);
+			System.out.println("1:"+ test.hashCode());
+			test++;
+			System.out.println("2:"+ test.hashCode());
+		
+	}
+	private static void maploading() {
 		 HashMap<String, Integer> map = new HashMap<String,Integer>();
 		 
 		 map.put("aba", 1);
@@ -153,6 +166,11 @@ public class CheckerClass {
 		
 		//if not found, it will return the position where it should be inserted
 		System.out.println("position of 10 : "+ Arrays.binarySearch(check, 10));
-		System.out.println("position of 44 : "+ Arrays.binarySearch(check, 55));
+		System.out.println("position of 55 : "+ Arrays.binarySearch(check, 55));
 	}
+
+
 }
+
+
+
