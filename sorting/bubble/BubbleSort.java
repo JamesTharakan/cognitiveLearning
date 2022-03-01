@@ -18,7 +18,7 @@ public class BubbleSort implements Sort {
 		for (int i = 0; i < n-1; i++)
 		   {
 		     swapped = false;
-		     for (int j = 0; j < n-i-1; j++)	
+		     for (int j = 0; j < n-1-i; j++)	
 		     {									//In each cycle the biggest element will be placed in its right position,
 		        if (input[j] > input[j+1])		// so "i" is used to avoid further comparisons on that element	
 		        {

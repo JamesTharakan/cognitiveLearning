@@ -6,6 +6,24 @@ import java.util.Map;
 public class MergeMaps {
 
 	public static void main(String[] args) {
+		
+		String namesss = "tharakan james harvey james";
+		String [] names = namesss.split("\\s");
+		
+		
+
+		Map<String, Integer> resultMapNames = new HashMap<String, Integer>();
+		for (int j = 0; j < names.length; j++) {
+			String key =names[j];
+			
+			if (resultMapNames.containsKey(key)) {
+				resultMapNames.put(key, resultMapNames.get(key)+1);
+			} else {
+				resultMapNames.put(key, 1);
+			}
+		}
+
+		System.out.println("Distinct names in Array :" + resultMapNames );
 
 		int[] input = { 1, 2, 3, 2 ,2};
 
@@ -15,6 +33,8 @@ public class MergeMaps {
 		}
 
 		System.out.println("Distinct numbers in Array :" + resultMap + " Occur of 3:" + resultMap.get(3));
+			
+		
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 		Map<Integer, Integer> mapA = new HashMap<Integer, Integer>();
 		Map<Integer, Integer> mapB = new HashMap<Integer, Integer>();

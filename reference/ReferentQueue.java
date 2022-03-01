@@ -10,8 +10,9 @@ public class ReferentQueue {
 	public static void main(String[] args) {
 		WhatIsHappenig wih = new WhatIsHappenig();
 		ReferenceQueue referenceQueue = new ReferenceQueue();
+		
 		WeakReference softRef = new WeakReference(wih, referenceQueue);
-
+		System.out.println("Initially from weakReference : "+softRef.get());
 		wih = null;
 		System.gc();
 		try {Thread.sleep(2000);} catch (Exception ignored) {}
@@ -21,18 +22,18 @@ public class ReferentQueue {
 		if (back != null) {
 			if(back==softRef)
 				System.out.println("It is same but i cant use the object");
-			//however i can do something else, like, thing to do after some object is GCed 
-			
+			//however i can do something else like preparing the related objects for GC or 
+			//thing to do after some object is GCed 
 			WhatIsHappenig wihObject = (WhatIsHappenig) back.get();
-			System.out.println("After " + wihObject);
-			
+			System.out.println("After " + wihObject); // this will be always null as the object is GCed
 //			wihObject.someMethod();
 		} else {
-			System.out.println("Did not get anything");
+			System.out.println("Did not get anything, must be GCed by now");
 		}
 	}
 
 }
+class Customer{}
 
 class WhatIsHappenig {
 

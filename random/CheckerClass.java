@@ -1,6 +1,7 @@
 
 package random;
 
+import java.io.FileNotFoundException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,9 +44,29 @@ public class CheckerClass {
 //		checkArrayClass();
 		
 //		builtInImmutable();
+		
+		
+//		checkedException(); //Compiler checks if these exception are handled(catch or throw) by the program
+		
+//		uncheckedException();
 	}	
 	
-	 private static void builtInImmutable() {
+	private static void checkedException()/* throws FileNotFoundException */ {
+		try{
+			throw new FileNotFoundException();
+		}catch(FileNotFoundException ex) {
+			System.out.println("We have to catch or declare as it throws a checked exception");
+		}
+		
+		
+		
+	}
+	private static void uncheckedException() {
+		System.out.println("We dont catch or declare, as it throws a UNchecked exception ");
+		 throw new NullPointerException();
+//		 throw new ArithmeticException();  //unreachable code
+	}
+	private static void builtInImmutable() {
 		 String S = new String("one");
 			System.out.println("1:"+ S.hashCode());
 			S= S+"two";

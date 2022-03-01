@@ -14,10 +14,10 @@ public class TestSorting {
 		
 		int arr[][]= {
 					{ 12, 10, 3, 11, -1, 2, 2, 100 },
-					{ 77,22,23 },
-					{1,2,3,4,5,6,7},
-					{7,6,5,4,3,2,1},
-				{13,9,2,25,5}
+//					{ 77,22,23 },
+//					{1,2,3,4,5,6,7},
+//					{7,6,5,4,3,2,1},
+//				{13,9,2,25,5}
 		};
 		
 		Sort sortStrategy = simpleStaticSortFactory(SortType.BUBBLE);
