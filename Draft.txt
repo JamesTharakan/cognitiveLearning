@@ -24,15 +24,4 @@ Instead of "new Object()"  we are calling Factory.createNewObjet(parameters). Ho
 There is or there must be some bussiness logic that dynamically determines which object has to be created.
 
 ************************************************************************************************************************************
-The JVM consists of three distinct components:
-
-Class Loader
-Runtime Memory/Data Area
 Execution Engine
-
-Class Loader :
-	The JVM uses the ClassLoader.loadClass() method for loading the class into memory. It tries to load the class based on a fully qualified name.
-The first class to be loaded into memory is usually the class that contains the main() method. There are three phases in the class loading process: loading, linking, and initialization.
-
-Loading :	
-	Loading involves taking the bytecode of a class with a particular name, and generating the original class.
