@@ -5,6 +5,7 @@ $ git branch -d branch_name
 $ git branch -D branch_name
 Test: create remoteBranch
 Test: Line 2 without merge
+Test: Line 3 , after merging the PR
 $ git push origin --delete <branch_name>
 deletes the remote branch
 ==========================================================================================
@@ -41,8 +42,8 @@ https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
 $ git remote
 origin
 
-To see which remote servers you have configured, you can run the git remote command.It lists the shortnames of each remote handle you’ve specified.
-If you’ve cloned your repository, you should at least see origin,that is the default name Git gives to the server you cloned from.
+To see which remote servers you have configured, you can run the git remote command.It lists the shortnames of each remote handle youâ€™ve specified.
+If youâ€™ve cloned your repository, you should at least see origin,that is the default name Git gives to the server you cloned from.
 
 $ git remote -v
 origin  https://github.com/JamesTharakan/cognitiveLearning.git (fetch)
@@ -55,7 +56,7 @@ git reset HEAD <filePath>
 ======================================================================================
 git log --branches --not --remotes=origin
 Shows all commits that are in any of local branches but not in any of remote-tracking branches for origin
- (what you have that origin doesn’t).
+ (what you have that origin doesnâ€™t).
 ======================================================================================
 
 git checkout -b branchname origin/branchname
