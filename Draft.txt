@@ -24,4 +24,18 @@ Instead of "new Object()"  we are calling Factory.createNewObjet(parameters). Ho
 There is or there must be some bussiness logic that dynamically determines which object has to be created.
 
 ************************************************************************************************************************************
-Execution Engine
+Maven :
+	Build Tool 
+	Project management tool 	
+	Java Based
+
+************************************************************************************************************************************
+Streams :
+
+maps
+filters
+
+Terminal operators:
+	forEach
+	Collec()
+	
