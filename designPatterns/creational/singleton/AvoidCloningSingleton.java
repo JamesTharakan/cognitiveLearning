@@ -15,6 +15,10 @@ public class AvoidCloningSingleton {
 
 }
 
+/**
+ * Singleton class avoiding clone
+ *
+ */
 class cannotCloneMe {
 
 	private static cannotCloneMe instance = null;

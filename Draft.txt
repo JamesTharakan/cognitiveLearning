@@ -30,6 +30,11 @@ Maven :
 	Java Based
 
 ************************************************************************************************************************************
+ Docker is essentially a toolkit that enables developers to manage(build, deploy, run, update, and stop) containers using simple commands
+
+
+
+************************************************************************************************************************************
 Streams :
 
 maps
