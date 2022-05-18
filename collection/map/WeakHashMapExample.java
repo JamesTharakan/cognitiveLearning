@@ -5,6 +5,13 @@ import java.util.WeakHashMap;
 
 import utils.Customer;
 
+/**
+ * General usecase of WeakHashMap
+ * We are trying to save current object in weakHashMap before moving on to next object.
+ * So we can come back and check on the old object if it is not yet GCed. 
+ * 
+ * This becomes very useful if the construction of the object is expensive(time or resource) 
+ */
 public class WeakHashMapExample {
 
 	public static void main(String[] args) {
@@ -12,7 +19,7 @@ public class WeakHashMapExample {
 		
 		WeakHashMap<Customer,String> wm = new WeakHashMap<Customer,String>();
 		
-		wm.put(custOne, "myValue");
+		wm.put(custOne, "WeakHashMap");
 		System.out.println("Before :"+wm);
 		
 		custOne = null;
@@ -24,10 +31,10 @@ public class WeakHashMapExample {
 		
 		HashMap<Customer,String> m = new HashMap<Customer,String>();
 		
-		m.put(custTwo, "myValue");
+		m.put(custTwo, "HashMap");
 		System.out.println("Before :"+m);
 		
-		custOne = null;
+		custTwo = null;
 		System.gc();
 		System.out.println("After :"+m);
 

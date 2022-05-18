@@ -21,14 +21,23 @@ public class CopyConstructor {
 		base.add(1);
 		System.out.println("Base :"+base );
 		
-		List<Integer> copy = new ArrayList<>(base);
+		List<Integer> copy = new ArrayList<>(base); 	//Even though a new operator is used 
+		
+		System.out.println("base : "+ base.hashCode());
+		System.out.println("copy : "+ copy.hashCode());
+		
 		copy.add(2);
 		System.out.println("\nBase" +base);
 		System.out.println("Copy" +copy);
 		
+		System.out.println("Hascode of base after insert to copy : "+ base.hashCode());
+		System.out.println("Hascode of copy after insert to copy : "+ copy.hashCode());
 		
-		List<Integer> addAll = new ArrayList<>();
+		List<Integer> addAll= new ArrayList<>();
 		addAll.addAll(copy);
+		System.out.println("Hashcode of addAll : "+ addAll.hashCode());
+		
+		
 		System.out.println("\nBase" +copy);
 		System.out.println("Copy" +copy);
 		System.out.println("addAll" +addAll);

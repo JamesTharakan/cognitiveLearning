@@ -17,24 +17,6 @@ Telescoping constructor pattern: One constructor with only required fields and m
 
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
 ************************************************************************************************************************************
-FactoryPattern:
-It is about creating an object. When/Who creates it
-
-Instead of "new Object()"  we are calling Factory.createNewObjet(parameters). How is it going to make difference
-There is or there must be some bussiness logic that dynamically determines which object has to be created.
-
-************************************************************************************************************************************
-Maven :
-	Build Tool 
-	Project management tool 	
-	Java Based
-
-************************************************************************************************************************************
- Docker is essentially a toolkit that enables developers to manage(build, deploy, run, update, and stop) containers using simple commands
-
-
-
-************************************************************************************************************************************
 Streams :
 
 maps

@@ -11,16 +11,27 @@ public class SerializationUtil {
 	
 	
 	public static ObjectOutputStream serialize(Object object, String fileName) throws FileNotFoundException, IOException{
-		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName));
+		
+		FileOutputStream fos = new FileOutputStream(fileName);
+		ObjectOutputStream out = new ObjectOutputStream(fos);
 		out.writeObject(object);
+		
+		fos.close();
+		out.close();
+		
 		return out;
 		
 	}
 	
 	public static Object deSerialize(String fileName) throws FileNotFoundException, IOException, ClassNotFoundException {
-		ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName));
-		return  in.readObject();
 		
+		FileInputStream fis =  new FileInputStream(fileName);
+		ObjectInputStream in = new ObjectInputStream(fis);
+		
+		fis.close();
+		in.close();
+		
+		return  in.readObject();
 	}
 
 }

@@ -1,5 +1,6 @@
 package collection.map;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class IterateHashMap {
 	    System.out.println("\nIndependent handling using Entry class");
 	    while (it.hasNext()) {
 	        Map.Entry pair = (Map.Entry)it.next();
-	        System.out.print(pair.getKey() + " = " + pair.getValue());
+	        System.out.print(pair.getKey() + " : " + pair.getValue());
 	        it.remove(); // avoids a ConcurrentModificationException
 	    }
 	    System.out.println(" ");
@@ -51,6 +52,12 @@ public class IterateHashMap {
 		map=createMap();
 		System.out.println("\nIndependent handling using ForEach");
 		map.forEach((k,v) -> System.out.print(k+","+v+ "  "));
+		
+		
+		ArrayList<Integer> arr = new ArrayList<Integer>(5);
+		arr.add(1);arr.add(2);arr.add(3);arr.add(4);
+		System.out.println("\n");
+		arr.forEach(item ->System.out.print(item));
 		 
 	}
 }
