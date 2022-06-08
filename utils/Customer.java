@@ -25,21 +25,17 @@ public class Customer {
 
 
 	public Customer() {
-		super();
 	}
 	public Customer(String name) {
-		super();
 		this.name = name;
 	}
 
 	public Customer(int id) {
-		super();
 		this.id = id;
 	}
 
 
 	public Customer(int id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
