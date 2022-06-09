@@ -2,22 +2,14 @@ package designPatterns.behavioural.iterator;
 
 import java.util.Iterator;
 
-public class India implements ScoreBoard {
+public class India implements Team {
 
-	int score[];
-	Iterator itr;
+	int score[]=new int[] { 7, 5, 9, 2, 3 };
+	Iterator itr = new ArrayIterator(this.score);
 
-	public India(int[] score) {
-		super();
-		this.score = score;
-		itr = new ArrayIterator(this.score);
+
+	public Iterator getCustomIterator() {
+		return itr;
 	}
 
-	public void printScore() {
-
-		while (itr.hasNext()) {
-			System.out.print(itr.next() + " ");
-		}
-		System.out.println();
-	}
 }

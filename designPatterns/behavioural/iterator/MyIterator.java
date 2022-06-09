@@ -1,5 +1,7 @@
 package designPatterns.behavioural.iterator;
 
+import java.util.Iterator;
+
 /**
  * Using the Iterator pattern, the client class(MyIterator.java) will never know
  * the internal data structure used to store the data(Score).
@@ -14,15 +16,28 @@ package designPatterns.behavioural.iterator;
  *
  */
 public class MyIterator {
-	static ScoreBoard sr = null;
+	static Team team = null;
+	static Iterator itr;
 
 	public static void main(String[] args) {
-		
-		sr = new India(new int[] { 7, 5, 9, 2, 3 });
-		sr.printScore();
 
-		sr = new Pakistan(new int[] { 1, 2, 3, 4, 5, 6 });
-		sr.printScore();
+		team = new India();
+		itr = team.getCustomIterator();
+
+		while (itr.hasNext()) {
+			System.out.print(itr.next() + " ");
+		}
+		System.out.println();
+		
+		
+		
+
+		team = new Pakistan();
+		itr = team.getCustomIterator();
+		while (itr.hasNext()) {
+			System.out.print(itr.next() + " ");
+		}
+		System.out.println();
 	}
 
 }
