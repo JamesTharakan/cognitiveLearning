@@ -35,7 +35,7 @@ public class QuickSort implements Sort{
 				pIndex++;
 			}
 		}
-		swap(input, end, pIndex);
+		swap(input, end, pIndex); //end:pivot index
 		return pIndex;
 	}
 

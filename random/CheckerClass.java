@@ -18,14 +18,18 @@ public class CheckerClass {
 	void test(){
 		int x = interest;
 		int y = NonStaticInterest;
+
 	}
 	static void  Statictest(){
 		int x = interest;
 //		int y = NonStaticInterest;
 	}
 
+
 	public static void main(String[] args) {
-		
+		new CheckerClass().test();
+
+		noDefaultValuesForLocalVariables();
 
 //		maploading();
 		
@@ -51,6 +55,12 @@ public class CheckerClass {
 //		uncheckedException();
 	}	
 	
+	// Only instance level variables will have default values
+	private static void noDefaultValuesForLocalVariables() {
+		 int ii ; boolean bb;
+//		System.out.println("CheckerClass.main()"+ bb +" "+ ii);
+		
+	}
 	private static void checkedException()/* throws FileNotFoundException */ {
 		try{
 			throw new FileNotFoundException();

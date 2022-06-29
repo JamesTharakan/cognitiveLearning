@@ -42,4 +42,18 @@ public class BubbleSort implements Sort {
 		input[j] = temp;
 	}
 	
+	public void simpleForm(int[] input) {
+
+		int n = input.length;
+		
+		for (int i = 0; i < n-1; i++)
+		   {
+		     for (int j = 0; j < n-1-i; j++)	
+		     {									
+		        if (input[j] > input[j+1])			
+		           swap(input, j, j+1);
+		     }
+		   }
+	}
+	
 }

@@ -44,5 +44,9 @@ public class Customer {
 	public String toString() {
 		return "[id=" + id + ", name=" + name + "]";
 	}
+	
+	public int hascode() {
+		return name.length();
+	}
 
 }

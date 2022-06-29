@@ -14,11 +14,11 @@ public class SerializationUtil {
 		
 		FileOutputStream fos = new FileOutputStream(fileName);
 		ObjectOutputStream out = new ObjectOutputStream(fos);
-		out.writeObject(object);
 		
+		out.writeObject(object); //If Custom writeObject is defined, it will call that 
+
 		fos.close();
 		out.close();
-		
 		return out;
 		
 	}
@@ -28,10 +28,12 @@ public class SerializationUtil {
 		FileInputStream fis =  new FileInputStream(fileName);
 		ObjectInputStream in = new ObjectInputStream(fis);
 		
+		Object  obj = in.readObject(); //If Custom readObject is defined, it will call that
+		
 		fis.close();
 		in.close();
 		
-		return  in.readObject();
+		return  obj;
 	}
 
 }
