@@ -7,17 +7,11 @@ import java.util.concurrent.locks.ReentrantLock;
 public class newConditionExample {
 
 	public static void main(String[] args) {
-		
 			
 		   final Lock lock = new ReentrantLock();
 		   final Condition notFull  = lock.newCondition(); 
 		   final Condition notEmpty = lock.newCondition();
-		   
-		   
-		   
-
 	}
-
 }
 
 //	https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html

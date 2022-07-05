@@ -10,21 +10,21 @@ import java.util.Iterator;
  */
 public class ArrayListIterator implements Iterator {
 	int index = 0; // Taking the responsibility to the iterator object
-	ArrayList arraylist;
+	ArrayList nameslist;
 
-	ArrayListIterator(ArrayList arraylist) {
-		this.arraylist = arraylist;
+	ArrayListIterator(ArrayList names) {
+		this.nameslist = names;
 	}
 
 	public boolean hasNext() {
-		if (index <= (arraylist.size() - 1))
+		if (index <= (nameslist.size() - 1))
 			return true;
 
 		return false;
 	}
 
 	public Object next() {
-		return arraylist.get(index++);
+		return nameslist.get(index++);
 
 	}
 }

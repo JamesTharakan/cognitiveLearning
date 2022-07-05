@@ -6,7 +6,7 @@ import java.util.WeakHashMap;
 import utils.Customer;
 
 /**
- * General usecase of WeakHashMap
+ * General usecase of WeakHashMap( In general Weakxxx or Softxxx)
  * We are trying to save current object in weakHashMap before moving on to next object.
  * So we can come back and check on the old object if it is not yet GCed. 
  * 
@@ -15,19 +15,19 @@ import utils.Customer;
 public class WeakHashMapExample {
 
 	public static void main(String[] args) {
-		Customer custOne= new Customer(1, "one");
+		Customer custOne= new Customer(1);
 		
-		WeakHashMap<Customer,String> wm = new WeakHashMap<Customer,String>();
+		WeakHashMap<Customer,String> whp = new WeakHashMap<Customer,String>();
 		
-		wm.put(custOne, "WeakHashMap");
-		System.out.println("Before :"+wm);
+		whp.put(custOne, "WeakHashMap");
+		System.out.println("Before :"+whp);
 		
 		custOne = null;
 		System.gc();
-		System.out.println("After :"+wm); //Entry in WeakHashMap is removed as the referent is not reachable.
+		System.out.println("After :"+whp); //Entry in WeakHashMap is removed as the referent is not reachable.
 		
 		
-		Customer custTwo= new Customer(2,"two");
+		Customer custTwo= new Customer(2);
 		
 		HashMap<Customer,String> m = new HashMap<Customer,String>();
 		

@@ -17,7 +17,7 @@ package designPatterns.creational.singleton;
  */
 
 public class EarlyInitialization {
-	private static EarlyInitialization instance = new EarlyInitialization();
+	private static EarlyInitialization instance = new EarlyInitialization(); //Create early , when the class is loaded
 	
 
 	public static EarlyInitialization Instance() {

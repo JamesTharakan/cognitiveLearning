@@ -5,7 +5,7 @@ public class LazyInitialization {
 	private static LazyInitialization instance = null	;
 	
 
-	public static LazyInitialization getInstance() {
+	public static LazyInitialization getInstance() {	//create the object , when the  static method is called
 		if(instance==null)
 			instance = new LazyInitialization();
 			

@@ -15,7 +15,8 @@ public class ConsumerFI {
 		
 //		the statement(s) in forEach is the example of implementation of the
 //		functional Interface Consumer which takes an argument and does not return anything.
-//		This FI is implemented using lambda
+
+//		THIS Consumer FI IS IMPLEMENTED USING LAMBDA
 		people.forEach(p -> {
 								System.out.println(p);
 							}

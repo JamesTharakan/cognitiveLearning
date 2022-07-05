@@ -6,11 +6,11 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class streamMethods {
+public class StreamMethods {
 
 	public static void main(String[] args) {
 
-		streamMethods caller = new streamMethods();
+		StreamMethods caller = new StreamMethods();
 		
 		
 		caller.orElse();
@@ -27,6 +27,7 @@ public class streamMethods {
 		customers.add(new Customer("Something"));
 		customers.add(new Customer("tharakan"));
 		customers.add(new Customer("James"));
+		
 		Customer orElse = customers.stream().filter(tempCust -> "Bames".equals(tempCust.getName()))
 				.findAny()
 				.orElse(null);

@@ -8,6 +8,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import utils.JUtil;
  
@@ -29,7 +31,7 @@ public class CheckerClass {
 	public static void main(String[] args) {
 		new CheckerClass().test();
 
-		noDefaultValuesForLocalVariables();
+//		noDefaultValuesForLocalVariables();
 
 //		maploading();
 		
@@ -41,7 +43,7 @@ public class CheckerClass {
 //		
 //		NoPloymorphismInGenerics(new ArrayList<String>());  //Should pass Object !!
 //		
-//		nonGenericCollection();
+		nonGenericCollection();
 //		
 //		floatDivision();
 
@@ -53,7 +55,24 @@ public class CheckerClass {
 //		checkedException(); //Compiler checks if these exception are handled(catch or throw) by the program
 		
 //		uncheckedException();
+		
+		boundedBlockingQueues();
 	}	
+	
+	private static void boundedBlockingQueues() {
+		ArrayList<Object> al = new ArrayList<Object>(5);
+		System.out.println("Inital size of arraylist created with a defined size :"+al.size());
+		
+		BlockingQueue <Object>blockingQueue = new LinkedBlockingQueue<Object>(5);
+		
+		for (int i = 1; i <= 6; i++) {
+			System.out.println("Size: "+blockingQueue.size());
+			blockingQueue.add( new Object());
+		}
+		
+		
+		
+	}
 	
 	// Only instance level variables will have default values
 	private static void noDefaultValuesForLocalVariables() {
@@ -162,6 +181,8 @@ public class CheckerClass {
 			Object temp = it.next();
 			if( temp instanceof String){
 				System.out.println("" +temp);
+			}else {
+				System.out.println(temp.getClass());
 			}
 		}
 		

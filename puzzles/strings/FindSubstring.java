@@ -11,11 +11,11 @@ public class FindSubstring {
 		for (int tempIndex =0; tempIndex<=main.length(); ) {
 			tempIndex = main.indexOf(find, tempIndex);
 			if(tempIndex ==-1) {
-				System.out.println("FindSubstring.main():: Count :"+count);
+				System.out.println("Total occurences of subString  :"+count);
 				break;
 			}else {
 				count++;
-				System.out.println("FindSubstring.main():: "+tempIndex);
+				System.out.println("Found at index:: "+tempIndex);
 				tempIndex = tempIndex+find.length();
 			}
 		}

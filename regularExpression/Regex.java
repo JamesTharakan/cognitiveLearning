@@ -23,7 +23,7 @@ public class Regex {
 //			for (int i = 1; i <= m.groupCount(); i++) {
 //				System.out.println("Found value: " + m.group(i));
 //			}
-			System.out.println("Match "+count+ "-> Start : "+m.start() + " End :"+m.end());
+			System.out.println("Match "+count+ "-> Starting at : "+m.start() + " to :"+m.end());
 			
 		}
 		

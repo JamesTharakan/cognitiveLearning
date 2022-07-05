@@ -5,21 +5,20 @@ import java.util.Iterator;
 
 public class Pakistan implements Team {
 
-	int input[] = { 1, 2, 3, 4, 5, 6 };
+	String input[] = { "p1", "p2", "p3", "p4", "p5", "p6" };
 	Iterator itr;
 
 	public Pakistan() {
-		ArrayList score = new ArrayList(2);
-		for (int i : input)
-			score.add(input[i-1]);
+		ArrayList names = new ArrayList(2);
+		for (String s : input)
+			names.add(s);
 
-		itr = new ArrayListIterator(score);
+		itr = new ArrayListIterator(names);
 	}
 
 	
 
-	public Iterator getCustomIterator() {
-		// TODO Auto-generated method stub
+	public Iterator getTeamMemberIterator() {
 		return itr;
 	}
 }

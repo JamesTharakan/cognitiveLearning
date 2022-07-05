@@ -6,7 +6,7 @@ public class GenerateBinary {
 
 	public static void main(String[] args) {
 		
-		int decimal = 12;
+		int decimal = 2;
 		
 		MyStack stack = new MyStack(10);
 		String binary = "";

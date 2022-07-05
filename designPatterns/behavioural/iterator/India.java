@@ -4,11 +4,11 @@ import java.util.Iterator;
 
 public class India implements Team {
 
-	int score[]=new int[] { 7, 5, 9, 2, 3 };
-	Iterator itr = new ArrayIterator(this.score);
+	String names[]=new String[] { "i7", "i5", "i9", "i2", "i3" };
+	Iterator itr = new ArrayIterator(this.names);
 
 
-	public Iterator getCustomIterator() {
+	public Iterator getTeamMemberIterator() {
 		return itr;
 	}
 

@@ -31,7 +31,7 @@ interface isAnnotationNeeded{
 }
 
 @FunctionalInterface
-interface canHaveOtherMethods {
+interface CanHaveOtherMethods {
 	void display();		//Only one abstract method
 
 	default void defaultMethod() {			//the default is not access specifier, it means default implementation
@@ -42,6 +42,14 @@ interface canHaveOtherMethods {
 		System.out.println("Static methods");
 	}
 
+}
+
+
+@FunctionalInterface
+interface WithAnnotionsAndExtraMethod {//compiler error
+	void display();		//Only one abstract method
+
+	 public void ExtraMethod();
 }
 
 public class Functionalnterface {
@@ -72,9 +80,9 @@ public class Functionalnterface {
 		annotationNeeded.display();
 		
 		
-		canHaveOtherMethods otherMethods = () -> {System.out.println("canHaveOtherMethods");};
+		CanHaveOtherMethods otherMethods = () -> {System.out.println("canHaveOtherMethods");};
 		otherMethods.defaultMethod();
-		canHaveOtherMethods.staticMethod();
+		CanHaveOtherMethods.staticMethod();
 		
 	}
 

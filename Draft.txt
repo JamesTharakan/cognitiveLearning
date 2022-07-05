@@ -6,16 +6,16 @@ Decorator
 Bridge
 ************************************************************************************************************************************
 update "Happens Before"
-What is Mutex, Semaphore
+
 Why wait(), notify() and notifyAll() are in Object Class ?
-What is ThreadGroup 
-Analyzed Thread Dumps
+
 ************************************************************************************************************************************
 Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.
 
 Telescoping constructor pattern: One constructor with only required fields and many other construtors with different combinations of optional fields. Difficult to mantain and bug prone.
 
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
+
 ************************************************************************************************************************************
 Streams :
 
@@ -26,8 +26,5 @@ Terminal operators:
 	forEach
 	Collec()
 	
-	
 A Priority Queue is different from a normal queue, because instead of being a “first-in-first-out”, values come out in order by priority. 
-	
-	
 ************************************************************************************************************************************

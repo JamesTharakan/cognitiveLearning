@@ -9,21 +9,21 @@ import java.util.Iterator;
  */
 public class ArrayIterator implements Iterator {
 	int index = 0; // Taking the responsibility to the iterator object
-	int arrayInt[];
+	String namesArr[];
 
-	ArrayIterator(int score[]) {
-		arrayInt = score;
+	ArrayIterator(String names[]) {
+		namesArr = names;
 	}
 
 	public boolean hasNext() {
-		if (index <= (arrayInt.length - 1))
+		if (index <= (namesArr.length - 1))
 			return true;
 
 		return false;
 	}
 
 	public Object next() {
-		return arrayInt[index++];
+		return namesArr[index++];
 
 	}
 }

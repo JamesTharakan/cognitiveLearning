@@ -2,7 +2,7 @@ package utils;
 
 public class Customer {
 
-	private int id;
+	private int id =-1;
 	private String name;
 
 	
@@ -42,7 +42,8 @@ public class Customer {
 
 
 	public String toString() {
-		return "[id=" + id + ", name=" + name + "]";
+
+		return "[id=" + id + ",name=" + name + "]";
 	}
 	
 	public int hascode() {

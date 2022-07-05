@@ -16,28 +16,23 @@ import java.util.Iterator;
  *
  */
 public class MyIterator {
-	static Team team = null;
-	static Iterator itr;
 
 	public static void main(String[] args) {
 
-		team = new India();
-		itr = team.getCustomIterator();
+		printTeam(new India());
 
+		printTeam(new Pakistan());
+		
+	}
+
+	private static void printTeam(Team team) {
+		
+		Iterator itr = team.getTeamMemberIterator();
 		while (itr.hasNext()) {
 			System.out.print(itr.next() + " ");
 		}
 		System.out.println();
 		
-		
-		
-
-		team = new Pakistan();
-		itr = team.getCustomIterator();
-		while (itr.hasNext()) {
-			System.out.print(itr.next() + " ");
-		}
-		System.out.println();
 	}
 
 }

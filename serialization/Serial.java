@@ -53,6 +53,7 @@ class Emp extends Company implements Serializable{
 		setYear((Integer) ois.readObject());
 	}
 	
+//	Override this method if we want to serialize any custom data but must call default Write/readObject method
 	private void writeObject(ObjectOutputStream oos) throws IOException{
 		oos.defaultWriteObject();		//This call is must
 

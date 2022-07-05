@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class IterateHashMap {
 	private static HashMap <Integer,Integer> createMap() {
@@ -41,7 +42,7 @@ public class IterateHashMap {
 		Iterator it = mp.entrySet().iterator();
 	    System.out.println("\nIndependent handling using Entry class");
 	    while (it.hasNext()) {
-	        Map.Entry pair = (Map.Entry)it.next();
+	        Entry pair = (Entry)it.next();
 	        System.out.print(pair.getKey() + " : " + pair.getValue());
 	        it.remove(); // avoids a ConcurrentModificationException
 	    }

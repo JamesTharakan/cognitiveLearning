@@ -9,10 +9,12 @@ import java.lang.ref.WeakReference;
 public class ReferentQueue {
 	public static void main(String[] args) {
 		WhatIsHappenig wih = new WhatIsHappenig();
-		ReferenceQueue referenceQueue = new ReferenceQueue();
+		ReferenceQueue <WhatIsHappenig>referenceQueue = new ReferenceQueue<WhatIsHappenig>();
 		
-		WeakReference softRef = new WeakReference(wih, referenceQueue);
-		System.out.println("Initially from weakReference : "+softRef.get());
+		
+		
+		WeakReference <WhatIsHappenig>weakRef = new WeakReference<WhatIsHappenig>(wih, referenceQueue);
+		System.out.println("Initially from weakReference : "+weakRef.get());
 		wih = null;
 		System.gc();
 		try {Thread.sleep(2000);} catch (Exception ignored) {}
@@ -20,7 +22,7 @@ public class ReferentQueue {
 		WeakReference back = (WeakReference) referenceQueue.poll();
 
 		if (back != null) {
-			if(back==softRef)
+			if(back==weakRef)
 				System.out.println("It is same but i cant use the object");
 			//however i can do something else like preparing the related objects for GC or 
 			//thing to do after some object is GCed 

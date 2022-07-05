@@ -2,7 +2,7 @@ package threads.readWriteLock;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class myReadWriteLock {
+public class MyReadWriteLock {
 
 	public static void main(String[] args) {
 		

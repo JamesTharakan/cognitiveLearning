@@ -7,11 +7,14 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+import io.ByteArrayOutputStream;
+
 public class SerializationUtil {
 	
 	
 	public static ObjectOutputStream serialize(Object object, String fileName) throws FileNotFoundException, IOException{
 		
+//		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		FileOutputStream fos = new FileOutputStream(fileName);
 		ObjectOutputStream out = new ObjectOutputStream(fos);
 		
