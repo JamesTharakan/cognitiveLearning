@@ -3,6 +3,8 @@ package collection;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 
+import utils.Customer;
+
 public class PQueue {
 
 	public static void main(String[] args) {
@@ -30,6 +32,15 @@ public class PQueue {
 		while (pq.peek() != null) {
 			System.out.print(pq.poll() + " ");
 		}
+		
+		//realUSeCase();
+	}
+	
+	
+	public static  void realUSeCase(){
+		PriorityQueue pq = new PriorityQueue<Customer>();
+		
+		pq.add(new Customer());
 	}
 
 }

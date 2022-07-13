@@ -7,7 +7,6 @@ import utils.JUtil;
 /**
  *In each cycle the biggest element will be placed in its right position.
  *We run the outer loop n.length number of times  OR  there is atleast one swap in the inner loop 
- * @author jtharaka
  */
 public class BubbleSort implements Sort {
 
@@ -15,10 +14,10 @@ public class BubbleSort implements Sort {
 
 		boolean swapped =true;
 		int n = input.length;
-		for (int i = 0; i < n-1; i++)
+		for (int i = 0; i < n-1; i++)		// this i used reduce the outer length for inner loop 
 		   {
 		     swapped = false;
-		     for (int j = 0; j < n-1-i; j++)	
+		     for (int j = 0; j < (n-1)-i; j++)	
 		     {									//In each cycle the biggest element will be placed in its right position,
 		        if (input[j] > input[j+1])		// so "i" is used to avoid further comparisons on that element	
 		        {

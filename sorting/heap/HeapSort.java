@@ -7,6 +7,15 @@ import sorting.strategyPattern.Sort;
  * Build the MaxHeap. Exchange the root with the last element. Repeat
  */
 public class HeapSort implements Sort{
+	
+	public static void main (String[] args) {
+		int[] input = { 0, 11, 52, 3, 5, 36, 17, 8 };
+		new HeapSort().sort(input);
+		
+		for (int i = 0; i < input.length; i++) {
+			System.out.print(input[i]+" ");
+		}
+	}
 
 	public void  sort(int arr[]) {
 		int n = arr.length;
