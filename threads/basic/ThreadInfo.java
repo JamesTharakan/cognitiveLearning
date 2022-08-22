@@ -13,6 +13,9 @@ public class ThreadInfo {
 		
 		System.out.println(" State : " + Thread.currentThread().getState());
 		System.out.println(" isAlive : " + Thread.currentThread().isAlive());
+		
+		
+		System.out.println(" Available Processors: "+Runtime.getRuntime().availableProcessors());
 
 	}
 

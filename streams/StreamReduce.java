@@ -10,7 +10,7 @@ public class StreamReduce {
 
 
 		int[] inputArray = {5,8,1,3,7,5,1,5};
-		System.out.println("\n\nSimple API total:"+Arrays.stream(inputArray).sum());
+		System.out.println("Simple API total:"+Arrays.stream(inputArray).sum());
 		
 		List<Integer> total = Arrays.asList(1,2,3,4);
 		Optional<Integer> Optionaltotal = total.stream().reduce((a,b)-> a+b);

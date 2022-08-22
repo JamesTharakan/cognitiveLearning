@@ -43,7 +43,7 @@ public class CheckerClass {
 //		
 //		NoPloymorphismInGenerics(new ArrayList<String>());  //Should pass Object !!
 //		
-		nonGenericCollection();
+//		nonGenericCollection();
 //		
 //		floatDivision();
 
@@ -56,8 +56,43 @@ public class CheckerClass {
 		
 //		uncheckedException();
 		
-		boundedBlockingQueues();
+//		boundedBlockingQueues();
+		
+		
+//		cha();
+		nuller();
 	}	
+	
+	private static void nuller() {
+		List<Object> objs = new ArrayList<Object>();
+		
+		System.out.println("CheckerClass.nuller()"+ objs.isEmpty());
+
+		for (int i = 0; i < objs.size(); i++) {
+			System.out.println("CheckerClass.nuller()");
+		}
+		System.out.println("CheckerClass.nuller():: out ");
+		
+		
+	}
+	
+	private static void cha() {
+		char captialA = 65;
+		char captialZ = 90;
+		
+		char smallA = 97;
+		char smallZ = 122;
+		
+		
+		System.out.println(captialA);
+		System.out.println(captialZ);
+		
+		
+		System.out.println(smallA);
+		System.out.println(smallZ);
+		
+	}
+
 	
 	private static void boundedBlockingQueues() {
 		ArrayList<Object> al = new ArrayList<Object>(5);

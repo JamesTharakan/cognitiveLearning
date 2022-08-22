@@ -22,7 +22,7 @@ public class MyCallable {
 		
 		try {
 			System.out.println("Waiting for result. "+ " isCancelled :"+ft.isCancelled()+ " isDone :"+ft.isDone());
-			System.out.println(ft.get(1,TimeUnit.SECONDS));
+			System.out.println(ft.get(5,TimeUnit.SECONDS));
 			
 		} catch (InterruptedException | ExecutionException | TimeoutException e) {
 			e.printStackTrace();

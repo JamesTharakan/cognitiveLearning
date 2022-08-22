@@ -28,3 +28,63 @@ Terminal operators:
 	
 A Priority Queue is different from a normal queue, because instead of being a “first-in-first-out”, values come out in order by priority. 
 ************************************************************************************************************************************
+One of the devOps tool for a better project management. Maven is written in Java and is used to build projects written in C#, Scala, Ruby, etc. Based on the Project Object Model (POM).
+
+Handles :
+  Builds,Documentation,Dependencies,Reports ,SCMs,Distribution,Releases,Mailing list
+
+Download dependencies
+
+
+The build tool compiles and packages the code into an executable form.
+A Maven plugin refers to the group of goals that may or may not be in the same phase
+
+
+Phases of the build life cycle: :
+	Compile, Test-Compile, Test, Package , Integration-Test, Verify, Install , Deploy
+	
+
+Pre-site
+Site
+Post-site
+Site-deploy
+
+There are two types of Maven Plugins:
+Build plugins – These plugins are executed during the build and are configured in the <build/> element of pom.xml
+Reporting plugins – These plugins are executed during the stage generation and are configured in the <reporting/> element of the pom.xml.
+
+
+The order of inheritance in Maven is:
+Settings
+CLI parameters
+Parent POM
+Project POM
+
+
+The different types of dependency scopes are:
+
+Compile
+Provided
+Runtime
+Test
+System
+Import
+
+
+
+Primary Artifacts:
+	These are like the primary dependencies which will have thier own pom and further dependencies.
+Secondary Artifacts
+	secondary artifact is not expected to have a remote pom and has thus never has any dependencies. With an extra tag </classifier>
+		
+		
+
+To verify the downloaded artifacts Maven computes the md5 and sha1 checksum for that artifact and compares it to the values found in the checksum files located at $ARTIFACT_URL.md5, or $ARTIFACT_URL.sha1, respectively.
+
+
+Snapshot :
+The idea is that you can continuously push your latest changes to 3.0.0-SNAPSHOT and anyone depending on it will get the latest changes every time they build their project. Then, after a few iterations, and everyone is happy the latest state of 3.0.0-SNAPSHOT, it can be permanently released as 3.0.0, and rapid development can continue on 3.0.1-SNAPSHOT.
+
+
+
+Check one pom.xml and see what all are defined in pom in each phase 
