@@ -1,4 +1,4 @@
-package puzzles.hanckerRank;
+package puzzles.hanckerRank.oneweek;
 /**
  * Needed better
  */

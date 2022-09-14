@@ -30,6 +30,8 @@ public class CheckerClass {
 
 	public static void main(String[] args) {
 		new CheckerClass().test();
+		
+		
 
 //		noDefaultValuesForLocalVariables();
 
@@ -60,11 +62,45 @@ public class CheckerClass {
 		
 		
 //		cha();
-		nuller();
+//		nuller();
+//		arrayAsList();
+		
+		print2DArray();
 	}	
 	
+	private static void print2DArray() {
+		int[][] arr = new int[][]{{1,2},{4,5},{7,8}};
+		
+		for (int row = 0; row < arr.length; row++) {
+
+			for (int col = 0; col < arr[row].length; col++) {
+				System.out.print(arr[row][col]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("--------"+arr.length);
+		for (int i = 0; i < arr.length-1; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.println(arr[j][i]+ " : "+arr[j+1][i]);
+			}
+			System.out.println();
+		}
+		
+		
+	}
+	private static void arrayAsList() {
+		Integer [] objectArray = new Integer[10];
+		int [] intArray = new int[100];
+	    
+
+	    System.out.println(Arrays.asList(objectArray));
+	    System.out.println(Arrays.asList(intArray));
+	    System.out.println(Arrays.asList(1,2,3,4));
+	    System.out.println(Arrays.asList(new int[] {1,2,3,4})); 
+		
+	}
 	private static void nuller() {
-		List<Object> objs = new ArrayList<Object>();
+		List<Object> objs = new ArrayList<Object>(10);
 		
 		System.out.println("CheckerClass.nuller()"+ objs.isEmpty());
 

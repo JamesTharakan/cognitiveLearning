@@ -1,5 +1,7 @@
 package concepts.javaUpdates.FunctionInterface;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @FunctionalInterface
 interface NoArgFuncInterface{
 	void display();
@@ -83,6 +85,8 @@ public class Functionalnterface {
 		CanHaveOtherMethods otherMethods = () -> {System.out.println("canHaveOtherMethods");};
 		otherMethods.defaultMethod();
 		CanHaveOtherMethods.staticMethod();
+		
+		
 		
 	}
 
