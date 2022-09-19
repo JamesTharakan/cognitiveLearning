@@ -5,6 +5,9 @@ import java.util.PriorityQueue;
 /**
  * A binary heap is one way to implement a priority queue.
  */
+//What heap is this . Min or Max. 
+//What are you doing in the class ?
+
 public class TestOne {
 
 	public static void main(String[] args) {

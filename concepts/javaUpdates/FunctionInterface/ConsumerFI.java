@@ -24,6 +24,11 @@ public class ConsumerFI {
 		//or
 		
 		people.forEach(p -> System.out.println(p)  );
+		
+		for(Person p : people) {
+			System.out.println(p.getFirstName());
+			
+		}
 
 	}
 

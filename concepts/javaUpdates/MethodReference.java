@@ -31,7 +31,6 @@ public class MethodReference {
 }
 
 
-
 interface printers {
 	public void print(Object obj);
 }

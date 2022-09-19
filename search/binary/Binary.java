@@ -1,5 +1,6 @@
-package search;
+package search.binary;
 
+//complexity  : log(n)  
 public class Binary {
 
 	public static void main(String[] args) {
@@ -23,3 +24,6 @@ public class Binary {
 		return -1;
 	}
 }
+
+
+//code the recursive also

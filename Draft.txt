@@ -88,3 +88,22 @@ The idea is that you can continuously push your latest changes to 3.0.0-SNAPSHOT
 
 
 Check one pom.xml and see what all are defined in pom in each phase 
+
+
+
+
+
+Finish:
+	searching in Binary Search
+	Palindrome 
+	1 Week Kit
+
+
+ next	: (current+1) % N
+ Prev	: (Current + N -1) % N
+ 
+ 
+ 
+ 1.Find element in a rotated sorted array
+ 2.Pallindrome Subsets
+ 

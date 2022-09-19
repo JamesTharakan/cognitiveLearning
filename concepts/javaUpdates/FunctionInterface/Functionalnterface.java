@@ -49,7 +49,7 @@ interface CanHaveOtherMethods {
 
 @FunctionalInterface
 interface WithAnnotionsAndExtraMethod {//compiler error
-	void display();		//Only one abstract method
+	 void display();		//Only one abstract method
 
 	 public void ExtraMethod();
 }

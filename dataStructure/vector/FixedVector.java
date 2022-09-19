@@ -1,4 +1,4 @@
-package concepts.clone;
+package dataStructure.vector;
 
 class FixedVector {
 	public static int count;

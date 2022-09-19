@@ -1,4 +1,4 @@
-package puzzles.hanckerRank.dataStructure.queue;
+package puzzles.hanckerRank.oneweek;
 
 import java.util.Scanner;
 import java.util.Stack;
