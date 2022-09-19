@@ -1,6 +1,10 @@
 package concepts.clone;
 
 public class Mutable {
-	int primitiveVal = 10;
+	int mutableprimitiveVal;
+	
+	public String toString() {
+		return ""+mutableprimitiveVal;
+	}
 
 }
