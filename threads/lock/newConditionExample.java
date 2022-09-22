@@ -4,24 +4,12 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class newConditionExample {
-
-	public static void main(String[] args) {
-
-		final Lock lock = new ReentrantLock();
-		final Condition notFull = lock.newCondition();
-		final Condition notEmpty = lock.newCondition();
-	}
-}
-
 //	https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html
-class BoundedBuffer {
+public class newConditionExample {
 	final Lock lock = new ReentrantLock();
-	final Condition remove = lock.newCondition();
-	final Condition insert = lock.newCondition();
+	final Condition removalDone = lock.newCondition();
+	final Condition insersionDone = lock.newCondition();
 	
-	final Condition howManyConditions = lock.newCondition();
-
 	final Object[] items = new Object[100];
 	int putptr, takeptr, count;
 
@@ -29,15 +17,14 @@ class BoundedBuffer {
 		lock.lock();
 		try {
 			while (count == items.length)
-				remove.await();
+				removalDone.await();
 			
 			items[putptr] = x;
-			
 			if (++putptr == items.length)
 				putptr = 0;
-			
 			++count;
-			insert.signal();
+			
+			insersionDone.signal();
 		} finally {
 			lock.unlock();
 		}
@@ -47,15 +34,15 @@ class BoundedBuffer {
 		lock.lock();
 		try {
 			while (count == 0)
-				insert.await();
+				insersionDone.await();
 			
 			
 			Object x = items[takeptr];
 			if (++takeptr == items.length)
 				takeptr = 0;
-			
 			--count;
-			remove.signal();
+			
+			removalDone.signal();
 			return x;
 		} finally {
 			lock.unlock();

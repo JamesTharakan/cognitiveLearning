@@ -21,10 +21,10 @@ public class SimpleCTWithException {
 			System.out.println("In ExecutionException because :"+e.getMessage());
 			System.out.println("Wat is the Cause : "+ e.getCause());
 		} 
-		System.out.println("All is Well");
+		System.out.println("Done");
 	}
 }
-// 
+
 	class CTE implements Callable<Integer>{
 
 		public Integer call() throws Exception {

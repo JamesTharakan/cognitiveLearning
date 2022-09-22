@@ -54,7 +54,7 @@ public class LonelyInteger {
 
     }
 	//
-    public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+    public static void compareTriplets(List<Integer> a, List<Integer> b) {
         
         int alice =0; 
         int bob=0;

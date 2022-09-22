@@ -47,7 +47,7 @@ class Emp extends Company implements Serializable{
 	
 	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException{
 		ois.defaultReadObject();//This call is must
-		
+		System.out.println("readObject()");
 		//the order of read and write should be same
 		setName((String) ois.readObject());
 		setYear((Integer) ois.readObject());
@@ -57,7 +57,7 @@ class Emp extends Company implements Serializable{
 	private void writeObject(ObjectOutputStream oos) throws IOException{
 		oos.defaultWriteObject();		//This call is must
 
-		
+		System.out.println("writeObject");
 		//Since name is not serializable, we override the writeObject, do the defaultWriteObject, and then serialize custom data
 		oos.writeObject(getName());
 		oos.writeObject(getYear());
@@ -73,22 +73,20 @@ public class Serial {
 
 	public static void main(String[] args) {
 		Emp serial = new Emp(32, 1, 2, "LT",1945);
-		System.out.println("Before :: " + serial);
-		System.out.println("\n\t\tStart Serialization\n");
+		System.out.println(serial);
 		try {
 			SerializationUtil.serialize(serial, "fileToWhichSerial.txt");
 		} catch (IOException exp) {
 			System.out.println("Exception caught when Serialization:: "+exp.getClass().getName() +" Message: "+exp.getMessage());
 		}
 		
-		System.out.println("\n\t\tStart deserialization\n");
 		serial.a=100;
 		Emp.b=200;
 		Emp deSerial = null;
 
 		try {
 			deSerial = (Emp)SerializationUtil.deSerialize("fileToWhichSerial.txt");
-			System.out.println("After :: "+deSerial);
+			System.out.println(deSerial);
 		} catch (IOException | ClassNotFoundException exp) {
 			System.out.println("Exception caught when deSerializing ::"+exp.getClass().getName()+" Message: "+exp.getMessage());
 		}

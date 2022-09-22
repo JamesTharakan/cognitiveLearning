@@ -5,10 +5,13 @@ import java.io.FileNotFoundException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 import utils.JUtil;
@@ -63,11 +66,13 @@ public class CheckerClass {
 		
 //		cha();
 //		nuller();
-//		arrayAsList();
 		
-		print2DArray();
+		arrayAsList();
+		
+//		print2DArray();
 	}	
 	
+
 	private static void print2DArray() {
 		int[][] arr = new int[][]{{1,2},{4,5},{7,8}};
 		
@@ -78,25 +83,22 @@ public class CheckerClass {
 			}
 			System.out.println();
 		}
-		System.out.println("--------"+arr.length);
-		for (int i = 0; i < arr.length-1; i++) {
-			for (int j = 0; j < arr[i].length; j++) {
-				System.out.println(arr[j][i]+ " : "+arr[j+1][i]);
-			}
-			System.out.println();
-		}
-		
-		
-	}
+}
 	private static void arrayAsList() {
 		Integer [] objectArray = new Integer[10];
-		int [] intArray = new int[100];
-	    
-
 	    System.out.println(Arrays.asList(objectArray));
+
+	    int [] intArray = new int[100];
 	    System.out.println(Arrays.asList(intArray));
-	    System.out.println(Arrays.asList(1,2,3,4));
 	    System.out.println(Arrays.asList(new int[] {1,2,3,4})); 
+	    
+	    System.out.println(Arrays.asList(1,2,3,4));
+	    
+	    List listOne =Arrays.asList(1,2,3,4);
+	    System.out.println("Class name :" +listOne.getClass().getName());
+	    
+	    List listTwo =Arrays.asList(intArray);
+	    System.out.println("Class name :" +listTwo.getClass().getName());
 		
 	}
 	private static void nuller() {

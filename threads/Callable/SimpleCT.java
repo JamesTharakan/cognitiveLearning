@@ -8,7 +8,6 @@ import java.util.concurrent.FutureTask;
 public class SimpleCT {
 
 	public static void main(String[] args) {
-
 		Callable<Integer> simpleCT =()->{return new Random().nextInt();};
 		
 		

@@ -20,10 +20,7 @@ public class CaesarCipher2 {
 		
 		int canGetNumberLikeThis = (int)testa;
 		System.out.println("canGetNumberLikeThis :"+canGetNumberLikeThis);
-		
-		int canGetNumberLikeThis2 = (int)'a';
-		System.out.println("canGetNumberLikeThis :"+canGetNumberLikeThis2);
-		
+		System.out.println("canGetNumberLikeThis :"+(int)testa);
 	}
 
 	private static String CaesarCipher(String message1, int i) {

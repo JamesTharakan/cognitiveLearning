@@ -13,7 +13,7 @@ public class MergeSortLearning {
 			return;
 		}
 
-		int mid = arrayLength / 2;
+		int mid = arrayLength / 2;							//Split
 		int left[] = new int[mid];
 		int right[] = new int[arrayLength - mid];
 
@@ -23,10 +23,10 @@ public class MergeSortLearning {
 		for (int i = mid; i <= arrayLength - 1; i++) {
 			right[i - mid] = input[i];
 		}
-		mergeSort(left);
+		mergeSort(left);									//Recursive call
 		mergeSort(right);
 
-		merge(left, right, input);
+		merge(left, right, input);							//Merge
 
 	}
 

@@ -5,7 +5,7 @@ import sorting.strategyPattern.Sort;
 import utils.JUtil;
 
 /**
- *In each cycle the biggest element will be placed in its right position.
+ *In each cycle the biggest element will be placed in its right position. i.e Biggest element is pushed to the right
  *We run the outer loop n.length number of times  OR  there is atleast one swap in the inner loop 
  */
 public class BubbleSort implements Sort {
@@ -16,9 +16,9 @@ public class BubbleSort implements Sort {
 		int n = input.length;
 		for (int i = 0; i < n-1; i++)		// this i used reduce the outer length for inner loop 
 		   {
-		     swapped = false;
+		     swapped = false;		//this is used as a improvement to reduce time
 		     for (int j = 0; j < (n-1)-i; j++)	
-		     {									//In each cycle the biggest element will be placed in its right position,
+		     {									//In each cycle the biggest element will be pushed to the right side,
 		        if (input[j] > input[j+1])		// so "i" is used to avoid further comparisons on that element	
 		        {
 		           swap(input, j, j+1);
@@ -41,7 +41,7 @@ public class BubbleSort implements Sort {
 		input[j] = temp;
 	}
 	
-	public void simpleForm(int[] input) {
+	public void bruteForce(int[] input) {//BruteForce Sorting
 
 		int n = input.length;
 		

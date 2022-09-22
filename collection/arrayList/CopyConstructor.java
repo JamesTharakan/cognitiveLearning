@@ -38,13 +38,13 @@ public class CopyConstructor {
 		System.out.println("Hashcode of addAll : "+ addAll.hashCode());
 		
 		
-		System.out.println("\nBase" +copy);
+		System.out.println("\nBase" +base);
 		System.out.println("Copy" +copy);
 		System.out.println("addAll" +addAll);
 		
 		addAll.add(3);
 		
-		System.out.println("\nBase" +copy);
+		System.out.println("\nBase" +base);
 		System.out.println("Copy" +copy);
 		System.out.println("addAll" +addAll);
 	}

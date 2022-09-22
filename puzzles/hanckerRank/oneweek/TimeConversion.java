@@ -1,7 +1,6 @@
 package puzzles.hanckerRank.oneweek;
 
 import java.io.IOException;
-import java.util.HashSet;
 
 public class TimeConversion {
 	public static void main(String[] args) throws IOException {

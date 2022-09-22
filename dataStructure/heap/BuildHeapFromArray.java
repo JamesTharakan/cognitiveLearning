@@ -3,34 +3,23 @@ package dataStructure.heap;
 import java.util.PriorityQueue;
 
 /**
- * A binary heap is one way to implement a priority queue.
- */
-//What heap is this . Min or Max. 
-//What are you doing in the class ?
+ * 
 
-public class TestOne {
+	In the below class we are building a Max heap from Binary Tree(Complete Binary Tree or Almost CBT)
+ */
+
+public class BuildHeapFromArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] priority_array = getArray();
-		
-		PriorityQueue pq = new PriorityQueue();
-		for (int i = 0; i < priority_array.length; i++) {
-			pq.offer(priority_array[i]);
-		}
-		
-		while (pq.peek() != null) {
-			System.out.print(pq.poll() + " ");
-		}
-	////////////////////////////////////////////////	
-		System.out.println();
+
 		int[] Heap_array = getArray();
 		int n = Heap_array.length;
 		// Build heap for all non-leaf nodes
-		for (int i = n / 2 - 1; i >= 0; i--) {		//  0 to (n/2)-1 nodes are non leaf nodes. Leaf nodes are considered as hepified.
+		for (int i = n / 2 - 1; i >= 0; i--) {	// 0 to (n/2)-1 nodes are non leaf nodes. Leaf nodes are considered as hepified.
 			buildHeap(Heap_array, n, i);
 		}
 		
+		System.out.println("\nArray content of Max Heap :");
 		for (int i = 0; i < Heap_array.length; i++) {
 			System.out.print(Heap_array[i]+ " ");
 		}
@@ -56,6 +45,7 @@ public class TestOne {
 		int left = 2 * currentRootIndex + 1;
 		int right = 2 * currentRootIndex + 2;
 
+		//below 2 if to find the greatest leftChild.
 		if (left < n && arr[left] > arr[largest])
 			largest = left;
 
@@ -63,6 +53,7 @@ public class TestOne {
 			largest = right;
 
 		// Swap and continue heapifying if root is not largest
+		//i.e, if the current root is not bigget that its largest child then swap its places
 		if (largest != currentRootIndex) {
 			int swap = arr[currentRootIndex];
 			arr[currentRootIndex] = arr[largest];
@@ -74,6 +65,11 @@ public class TestOne {
 	private static int[]  getArray() {
 		// TODO Auto-generated method stub
 		int[] input = { 0, 11, 52, 3, 5, 36, 17, 8 };
+		System.out.println("\nInput array : ");
+		for (int i = 0; i < input.length; i++) {
+			System.out.print(input[i]+" ");
+		}
+		System.out.println();
 		return input;
 	}
 }	

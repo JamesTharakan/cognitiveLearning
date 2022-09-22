@@ -26,7 +26,7 @@ public class TruckTour {
 				if( (petrol+ pp.get(j).get(0)) >=  pp.get(j).get(1)) {
 					petrol +=(pp.get(j).get(0) -  pp.get(j).get(1)) ;
 					visited++;
-//TODO:better way to loop back to zero index
+//TODO:better way to loop back to zero index::	Next: (current+1) % N			Previous: (Current + N -1) % N
 					if((j+1)==pp.size() && (visited != pp.size()))  //going to first index
 						j=-1;
 				}else {
