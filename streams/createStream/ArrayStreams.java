@@ -2,14 +2,14 @@ package streams.createStream;
 
 import java.util.stream.IntStream;
 
-public class A_TryStreams {
+public class ArrayStreams {
 
 	public static void main(String[] args) {
 
 		
-		IntStream.range(1, 10).forEach(num  -> System.out.print(num+" "));
+		IntStream.range(1, 10).forEach(num  -> System.out.print(num+" "));			
 		System.out.println();
-
+		//DoubleStream, LongStream
 		/*  */
 		
 		int test[]= IntStream.range(1, 5).toArray();
@@ -18,6 +18,9 @@ public class A_TryStreams {
 		
 		int even = IntStream.of(test).filter(x->x%2==0).reduce(100,(ans,i)-> ans+i);
 		System.out.println(even);
+		
+		
+		//If array is already created : Arrays.stream(myArray); this will return IntStream
 
 	}
 

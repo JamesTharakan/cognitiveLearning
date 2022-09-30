@@ -4,6 +4,7 @@ Use these in you regular programing:
 	Enhanced for loop and forEach loop
 	Lambda and Funtional Interface
 	Predefined Funtional Interface
+	yeild and multipleCase in Switch Case(https://www.geeksforgeeks.org/enhancements-for-switch-statement-in-java-13/)
 	
 ************************************************************************************************************************************	
 Puzzles:
@@ -25,5 +26,7 @@ Algorithms:
 	3 pointer algorithm
 	Sliding Window algorithm
 ************************************************************************************************************************************
-
-Update all my existing code with stream APIs.
+TimePass :
+	Update all my existing code with Streams APIs.
+	Move all methods of Checker class to individual class for better clarity
+	

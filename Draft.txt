@@ -16,6 +16,8 @@ Intermediate Operations:
 	maps
 	filters
 	sorted
+	skip : The skip(n) method is an intermediate operation that discards the first n elements of a stream. It returns a stream.
+	The n parameter can't be negative, and if it's higher than the size of the stream, skip() returns an empty stream.
 
 Terminal operators:
 	forEach
