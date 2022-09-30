@@ -6,6 +6,8 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import utils.Customer;
+
 public class StreamMethods {
 
 	public static void main(String[] args) {
@@ -69,20 +71,14 @@ public class StreamMethods {
 	}
 }
 
-class Customer {
-
-	private int id;
-	private String name;
-
-	public String getName() {
-		return name;
-	}
-	Customer(String n){
-		name = n;
-	}
-	
-	public String toString() {
-		return name;
-	}
-
-}
+/*
+ * class Customer {
+ * 
+ * private int id; private String name;
+ * 
+ * public String getName() { return name; } Customer(String n){ name = n; }
+ * 
+ * public String toString() { return name; }
+ * 
+ * }
+ */

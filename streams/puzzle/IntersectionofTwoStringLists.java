@@ -1,4 +1,4 @@
-package streams;
+package streams.puzzle;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,8 +26,10 @@ public class IntersectionofTwoStringLists {
 		.forEach(num  -> System.out.print(num+", "));
 		
 		
-		// I know. We can simply put both list content into a set 
+		// I know. We can simply put both list content into a set. But it would need extra space
+
 		
 	}
 
 }
+

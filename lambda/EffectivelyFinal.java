@@ -1,4 +1,4 @@
-package concepts.javaUpdates.lambda;
+package lambda;
 
 /**
  * Variables used inside the lambda should be final or effectivelyFinal.

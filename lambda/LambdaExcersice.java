@@ -1,4 +1,4 @@
-package concepts.javaUpdates.lambda;
+package lambda;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,7 +25,7 @@ public class LambdaExcersice {
 		Collections.sort(people, (p1, p2) -> p1.getLastName().compareTo(p2.getLastName()) 	);
 		
 //		the statement(s) in forEach is the example of implementation of the
-//		functional Interface Consumer which takes an argument and does not return anything.
+//		functional Interface "Consumer" which takes an argument and does not return anything.
 //		This FI is implemented using lambda
 		people.forEach(p -> {
 								System.out.println(p);
