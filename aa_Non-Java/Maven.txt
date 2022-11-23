@@ -1,3 +1,11 @@
+Maven 
+Maven :
+	Build Tool 
+	Project management tool 	
+	Java Based
+
+
+
 One of the devOps tool for a better project management. Maven is written in Java and is used to build projects written in C#, Scala, Ruby, etc. Based on the Project Object Model (POM).
 
 Handles :

@@ -23,3 +23,9 @@ Terminal operators:
 	forEach
 	Collect
 	reduce: The reduce method is used to reduce the elements of a stream to a SINGLE value
+
+
+
+
+
+

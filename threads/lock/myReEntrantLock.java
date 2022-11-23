@@ -8,8 +8,12 @@ public class myReEntrantLock {
 		
 		ReentrantLock reLock = new ReentrantLock();
 		
-		new Thread(new countWorkers(2,reLock), "Thread-2").start();
-		new Thread(new countWorkers(3,reLock), "Thread-1").start();
+		countWorkers w1 = new countWorkers(3,reLock);
+		countWorkers w2 = new countWorkers(2,reLock);
+		
+		
+		new Thread(w2, "Thread-2").start();
+		new Thread(w1, "Thread-1").start();
 
 	}
 
