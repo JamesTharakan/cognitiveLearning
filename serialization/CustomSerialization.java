@@ -69,7 +69,7 @@ class Emp extends Company implements Serializable{
 
 }
 
-public class Serial {
+public class CustomSerialization {
 
 	public static void main(String[] args) {
 		Emp serial = new Emp(32, 1, 2, "LT",1945);

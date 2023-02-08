@@ -6,7 +6,7 @@ public class CyclicBarrierExample {
 
 	public static void main(String[] args) {
 
-		int noOfParties = 50;
+		int noOfParties = 5;
 
 		CyclicBarrier barrier = new CyclicBarrier(noOfParties);
 

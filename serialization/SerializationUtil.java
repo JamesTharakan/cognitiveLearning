@@ -17,7 +17,9 @@ public class SerializationUtil {
 		
 		FileOutputStream fos = new FileOutputStream(fileName);
 		ObjectOutputStream out = new ObjectOutputStream(fos);
+		
 		System.out.println("SerializationUtil.serialize(): Writing to "+fileName);
+		
 		out.writeObject(object); //If Custom writeObject is defined, it will call that 
 
 		fos.close();
@@ -30,7 +32,9 @@ public class SerializationUtil {
 		
 		FileInputStream fis =  new FileInputStream(fileName);
 		ObjectInputStream in = new ObjectInputStream(fis);
+		
 		System.out.println("SerializationUtil.deSerialize() : Reading from "+fileName);
+		
 		Object  obj = in.readObject(); //If Custom readObject is defined, it will call that
 		
 		fis.close();

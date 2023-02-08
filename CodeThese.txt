@@ -1,5 +1,4 @@
 Use these in you regular programing:
-
 	Streams and its methods
 	Enhanced for loop and forEach loop
 	Lambda and Funtional Interface

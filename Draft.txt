@@ -1,3 +1,10 @@
+Playlist to watch :
+
+	Docker : 	https://www.youtube.com/watch?v=CYyUCJad954&list=PLRAV69dS1uWTJLvDP4Veld5F05rJAmOcp
+	
+	Spring : Java Brains :  https://www.youtube.com/watch?v=GB8k2-Egfv0&list=PLC97BDEFDCDD169D7
+
+************************************************************************************************************************************
 update "Happens Before"
 
 Why wait(), notify() and notifyAll() are in Object Class ?
@@ -24,8 +31,30 @@ Terminal operators:
 	Collect
 	reduce: The reduce method is used to reduce the elements of a stream to a SINGLE value
 
+*****************************************************************Reflection************************************************************
+You can pass any object that implements java.lang.AutoCloseable, which includes all objects which implement java.io.Closeable.
 
 
+String fileName =  "C:\\MyDrive\\GitHub\\cognitiveLearning\\Files\\OutPut\\SimpleSerialization.txt"
 
+*****************************************************************	class	************************************************************
+
+Every different type of object in the running Java application will have a single Class object, these Class objects are created by the JVM. They don’t have any public constructor. We can fetch that Class object using Class.forname("fullyQaulifiedName").When we write someClass.class, it references to this Class object.
+
+Instead a Class object is constructed automatically by the Java Virtual Machine when a class loader invokes one of the defineClass methods and passes the bytes of a class file(byte code).
+
+Class has no public constructor. 
+
+The Class object also represents enums and intefaces along with classes in a running Java application, and have their metadata. The Class object is mostly used with the reflection capabilities of Java.
+
+The Class object has metadata about the class. Some for the information are :
+Package
+Fully qualified class Name
+Parent class name
+Fields
+Constructors
+Annotations
+Methods
+Constant Pool
 
 

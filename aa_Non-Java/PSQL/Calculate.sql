@@ -4,6 +4,8 @@
 --The GROUP BY statement lets the database system know that
 --we wish to group the same value rows of the columns specified.
 
+-- When using "select something, count
+
 
 
 --Function : Count  

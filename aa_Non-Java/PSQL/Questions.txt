@@ -4,15 +4,6 @@
 --Why a new table is created in a "Public" scheme
 --What are tables, View and Procedures
 --views and Materialized Views
-
-
-
-
---JDBC
---RESTful web services
---Maven
---Containers, docker and kubernetes
---JDBC
---Postgres
+--cascade
 
 

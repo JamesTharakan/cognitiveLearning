@@ -17,11 +17,11 @@ public class CyclicBarrierWork implements Runnable {
 	 */
 	public void run() {
 
-		System.out.println(Thread.currentThread().getName() + " has reached the barrier, about to wait along with "
-				+ barrier.getNumberWaiting() + " other parties");
+		System.out.println(Thread.currentThread().getName() + " about to call await");
 		try {
 
 			barrier.await();
+			System.out.println(Thread.currentThread().getName() + " Waiting along with "+ barrier.getNumberWaiting() + " other parties");
 		} catch (InterruptedException | BrokenBarrierException e) {
 			System.out.println("Got " + e.getMessage());
 		}

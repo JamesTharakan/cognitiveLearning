@@ -12,9 +12,20 @@ public class Interrupter implements Runnable{
 		Thread t2 = new Thread(new Interrupter("\t\tT2"));
 		
 		t1.start();
-		t1.interrupt();
+		t1.interrupt();	// Main thread is setting the interrupt flag of t1 thread.
+						// t1 should poll to check if it is interrupted by anyone or not. 
+						//  It can check it and act upon that or ignore it 
+						// or
+						// it can never check it and continue its task.
 		
 		t2.start();
+		
+		try {
+			Thread.currentThread().sleep(0);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			t1.join();		//Asking main to wait for t1 and t2 for its completion

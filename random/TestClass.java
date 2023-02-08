@@ -17,6 +17,10 @@ class TestSuper {
 	TestSuper(int TestSupera) {
 		System.out.println("TestSuper.TestSuper() :: One parameter");
 	}
+	
+	void canCall() {
+		
+	}
 }
 
 public class TestClass extends TestSuper implements TestInterface {
@@ -27,6 +31,15 @@ public class TestClass extends TestSuper implements TestInterface {
 		System.out.println("How are <b>you</b>?");
 		
 		Runtime.getRuntime().gc();
+		
+		try {
+			Class detector = Class.forName("TestSuper");
+			detector.
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void test() {
