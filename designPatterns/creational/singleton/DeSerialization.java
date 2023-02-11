@@ -1,6 +1,8 @@
 package designPatterns.creational.singleton;
 
-public class DeSerialization {
+import java.io.Serializable;
+
+public class DeSerialization implements Serializable{
 
 	private static DeSerialization instance = new DeSerialization();
 

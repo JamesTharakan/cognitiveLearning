@@ -1,59 +1,53 @@
 package threads;
 
+/**
+ * Threads can be interrupted
+ * A thread can poll to check if it is interrupted and can act upon that or ignore it 
+ *	or
+ * it can never check it and continue its task.
+ * 
+ * But if a thread is in wait() , join() , sleeping, InterruptedException is throw
+ *
+ */
 public class Interrupter implements Runnable{
-	String name ;
-	public Interrupter(String string) {
-		name =string;
-	}
 
 	public static void main(String[] args) {
 		
-		Thread t1 = new Thread(new Interrupter("T1"));
-		Thread t2 = new Thread(new Interrupter("\t\tT2"));
+		Thread t1 = new Thread(new Interrupter());
 		
 		t1.start();
+		
+		try {//Making main thread to wait until t1 starts
+			Thread.currentThread().sleep(2000);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+		
+		
 		t1.interrupt();	// Main thread is setting the interrupt flag of t1 thread.
 						// t1 should poll to check if it is interrupted by anyone or not. 
 						//  It can check it and act upon that or ignore it 
 						// or
 						// it can never check it and continue its task.
 		
-		t2.start();
+		try {//Asking main to wait for t1 for its completion
+			t1.join();	
+			System.out.println("Thread Returned");
+		} catch (InterruptedException e) {		System.out.println("main got interrupted");		}
 		
-		try {
-			Thread.currentThread().sleep(0);
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		
-		try {
-			t1.join();		//Asking main to wait for t1 and t2 for its completion
-			t2.join();
-		} catch (InterruptedException e) {
-			System.out.println("NeverMind");
-		}
-		
-		System.out.println(t1.isInterrupted()+" : "+t2.isInterrupted()); 
-		//false because,the thread was sleeping and not alive. i.e isInterrupted will only be true if the thread is running
-		System.out.println("run() cannot throw exception ");
-		
-
+		System.out.println("Even after the thread finishes we can check its interrupt status: "+t1.isInterrupted()); 
 	}
 
 	public void run() {
-		System.out.println(this + " : I am running");
-		try {
-			System.out.println(this +" : I am about to sleep ");
-			Thread.sleep(5000);
-			System.out.println(this +" : I am back");
-		} catch (InterruptedException e) {
-			System.out.println(this +" : Somebody Interrupted me !!!!!");
-		}
+		System.out.println("Running");
+		//Thread.sleep(5000);
+		//While sleeping interrupt can't be checked 
+		//i.e isInterrupted will only be true if the thread is running
+		int i=0;
+		for(i=0; !Thread.currentThread().isInterrupted(); i++);
+		
+		
+		System.out.println(Thread.currentThread().isInterrupted()+ " "+i);	
 	}
 	
-	public String toString(){
-		return name;
-	}
-
 }
