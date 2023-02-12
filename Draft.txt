@@ -1,15 +1,9 @@
 Playlist to watch :
-
 	Docker : 				https://www.youtube.com/watch?v=CYyUCJad954&list=PLRAV69dS1uWTJLvDP4Veld5F05rJAmOcp
 	
 	Spring : Java Brains :  https://www.youtube.com/watch?v=GB8k2-Egfv0&list=PLC97BDEFDCDD169D7
 	
 	Spring : 				:https://www.youtube.com/watch?v=YpsFT50mths&list=PLd3UqWTnYXOlc93disyBjyFv-r1Vq-5zh
-
-************************************************************************************************************************************
-update "Happens Before"
-
-Why wait(), notify() and notifyAll() are in Object Class ?
 
 ************************************************************************************************************************************
 Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.
@@ -18,8 +12,9 @@ Telescoping constructor pattern: One constructor with only required fields and m
 
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
 
-*****************************************************************Streams************************************************************
+Java Bean Pattern vs Telescoping pattern ?
 
+*****************************************************************Streams************************************************************
 Intermediate Operations:
 
 	maps
@@ -32,7 +27,4 @@ Terminal operators:
 	forEach
 	Collect
 	reduce: The reduce method is used to reduce the elements of a stream to a SINGLE value
-
-*****************************************************************	Semaphore		************************************************************
-
-
+*****************************************************************************************************************************

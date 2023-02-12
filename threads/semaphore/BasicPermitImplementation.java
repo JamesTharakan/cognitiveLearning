@@ -30,7 +30,7 @@ class takeThread implements Runnable {
 			s.acquire();
 			
 			System.out.println("Acquired");
-			Thread.currentThread().sleep(3000);
+			Thread.currentThread().sleep(3000);		//Does not release the Semaphore
 			
 			s.release();
 			System.out.println("takeThread.run(): released");

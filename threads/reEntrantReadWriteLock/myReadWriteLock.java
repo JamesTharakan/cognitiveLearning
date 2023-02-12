@@ -1,4 +1,4 @@
-package threads.readWriteLock;
+package threads.reEntrantReadWriteLock;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 

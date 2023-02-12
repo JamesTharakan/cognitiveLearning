@@ -7,7 +7,7 @@ public class TryWithResource {
 
 	public static void main(String[] args) throws IOException {
 
-		String filePath = "C:\\MyDrive\\GitHub\\cognitiveLearning\\Files\\OutPut\\TryWithResource.txt";
+		String filePath = "C:\\MyDrive\\GitHub\\cognitiveLearning\\Resources\\OutPut\\TryWithResource.txt";
 
 		try (FileOutputStream fileOutputStream = new FileOutputStream(filePath)) {
 			
