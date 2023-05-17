@@ -8,7 +8,7 @@ public class Permutation {
 
 	private void permute(String str, int left, int right) {
 		if (left == right)
-			System.out.print(str+" ");
+			System.out.println(str+" ");
 		else {
 			for (int i = left; i <= right; i++) {
 				str = swap(str, left, i);
@@ -18,12 +18,12 @@ public class Permutation {
 		}
 	}
 
-	public String swap(String a, int i, int j) {
+	public String swap(String str, int i, int j) {
 		if (i == j /*|| a.charAt(j)==a.charAt(j)*/)
-			return a;
+			return str;
 
 		char temp;
-		char[] charArray = a.toCharArray();
+		char[] charArray = str.toCharArray();
 		temp = charArray[i];
 		charArray[i] = charArray[j];
 		charArray[j] = temp;

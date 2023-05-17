@@ -1,20 +1,28 @@
 package puzzles.leftShift;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 public class leftShifter {
 
 	public static void main(String[] args) {
-		int array[]=new int[]{1,2,3,4,5};
-
+		int array[]=IntStream.range(1, 6).toArray();
+		
 		int noOfShifts =3;
 		int count =0;
 		int tempArray[]=new int[noOfShifts];
+		
 		System.out.println("Number of Shifts :"+noOfShifts);
-		utils.JUtil.printIntArray("Input array", array);
+		
+		
+		Arrays.stream(array).forEach(num -> System.out.print(num +" "));
+		
 		//Copy first n elements of the array
 		for(int i=0; i<noOfShifts; i++){
 			tempArray[i]=array[i];
 		}
-		utils.JUtil.printIntArray("contents copied to tempArray", tempArray);
+		System.out.print("\nContents of temp array :");
+		Arrays.stream(tempArray).forEach(num -> System.out.print(num +" "));
 		
 		for(int i=0; i<noOfShifts; i++){
 			if(noOfShifts+i <array.length){
@@ -22,12 +30,14 @@ public class leftShifter {
 				count++;
 			}
 		}
-		utils.JUtil.printIntArray("after initial shift ", array);
+		System.out.print("\nafter initial shift :");
+		Arrays.stream(array).forEach(num -> System.out.print(num +" "));
 		
 		for(int i=0;i<noOfShifts;i++){
 			array[count++]=tempArray[i];
 		}
-		utils.JUtil.printIntArray("Final output: ", array);
+		System.out.print("\nFinal :");
+		Arrays.stream(array).forEach(num -> System.out.print(num +" "));
 	}
 	
 	

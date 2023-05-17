@@ -5,8 +5,18 @@ import sorting.strategyPattern.Sort;
 import utils.JUtil;
 
 /**
- *In each cycle the biggest element will be placed in its right position. i.e Biggest element is pushed to the right
- *We run the outer loop n.length number of times  OR  there is atleast one swap in the inner loop 
+ *
+ *The main logic is inside the inner for loop. 
+ *1. The logic is , compare the current element with its next element.
+ *	 If it is greater, then swap. So by the end of first cycle the largest element has reached its final/correct position.
+ *2. Since in every cycle the nth largest element will reach its position, 
+ *		i.e In 1st cycle first largest element will reach its place
+ *			In 2nd cycle second largest element will reach its place
+ *			and so on
+ *3.So we use an outer loop and make sure that the inner loop does not compare again with the already settled elements. 
+ *
+ *Improvement to this Algo : If there are no swaps during any cycle, it means the array is sorted and we can break out.
+ *
  */
 public class BubbleSort implements Sort {
 

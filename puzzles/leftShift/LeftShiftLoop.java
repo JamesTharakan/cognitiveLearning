@@ -1,5 +1,7 @@
 package puzzles.leftShift;
 
+import java.util.Arrays;
+
 public class LeftShiftLoop {
 
 	public static void main(String[] args) {
@@ -12,14 +14,13 @@ public class LeftShiftLoop {
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + " ");
 		}
+		
 		System.out.println(" ");
 		for (int i = 1; i <= k; i++) {
 			leftShift(a);
 		}
 
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		Arrays.stream(a).forEach(num -> System.out.print(num + " "));
 
 	}
 

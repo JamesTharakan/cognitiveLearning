@@ -22,6 +22,7 @@ public class ReferentQueue {
 		WeakReference back = (WeakReference) referenceQueue.poll();
 
 		if (back != null) {
+			System.out.println("ReferentQueue.main()::Print "+back);
 			if(back==weakRef)
 				System.out.println("It is same but i cant use the object");
 			//however i can do something else like preparing the related objects for GC or 

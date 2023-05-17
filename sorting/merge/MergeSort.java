@@ -59,7 +59,7 @@ public class MergeSort implements Sort{
 
 		int size = rightEnd + 1 - leftStart;
 		System.arraycopy(temp, leftStart, input, leftStart, size); //Copy size number of elements from temp array starting from leftStart to 
-																	//	input array at leftStart
+																   //	input array at leftStart
 		
 		/*
 		System.out.print(" Copying "+size +" elements from "+ leftStart +" :: " );

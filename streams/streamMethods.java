@@ -70,15 +70,3 @@ public class StreamMethods {
 		
 	}
 }
-
-/*
- * class Customer {
- * 
- * private int id; private String name;
- * 
- * public String getName() { return name; } Customer(String n){ name = n; }
- * 
- * public String toString() { return name; }
- * 
- * }
- */

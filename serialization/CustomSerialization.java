@@ -46,7 +46,7 @@ class Emp extends Company implements Serializable{
 	}
 	
 	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException{
-		ois.defaultReadObject();//This call is must
+		ois.defaultReadObject();//This call is must, to do basic read of non-transient and non-static members
 		System.out.println("readObject()");
 		//the order of read and write should be same
 		setName((String) ois.readObject());
@@ -55,7 +55,7 @@ class Emp extends Company implements Serializable{
 	
 //	Override this method if we want to serialize any custom data but must call default Write/readObject method
 	private void writeObject(ObjectOutputStream oos) throws IOException{
-		oos.defaultWriteObject();		//This call is must
+		oos.defaultWriteObject();		//This call is must, to do basic write of non-transient and non-static members
 
 		System.out.println("writeObject");
 		//Since name is not serializable, we override the writeObject, do the defaultWriteObject, and then serialize custom data

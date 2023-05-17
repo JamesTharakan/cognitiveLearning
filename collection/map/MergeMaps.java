@@ -1,4 +1,4 @@
-package puzzles.collection.map;
+package collection.map;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,12 +15,7 @@ public class MergeMaps {
 		Map<String, Integer> resultMapNames = new HashMap<String, Integer>();
 		for (int j = 0; j < names.length; j++) {
 			String key =names[j];
-			
-			if (resultMapNames.containsKey(key)) {
-				resultMapNames.put(key, resultMapNames.get(key)+1);
-			} else {
-				resultMapNames.put(key, 1);
-			}
+			resultMapNames.merge(key, 1, (value1,value2)->value1+value2);
 		}
 
 		System.out.println("Distinct names in Array :" + resultMapNames );
@@ -66,7 +61,7 @@ public class MergeMaps {
 		
 		mapStringA.forEach((k,v) -> mapStringB.merge(k, v, String::concat));		
 		
-		System.out.println("Merged map :"+mapStringB);
+		System.out.println("Merged map :merge:"+mapStringB);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 		Map<String, String> A = new HashMap<String,String>();
 		Map<String, String> B = new HashMap<String, String>();
@@ -80,6 +75,6 @@ public class MergeMaps {
 		
 		A.forEach((k,v) -> B.compute(k,String::concat));		
 		
-		System.out.println("Merged map :"+B);
+		System.out.println("Merged map :compute:"+B);
 	}
 }

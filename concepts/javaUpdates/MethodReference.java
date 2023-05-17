@@ -22,7 +22,6 @@ public class MethodReference {
 		PrinterClass my = new PrinterClass(123);
 		numList.forEach(my::print);		//methodReference ::instance method
 		
-		
 //		System.out.print("\n methodReference :: Type method :");
 //		numList.forEach(printers::printMe);		//methodReference ::Type method
 
@@ -42,12 +41,18 @@ class PrinterClass implements printers {
 		this.i = i;
 	}
 
-	public void print(Object obj) {
-		System.out.print(obj);
+	public static void staticPrint(Object obj) {
+		System.out.println(" Static method :"+obj);
 	}
 
-	public static void staticPrint(Object obj) {
-		System.out.print(obj);
+	public void print(Object obj) {
+		System.out.println(" Instance method :"+obj);
 	}
+	
+
+	public void printTwoArgs(Object obj, int i) {				//TODO: How to call this in MethodReference ?			
+		System.out.println(" Instance method :"+obj);
+	}
+
 
 }

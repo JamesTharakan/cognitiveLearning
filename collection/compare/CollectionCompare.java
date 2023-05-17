@@ -10,51 +10,49 @@ because it will restrict in only one type of comparison
 */
 
 public class CollectionCompare implements Comparable<CollectionCompare> , Comparator<CollectionCompare>  {
-	String s1;
+	String s;
 	Integer i;
 	public CollectionCompare(String string, int j) {
-		s1=string;
+		s=string;
 		i=j;
 	}
 	
-	/**
-	 * Beacuse i am trying to sort custom objects , i should define how it should be compared
-	 */
+	public String toString(){
+		return s+":"+i;
+	}
+	
+//	 Because we are trying to sort custom objects,
+//	 We should define how it should be compared
 	public int compareTo(CollectionCompare obj2){
-		System.out.println("Comparable");
-		return this.s1.compareTo(obj2.s1);
+		return this.s.compareTo(obj2.s);
 	}
 	
 	public int compare(CollectionCompare obj1, CollectionCompare obj2){
-		System.out.println("Comparator");
 		return obj1.i.compareTo(obj2.i);
 	}
 	
 	public static void main(String[] args) {
-		CollectionCompare r1 = new CollectionCompare("a", 20);
-		CollectionCompare r2 = new CollectionCompare("r",11);
-		CollectionCompare r3 = new CollectionCompare("c",1);
 		
+//		Create a list 
+		ArrayList<CollectionCompare> list = getlist();
 		
-		ArrayList<CollectionCompare> list = new ArrayList<CollectionCompare>();
-		list.add(r1);
-		list.add(r2);
-		list.add(r3);
-		System.out.println("Listed Created");
-		Collections.sort(list);// This will use the Comparable.
-		System.out.println(" String sort : "+list); 
+		Collections.sort(list);// This will use the Comparable,default method used for comparing
+		System.out.println("Sorted using Comparable : "+list); 
 		
 		Collections.sort(list, new CollectionCompare("",2));//i just need to pass a dummy object of the Comparator
-		System.out.println(" number sort : "+list);
+		System.out.println("Number sort : "+list);
 		
-		Collections.sort(list, (s1,s2)->s1.compareTo(s2) );
-		
-		if(r1.compareTo(r2) ==1) {
-			System.out.println("CollectionCompare.main()");
-		}
 	}
 	
-	public String toString(){
-		return s1+":"+i;
+	
+	public static ArrayList<CollectionCompare> getlist(){
+		
+		ArrayList<CollectionCompare> list = new ArrayList<CollectionCompare>();
+		list.add(new CollectionCompare("Apple", 2));
+		list.add(new CollectionCompare("Banana",3));
+		list.add(new CollectionCompare("Cherry",1));
+		
+		return list;
 	}
+	
 }

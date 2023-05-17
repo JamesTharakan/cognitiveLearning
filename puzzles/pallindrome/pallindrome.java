@@ -1,13 +1,14 @@
 package puzzles.pallindrome;
 
+import java.util.Arrays;
+
 public class pallindrome {
 
 	public static void main(String[] args) {
 
-		System.out.println("abzza"+" : "+isPallindrome("abzza"));
-		System.out.println("a"+" : "+isPallindrome("a"));
-		System.out.println("ab"+" : "+isPallindrome("ab"));
-		System.out.println("aba"+" : "+isPallindrome("aba"));
+		String pallins[] = {"aa","abzza","a","ab","aba"};
+		
+		Arrays.stream(pallins).forEach(str -> System.out.println(str +":"+ isPallindrome(str)));
 
 	}
 

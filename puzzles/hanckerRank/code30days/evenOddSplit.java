@@ -16,9 +16,6 @@ public class evenOddSplit {
         
       //  one(input, num);
         two(input, num);
-        
-        
-		 
 
 	}
 

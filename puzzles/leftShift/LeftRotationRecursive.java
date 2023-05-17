@@ -1,22 +1,21 @@
 package puzzles.leftShift;
 
+import java.util.Arrays;
+
 public class LeftRotationRecursive {
 
 	public static void main(String[] args) {
 
 		int k = 4;// Number of shifts
 		
-		int a[]={1,2,3,4,5};	
-		System.out.println("Shifting " + k + " times a array of lenght " + a.length);
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		int arr[]={1,2,3,4,5};	
+        
+		Arrays.stream(arr).forEach(num -> System.out.print(num + " "));
+		
 		System.out.println(" ");
-		leftShiftRecursive(a, k);
+		leftShiftRecursive(arr, k);
 
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
-		}
+		Arrays.stream(arr).forEach(num -> System.out.print(num + " "));
 
 	}
 

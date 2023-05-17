@@ -2,12 +2,15 @@ package collection.arrayList;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.stream.IntStream;
 
 public class Capacity {
 
 	public static void main(String args[]) throws Exception{
-	   ArrayList list = new ArrayList (2);
-	   int input []={1,2,3,4,5,6};
+	   ArrayList <Integer>list = new ArrayList <Integer>(2);
+	   
+	   int input []=IntStream.range(1, 6).toArray();
+	   
 	   
 	   for (int i = 0; i < input.length; i++) {
 		   list.add(i);

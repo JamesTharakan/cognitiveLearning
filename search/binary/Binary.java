@@ -23,7 +23,24 @@ public class Binary {
 		}
 		return -1;
 	}
+	
+	
+	public static int binarySearchRecursive(int[] input, int key, int left, int right) {
+		if(left > right)
+			return -1;
+		
+		int mid = (left + right) / 2;
+
+		if (input[mid] == key)
+			return mid;
+		
+		if (input[mid] > key)
+			return binarySearchRecursive(input,  key,  left,  mid - 1);
+		else
+			return binarySearchRecursive(input,  key,  mid + 1,  right);
+	}
 }
 
 
 //code the recursive also
+

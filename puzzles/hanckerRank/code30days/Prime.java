@@ -9,7 +9,7 @@ public class Prime {
         }
     }
 
-	private static boolean checkPrime(int num) {
+	private static boolean checkPrime(int num) {//to many logics, just to reduce runtime in hacker rank 
 		if(num <2){
 			return false;
 		}else if(num == 2){
@@ -27,6 +27,20 @@ public class Prime {
 			}
 		}
 		return isPrime;
+	}
+	
+	
+	private static boolean isSimple(int num) {
+		boolean flag = true;
+		for (int i = 2; i <= num / 2; ++i) {
+			// condition for nonprime number
+			if (num % i == 0) {
+				flag = false;
+				break;
+			}
+		}
+		return flag;
+
 	}
 	
 	

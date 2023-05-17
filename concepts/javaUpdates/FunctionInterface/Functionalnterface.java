@@ -51,7 +51,7 @@ interface CanHaveOtherMethods {
 interface WithAnnotionsAndExtraMethod {//compiler error
 	 void display();		//Only one abstract method
 
-	 public void ExtraMethod();
+//	 public void ExtraMethod();
 }
 
 public class Functionalnterface {

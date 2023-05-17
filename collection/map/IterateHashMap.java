@@ -36,7 +36,12 @@ public class IterateHashMap {
 		forEach(createMap());
 		
 	}
-
+	/**
+	 * 1. Get the entrySet
+	 * 2. Get the iterator of entry set
+	 * 3. Do getNext if present
+	 * 4. which returns a Entry pair 
+	 */
 	public static void printMap(Map mp) {
 		
 		Iterator it = mp.entrySet().iterator();

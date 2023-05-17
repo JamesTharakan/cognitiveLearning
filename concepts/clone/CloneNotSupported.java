@@ -19,8 +19,12 @@ public class CloneNotSupported {
 		CNSException cnse = new CNSException();
 
 		try {
-
-			cnse.clone(); //exception because CNSException does not implement
+//			exception because CNSException does not implement
+//			Just by overidding the method is not enough
+//			we should define it as it immpements Clonable 
+			cnse.clone(); 
+						  
+							
 
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();

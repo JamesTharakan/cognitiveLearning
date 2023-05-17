@@ -1,5 +1,7 @@
 package puzzles.algorithms.slidingWindow;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 /**
  * https://www.hackerrank.com/challenges/maximum-subarray-sum/problem
@@ -8,7 +10,14 @@ import java.util.List;
  */
 public class MaxSubarraySumModulo {
 
-	public static void main(String[] args) {}
+	public static void main(String[] args) {
+		
+
+		
+		
+	}
+
+
 
 	public static long maximumSum(List<Long> a, long m) {
 
@@ -18,8 +27,6 @@ public class MaxSubarraySumModulo {
 		long sum = 0;
 		int j = 0;
 		long max =0;
-		
-		//long a[] = {3,3,9,9,5};
 		
 		while(n <= a.size()) {
 			for (int i = 0; i < a.size(); i++) {
@@ -41,11 +48,12 @@ public class MaxSubarraySumModulo {
 		
 		}
 		
-		return(max);
+		return max;
 	
 
 	    }	
 }
+/*
 1
 50 1804289384
 846930887 1681692778 1714636916 1957747794 424238336 719885387 1649760493 596516650 1189641422 1025202363 
@@ -53,7 +61,7 @@ public class MaxSubarraySumModulo {
 521595369 294702568 1726956430 336465783 861021531 278722863 233665124 2145174068 468703136 1101513930 
 1801979803 1315634023 635723059 1369133070 1125898168 1059961394 2089018457 628175012 1656478043 1131176230 
 1653377374 859484422 1914544920 608413785 756898538 1734575199 1973594325 149798316 2038664371 1129566414
-
+*/
 
 /*
 long n = 1;// sum of n numbers

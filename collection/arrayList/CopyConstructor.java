@@ -23,8 +23,8 @@ public class CopyConstructor {
 		
 		List<Integer> copy = new ArrayList<>(base); 	//Even though a new operator is used 
 		
-		System.out.println("base : "+ base.hashCode());
-		System.out.println("copy : "+ copy.hashCode());
+		System.out.println("Hascode of base : "+ base.hashCode());
+		System.out.println("Hascode of copy : "+ copy.hashCode());
 		
 		copy.add(2);
 		System.out.println("\nBase" +base);
@@ -47,6 +47,10 @@ public class CopyConstructor {
 		System.out.println("\nBase" +base);
 		System.out.println("Copy" +copy);
 		System.out.println("addAll" +addAll);
+		
+		System.out.println("base : "+ base.hashCode());
+		System.out.println("copy : "+ copy.hashCode());
+		System.out.println("addAll : "+ addAll.hashCode());
 	}
 }
 

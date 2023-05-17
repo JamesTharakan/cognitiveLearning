@@ -1,9 +1,12 @@
 package puzzles.algorithms.slidingWindow;
 
+import java.util.stream.IntStream;
+
 public class SumOfNnumber {
 
 	public static void main(String[] args) {
-		int input[] = { 0, 1, 2, 3, 4 , 5, 6, 7, 8, 9, 10 };
+		int input[] = IntStream.range(0, 11).toArray();
+		
 		int n = 3;// sum of n numbers
 
 		int currentWindowSize = 0;
