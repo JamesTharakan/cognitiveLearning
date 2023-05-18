@@ -1,4 +1,4 @@
-Playlist to watch :
+Play-list to watch :
 	Docker : 				https://www.youtube.com/watch?v=CYyUCJad954&list=PLRAV69dS1uWTJLvDP4Veld5F05rJAmOcp
 	
 	Spring : Java Brains :  https://www.youtube.com/watch?v=GB8k2-Egfv0&list=PLC97BDEFDCDD169D7
@@ -8,23 +8,10 @@ Playlist to watch :
 ************************************************************************************************************************************
 Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.
 
-Telescoping constructor pattern: One constructor with only required fields and many other construtors with different combinations of optional fields. Difficult to mantain and bug prone.
+Telescoping constructor pattern: One constructor with only required fields and many other constructors with different combinations of optional fields. Difficult to maintain and bug prone.
 
-JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistant state and supports mutability.
+JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistent state and supports mutability.
 
 Java Bean Pattern vs Telescoping pattern ?
 
 *****************************************************************Streams************************************************************
-Intermediate Operations:
-
-	maps
-	filters
-	sorted
-	skip : The skip(n) method is an intermediate operation that discards the first n elements of a stream. It returns a stream.
-	The n parameter can't be negative, and if it's higher than the size of the stream, skip() returns an empty stream.
-
-Terminal operators:
-	forEach
-	Collect
-	reduce: The reduce method is used to reduce the elements of a stream to a SINGLE value
-*****************************************************************************************************************************

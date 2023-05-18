@@ -1,9 +1,9 @@
 Use these in you regular programing:
 	Streams and its methods
 	Enhanced for loop and forEach loop
-	Lambda and Funtional Interface
-	Predefined Funtional Interface
-	yeild and multipleCase in Switch Case(https://www.geeksforgeeks.org/enhancements-for-switch-statement-in-java-13/)
+	Lambda and Functional Interface
+	Predefined Functional Interface
+	yield and multipleCase in Switch Case(https://www.geeksforgeeks.org/enhancements-for-switch-statement-in-java-13/)
 	
 ************************************************************************************************************************************	
 Puzzles:
@@ -11,12 +11,11 @@ Puzzles:
 	Palindrome 
 	Pallindrome Subsets
 	searching in Binary Search
-	Week Kit(Easy and medium)
 ************************************************************************************************************************************	
 Design Patterns:
 	Abstract Factory Pattern
 	Iterator
-	State:Game. Make the character to walk,talk,run,fight. Pass command and change the state. Change state A-> B, A->A 
+	State: Game. Make the character to walk,talk,run,fight. Pass command and change the state. Change state A-> B, A->A 
 	Decorator
 	Bridge	
 ************************************************************************************************************************************

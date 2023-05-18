@@ -1,7 +1,5 @@
 package utils;
 
-import dataStructure.stack.MyStack;
-
 public class JUtil {
 
 	public static void printIntArray(String label, int array[]) {
@@ -12,12 +10,4 @@ public class JUtil {
 		System.out.println("] ");
 	}
 
-	public static void printMe(String label, Object printMe) {
-		System.out.print(label + "::" + printMe);
-
-	}
-	
-	public static String generateBinary(int decimal) {
-		
-	}
 }
