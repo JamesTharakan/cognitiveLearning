@@ -1,10 +1,5 @@
 package streams;
 
-import java.util.Arrays;
-
-import utils.Customer;
-import utils.CustomerID;
-
 public class StreamChecker {
 
 

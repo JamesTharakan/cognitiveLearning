@@ -28,18 +28,30 @@ public class TestClass extends TestSuper implements TestInterface {
 	static int num = 1;
 
 	public static void main(String s[]) {
-		System.out.println("How are <b>you</b>?");
+		int i =0 ;
 		
-		Runtime.getRuntime().gc();
-		
-		try {
-			Class detector = Class.forName("TestSuper");
-			detector.
-			
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		while(i>=0) {
+			i++;
 		}
+		if(i<0)
+			System.out.println("Negative :"+ i);
+		else {
+			System.out.println("Finished ");
+		}
+		
+//		
+//		System.out.println("How are <b>you</b>?");
+//		
+//		Runtime.getRuntime().gc();
+//		
+//		try {
+//			Class detector = Class.forName("TestSuper");
+//			detector.
+//			
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 
 	public void test() {

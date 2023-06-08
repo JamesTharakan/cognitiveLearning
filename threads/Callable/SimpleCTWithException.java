@@ -14,7 +14,7 @@ public class SimpleCTWithException {
 		t.start();
 		
 		try {
-			System.out.println(ft.get());//get() is locking call
+			System.out.println(ft.get());//get() is Blocking call
 		} catch (InterruptedException  e ) {
 			System.out.println("In InterruptedException because :"+e.getMessage());
 		} catch (ExecutionException e ) {

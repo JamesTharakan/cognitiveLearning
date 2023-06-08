@@ -14,6 +14,11 @@ Handles :
 Download dependencies
 
 
+POM 
+contains the project information and configuration details for Maven to build the project. It contains information such as dependencies, source directory, a build directory, plugins, goals, etc.Maven reads the pom.xml file and executes the desired goal.
+
+When maven is executing goals and tasks maven searches for POM.XML in the current directory. It reads configuration from pom file and executes the desired goal
+
 The build tool compiles and packages the code into an executable form.
 A Maven plugin refers to the group of goals that may or may not be in the same phase
 
