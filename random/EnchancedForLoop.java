@@ -1,6 +1,7 @@
 package random;
 
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import utils.Customer;
 

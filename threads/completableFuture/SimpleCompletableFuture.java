@@ -1,43 +1,22 @@
 package threads.completableFuture;
 
-import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
 
+/**
+ *Line1 creates a CF object which returns a String. But no task is assigned yet.
+ *We simply completed the CF object's task by calling complete() with String argument
+ *which will be used as a return value of the CF task 
+ */    
 public class SimpleCompletableFuture {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		
+		//Line 1
+		CompletableFuture<String> completableFutureObject = new CompletableFuture<String>();
 		
+		completableFutureObject.complete("Future's Result");
 		
-		Callable callable = () ->{
-								System.out.println("About to sleep");
-								Thread.sleep(3000);
-								System.out.println("Finished sleeping ");
-								return 1;
-								};
-		FutureTask future = new FutureTask(callable);
-								
-					
-		CompletableFuture<Integer> completableFuture = new CompletableFuture<Integer>();
-		
-		completableFuture.complete( Integer.valueOf(100));
-		
-		if(completableFuture.isDone()) {
-			System.out.println("Result : "+ completableFuture.getNow( Integer.valueOf(100)));
-			
-		}else {
-			System.out.println("Not finished");
-		}
-		
+		System.out.println(completableFutureObject.get());
 	}
-	
-	void test() {
-		CompletableFuture<String> cf = CompletableFuture.completedFuture("message");
-		 
-		 System.out.println(cf.isDone());
-		 System.out.println(cf.getNow(null));
-	}
-
 }
