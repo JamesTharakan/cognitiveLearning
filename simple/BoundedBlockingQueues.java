@@ -1,4 +1,4 @@
-package random.simple;
+package simple;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

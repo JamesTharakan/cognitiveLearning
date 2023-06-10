@@ -1,4 +1,4 @@
-package random.simple;
+package simple;
 
 public class ThrowException {
 

@@ -1,5 +1,5 @@
 
-package random;
+package test;
 
 import java.util.Arrays;
 

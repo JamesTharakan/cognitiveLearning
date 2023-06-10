@@ -1,4 +1,4 @@
-package random;
+package test;
 
 public interface TestInterface {
 	public void abstractmethodOne();
