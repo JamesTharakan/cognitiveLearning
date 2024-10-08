@@ -1,6 +1,6 @@
 package streams;
 
-public class StreamChecker {
+public class streamChecker {
 
 
 	public static void main(String[] args) {

@@ -1,0 +1,7 @@
+You run "java MyApp" from the command line. (java launcher is a executable component part of JRE kit)
+The operating system runs the java executable.
+The Java launcher checks the system's environment variables (JAVA_HOME, PATH) to find the JRE installation.
+Once the JRE is located, the Java launcher loads the JVM binary (e.g., jvm.dll) into memory.
+After loading the JVM, the launcher initializes the JVM’s components like class loader, bytecode verifier, execution engine.
+Then the launcher passes control to the JVM, which begins the process of loading the specified class.
+Once the class is loaded and verified, the JVM will invoke the main() method of the class, which is the entry point for the application.
