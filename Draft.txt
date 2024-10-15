@@ -1,12 +1,7 @@
-When we want to add new methods/ functionality to an existing Interface without having to modify the already implemented concrete class, we use the default methods. These default methods should be defined with a default definition.
+Functional Programming: 
 
-When we extend an interface that contains a default method, we can override or not override the default method. i.e., default methods can be overridden.
-If a class inherits a default method from multiple interfaces, it must explicitly override the method to resolve the conflict.
+When the operation returns a Stream<T> where T can be any type then it’s an intermediate operation (lazy); if the operation returns anything else i.e. void, int, boolean etc. then it’s terminal (eager) operation.
 
-Static method in interface is visible to interface methods only hence these static methods can’t be overridden(like static methods of class)
-
-This change was made to address practical problems like backward compatibility and interface evolution.
-The original motivation to introduce default methods to Java 8 was the desire to extend the Collections Framework interfaces with lambda-oriented methods without breaking any existing implementations.
 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&

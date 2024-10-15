@@ -20,6 +20,9 @@ public class PerdicateAndFilter {
 		
 		System.out.print("\nOdd :");
 		Arrays.stream(evenOdd).filter(odd).forEach(num -> System.out.print(num+ " "));
+		
+		System.out.print("\nNo need to create a separate array :");
+		IntStream.rangeClosed(1,10).filter( x -> (x % 2 != 0)).forEach(num -> System.out.print(num+ " "));
 	}
 
 }
