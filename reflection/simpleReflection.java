@@ -2,20 +2,35 @@ package reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 public class simpleReflection {
 
-	public static void main(String[] args) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException {
+	public static void main(String[] args)
+			throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+			NoSuchMethodException, SecurityException, ClassNotFoundException {
 		
-		Class clazz= Class.forName("reflection.testReflection");
-		
-		//Below is reflection pacakage 
-		
+		Class<?> clazz= Class.forName("reflection.testReflection");
+//case 1		
 		Constructor ctr = clazz.getDeclaredConstructor();
+		testReflection testRef = (testReflection)ctr.newInstance();
 		
-		testReflection tR = (testReflection)ctr.newInstance();
+		testRef.testReflectionMethod();
 		
-		System.out.println(tR.getname());
-	}
+//case 2		
+		Method method[]=clazz.getDeclaredMethods();
+		for(Method met : method) {
+			if(Modifier.isPrivate(met.getModifiers())) {
+				met.setAccessible(true);
+				met.invoke(testRef);
+			}
+		}
+		
+//case 3		
+		Method secretMethod = clazz.getDeclaredMethod("secretMethod");
+        secretMethod.setAccessible(true); // Bypass private access
+        secretMethod.invoke(testRef);  // Output: Secret message!
 
+	}
 }

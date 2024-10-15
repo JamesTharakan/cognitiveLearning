@@ -11,7 +11,6 @@ public class Capacity {
 	   
 	   int input []=IntStream.range(1, 6).toArray();
 	   
-	   
 	   for (int i = 0; i < input.length; i++) {
 		   list.add(i);
 		   System.out.println("Capacity = " + getCapacity(list)+" "+"Size = "+list.size());

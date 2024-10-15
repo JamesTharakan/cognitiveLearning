@@ -1,8 +1,8 @@
-Functional Programming: 
-
-When the operation returns a Stream<T> where T can be any type then it’s an intermediate operation (lazy); if the operation returns anything else i.e. void, int, boolean etc. then it’s terminal (eager) operation.
-
-
+A lambda expression represents a block of code (a function) that can be passed as an argument or used to define a behavior.
+Functional interfaces and lambda expressions work together to provide a way of passing behavior (a block of code) rather than values in Java.
+*******************Temp************************
+ 
+ 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.

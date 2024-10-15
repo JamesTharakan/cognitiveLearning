@@ -1,25 +1,27 @@
 package functionalInterface;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
+class simpleConsumerImpl implements Consumer <Integer>{
+	public void accept(Integer n) {
+		System.out.println("Otherwise : "+ n * 2);
+	}
+}	
 public class ConsumerExample {
 	public static void main(String[] args) {
-		
-		//Example 1
-		simpleConsumerImplClass ow = new simpleConsumerImplClass();
+		List<String> names = new ArrayList<>(List.of("Alice","Bob","Charlie"));
+        
+//Example 1
+		simpleConsumerImpl ow = new simpleConsumerImpl();
 		ow.accept(2);
 		
-		//Example 2
-		List<String> names = new ArrayList<>();
-        names.add("Alice");        names.add("Bob");        names.add("Charlie");
-        
-        Consumer <String> nameProcessor = s -> System.out.println(s + " by nameProcessor");
+//Example 2
+		Consumer<String> nameProcessor = s -> System.out.println(s + " by nameProcessor");
         names.forEach(nameProcessor);
 
-      //Example 3
+//Example 3
         Consumer <List<String>> processor = list->{
         	for (int i = 0; i < list.size(); i++) {
                 list.set(i, list.get(i) + " - Processed");
@@ -30,21 +32,11 @@ public class ConsumerExample {
         processor.accept(names);
         names.forEach(System.out::println);
         
-        
-        
-        //Example 4
-        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
-        // create Consumer to multiply and print each number
-        Consumer<Integer> multiplyAndPrint = (n) -> System.out.println(n * 2);
-        
-        numbers.forEach(multiplyAndPrint);
+//Example 4 
+        Consumer <String> test = str -> {str = str +" understood";};
+        test.accept("James");
+
+        names.forEach(test);
     }
 
-}
-
-
-class simpleConsumerImplClass implements Consumer <Integer>{
-	public void accept(Integer n) {
-		System.out.println("Otherwise : "+ n * 2);
-	}
 }
