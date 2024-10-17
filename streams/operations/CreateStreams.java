@@ -24,9 +24,9 @@ public class CreateStreams {
 		
 		//If array is already created : Arrays.stream(myArray); this will return IntStream
 		
-		Stream<String> s1 = Stream.of(new String("One"), new String("Two"), new String("Three"));
+		Stream<String> strStream = Stream.of(new String("One"), new String("Two"), new String("Three"));
 
-		s1.map(s0 -> s0+".").collect(Collectors.toList()).forEach(System.out::println);
+		strStream.map(s0 -> s0+".").collect(Collectors.toList()).forEach(System.out::println);
 
 	}
 

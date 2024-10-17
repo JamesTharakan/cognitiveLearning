@@ -3,9 +3,9 @@ package streams.operations;
 import java.util.List;
 import java.util.Optional;
 
-//filter returns a stream. 
-//We have a collect using collect(Collectors.toList())
-//or find one item and get an Optional object
+/**
+ * Filter takes a Predicate 
+ */
 public class Filter {
 
 	public static void main(String[] args) {
@@ -15,13 +15,15 @@ public class Filter {
         Optional<String> result = names.stream()
         								.filter(name -> name.startsWith("C"))
         								.findAny();
-       
 
         if (result.isPresent()) {
-            System.out.println("Found a name: " + result.get());
+            System.out.println("Found: " + result.get());
         } else {
-            System.out.println("No name starting with 'F' found.");
+            System.out.println("No name starting with 'C' found.");
         }
 	}
 
 }
+//filter returns a stream in this case. 
+//We have a collect using collect(Collectors.toList())
+//or find one item and get an Optional object

@@ -1,8 +1,8 @@
-A lambda expression represents a block of code (a function) that can be passed as an argument or used to define a behavior.
-Functional interfaces and lambda expressions work together to provide a way of passing behavior (a block of code) rather than values in Java.
+Predicate <String> tester = s -> s.equals("pass");
+System.out.println(tester.test("yes"));
+
 *******************Temp************************
- 
- 
+In case of primitives enchanced for loop or forEach becomes a drawback as we cannot modify the current item in the original array.
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.
@@ -12,9 +12,6 @@ Telescoping constructor pattern: One constructor with only required fields and m
 JavaBeans Pattern: One constructor with only required fields and setters for all other optional patterns. Inconsistent state and supports mutability.
 
 Java Bean Pattern vs Telescoping pattern?
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&   Streams   &&&&&&&&&&&&&&&&&&&&&&&&&&
-
-Reduction of Backtracking: Parsing from the end can help reduce backtracking, which occurs when the parser encounters an invalid or ambiguous construct and needs to backtrack to explore alternative parsing paths. Parsing from the end may allow for more straightforward decision-making because the parser has more context available to resolve ambiguities or make choices without extensive backtracking.
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&   29 May 23   &&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -87,11 +84,3 @@ What does Spring framework do:
  1. Application Context and Dependence injection 
  2. Data Access (hides a little bit of JDBC)
  3. Spring MVC
-
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&   09 Aug 23   &&&&&&&&&&&&&&&&&&&&&&&&&&
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project 
-xmlns="http://maven.apache.org/POM/4.0.0" 
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
