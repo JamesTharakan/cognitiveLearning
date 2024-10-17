@@ -1,10 +1,4 @@
-Predicate <String> tester = s -> s.equals("pass");
-System.out.println(tester.test("yes"));
-
-*******************Temp************************
-In case of primitives enchanced for loop or forEach becomes a drawback as we cannot modify the current item in the original array.
-
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+***************************************************************************************************************************************************************
 Sometimes type casts are unavoidable and in Generic code they happen often without the programmer ever noticing. Therefore, significant effort was made to make type cast quite fast.
 
 Telescoping constructor pattern: One constructor with only required fields and many other constructors with different combinations of optional fields. Difficult to maintain and bug prone.
@@ -84,3 +78,23 @@ What does Spring framework do:
  1. Application Context and Dependence injection 
  2. Data Access (hides a little bit of JDBC)
  3. Spring MVC
+ 
+ 
+***************************************************************************************************************************************************************
+ Play-list to watch:
+Docker: https://www.youtube.com/watch?v=CYyUCJad954&list=PLRAV69dS1uWTJLvDP4Veld5F05rJAmOcp
+	
+Spring: 
+https://www.youtube.com/watch?v=GB8k2-Egfv0&list=PLC97BDEFDCDD169D7
+ (Java Brains: 4Hr.49min: 24 Videos: Avg :13 min)
+
+Spring – AOP
+Java Brains
+https://www.youtube.com/watch?v=QdyLsX0nG30&list=PLE37064DE302862F8
+
+SpringBoot:
+Spring Boot Quick Start: Java Brains: 34 Videos: Avg: 8Mins
+https://www.youtube.com/watch?v=msXL2oDexqw&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x
+
+***************************************************************************************************************************************************************
+
