@@ -97,9 +97,19 @@ Spring Boot Quick Start: Java Brains: 34 Videos: Avg: 8Mins
 https://www.youtube.com/watch?v=msXL2oDexqw&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x
 
 ***************************************************************************************************************************************************************
-Supplier :
-No Input but returns an object. get()
-Usecases :
-Generate values or retrive the next avaible values
-Create a new instance when it required or may be computationally expensive.Lazy.
-Provide a default value when something is null.
+
+create : range(), rangeClosed(), stream(),parallel(), parallelStream(),sequential()
+mapping: map(), flatMap(), mapToInt(), mapToLong(), mapToDouble(),mapToObj()
+Filtering: filter(), distinct()
+Sorting: sorted(), sorted(Comparator)
+Limiting and Skipping: limit(), skip()
+Peeking and Debugging: peek()
+Matching: anyMatch(), allMatch(), noneMatch() 
+Finding: findAny(), findFirst()
+Reduction: reduce()
+Short-Circuiting: takeWhile(), dropWhile()
+Concatenation or Combining: concat()
+Colletions:collect(), toList(),toSet(),toMap(),toCollection(Supplier<C>collectionFactory),collectingAndThen()
+Aggregation Operations: counting(),minBy(),maxBy(),Collectors.summingInt(ToIntFunction Mapper),Collectors.averagingInt(ToIntFunction Mapper),joining(),summarizingInt(ToIntFunction Mapper)
+Grouping Operations :partitioningBy(),groupingBy
+Numeric operation: sum(), average(), min(), max()

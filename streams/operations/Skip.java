@@ -14,17 +14,16 @@ public class Skip {
 
 		
 		int [] output = Arrays.stream(myArray).skip(5).toArray();
-//		int [] output = Arrays.stream(myArray).skip(5).collect(); //Why can't i use collector
+//		primitive streams, such as IntStream, do not have a collect() method like regular Stream<T> does.
+//		int [] output = Arrays.stream(myArray).skip(5).collect(); 
 		
 		
-		Customer [] CustArray = new Customer[2];
-		CustArray[0] =new Customer();		CustArray[1] =new Customer();
+		Customer [] CustArray = new Customer[3];
+		CustArray[0] =new Customer();	CustArray[1] =new Customer();CustArray[2] =new Customer();
 		
 		Arrays.stream(CustArray).skip(1)
 								.collect(Collectors.toList())
 								.forEach(cust -> System.out.println("\n"+cust));
-
-		
 	}
 
 }

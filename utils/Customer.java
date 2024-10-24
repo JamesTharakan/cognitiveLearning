@@ -1,5 +1,7 @@
 package utils;
 
+import collection.equalsHashcode.BasicEqualsHashCode;
+
 public class Customer {
 
 	private int id =-1;
@@ -46,8 +48,18 @@ public class Customer {
 		return "[id=" + id + ",name=" + name + "]";
 	}
 	
-	public int hascode() {
+	public int hashCode() {
 		return name.length();
 	}
-
+	
+	public boolean equals(Object Obj) {
+		if (this ==Obj)
+			return true;
+		
+		if(!(Obj instanceof Customer))
+			return false;
+		
+		Customer cust = (Customer)Obj;
+		return cust.id == this.id;
+	}
 }

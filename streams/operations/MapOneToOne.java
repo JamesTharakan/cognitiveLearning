@@ -1,6 +1,5 @@
 package streams.operations;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,7 +9,7 @@ public class MapOneToOne {
 	
 	public static void main(String args[]) {
 
-		List<Integer> list = Arrays.asList(5,10,15,20);
+		List<Integer> list = List.of(5,10,15,20);
 
 		list = list.stream().map(number -> number * 2).collect(Collectors.toList());
 		list.forEach(x -> System.out.print(x+" "));
@@ -22,7 +21,7 @@ public class MapOneToOne {
 
 		
 		System.out.println("\n");
-		List<String> people = Arrays.asList("Al", "Ankit", "Brent", "Sarika", "amanda", "Hans", "Shivika", "Sarah");
+		List<String> people = List.of("Al", "Ankit", "Brent", "Sarika", "amanda", "Hans", "Shivika", "Sarah");
 		
 		people.stream()
 				.map(String::toLowerCase)
