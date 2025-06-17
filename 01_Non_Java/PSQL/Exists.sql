@@ -4,5 +4,3 @@ WHERE EXISTS(SELECT * FROM cars	WHERE cars.id=person.carid);
 
 
 SELECT id ,Fname, carid FROM person WHERE carid NOTNULL
-
-

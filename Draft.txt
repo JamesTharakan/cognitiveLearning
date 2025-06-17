@@ -111,5 +111,11 @@ Short-Circuiting: takeWhile(), dropWhile()
 Concatenation or Combining: concat()
 Colletions:collect(), toList(),toSet(),toMap(),toCollection(Supplier<C>collectionFactory),collectingAndThen()
 Aggregation Operations: counting(),minBy(),maxBy(),Collectors.summingInt(ToIntFunction Mapper),Collectors.averagingInt(ToIntFunction Mapper),joining(),summarizingInt(ToIntFunction Mapper)
-Grouping Operations :partitioningBy(),groupingBy
 Numeric operation: sum(), average(), min(), max()
+Grouping Operations :partitioningBy(),groupingBy
+
+
+FI does deferred execution. Why is it needed?
+
+Supplier, Function, BiFunction, Predicate
+Deferred execution:

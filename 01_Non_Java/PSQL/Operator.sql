@@ -15,5 +15,3 @@ BETWEEN DATE '2001-01-01' AND '2001-01-31'
 SELECT * FROM person WHERE email like '%rediff%';
 
 SELECT * FROM person WHERE email like '______@%';
-
-

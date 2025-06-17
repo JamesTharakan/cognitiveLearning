@@ -1,5 +1,6 @@
+use vehicle;
 create table cars (
-	id BIGSERIAL NOT NULL PRIMARY KEY,
+	id BIGINT NOT NULL PRIMARY KEY,
 	make VARCHAR(100) NOT NULL,
 	model VARCHAR(100) NOT NULL,
 	price NUMERIC(19,2)NOT NULL

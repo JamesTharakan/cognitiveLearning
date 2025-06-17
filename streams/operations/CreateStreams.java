@@ -1,5 +1,6 @@
 package streams.operations;
 
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -22,11 +23,16 @@ public class CreateStreams {
 		System.out.println(evenSum);
 		
 		
-		//If array is already created : Arrays.stream(myArray); this will return IntStream
 		
 		Stream<String> strStream = Stream.of(new String("One"), new String("Two"), new String("Three"));
-
 		strStream.map(s0 -> s0+".").collect(Collectors.toList()).forEach(System.out::println);
+		
+//Example 
+		
+		//If array is already created : Arrays.stream(myArray); this will return IntStream
+		int myArray[] = new int[] {1,2,3,4,5};
+		
+		Arrays.stream(myArray).forEach(System.out::println);
 
 	}
 
