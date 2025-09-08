@@ -1,8 +1,0 @@
-what is the difference between 
-git push origin myBranch:myBranch
-and 
-git push origin HEAD:myBranch
-
-Push local branch myBranch to remote branch myBranch on remote origin.
-
-push the currently checked-out branch (whatever branch you're on = HEAD) to remote branch myBranch on origin.

@@ -6,27 +6,27 @@ import java.util.HashMap;
 public class AparseArrays {
 
 	public static void main(String[] args) {
-		String []strings= {"aba","baba","aba","xzxb"};
+		String []baseStrings= {"aba","baba","aba","xzxb"};
 		String []queries = {"aba","xzxb","ab"};
 		//210
-		matchingStrings( strings,  queries);
+		matchingStrings( baseStrings,  queries);
 	}
 	
-	static int[] matchingStrings(String[] strings, String[] queries) {
-		HashMap<String, Integer> map = new HashMap<String,Integer>();
+	static int[] matchingStrings(String[] baseStrings, String[] queries) {
+		HashMap<String, Integer> counter = new HashMap<String,Integer>();
 		int []result = new int[queries.length];
 		
-		for (int i = 0; i < strings.length; i++) {
-			if(map.containsKey(strings[i])){
-				map.put(strings[i], map.get(strings[i])+1);
+		for (int i = 0; i < baseStrings.length; i++) {
+			if(counter.containsKey(baseStrings[i])){
+				counter.put(baseStrings[i], counter.get(baseStrings[i])+1);
 			}else{
-				map.put(strings[i], 1);
+				counter.put(baseStrings[i], 1);
 			}
 		}
-		System.out.println("AparseArrays.matchingStrings()::"+map);
+		System.out.println("AparseArrays.matchingStrings()::"+counter);
 		for (int i = 0; i < queries.length; i++) {
-			if(null!= map.get(queries[i]))
-				result[i]=map.get(queries[i]);
+			if(null!= counter.get(queries[i]))
+				result[i]=counter.get(queries[i]);
 			System.out.println("AparseArrays.matchingStrings()::"+result[i]);
 		}
 
