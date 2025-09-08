@@ -3,6 +3,7 @@ package collection.map;
 import java.util.HashMap;
 import java.util.Map;
 
+// resultMap.merge(key,value,remappingFunction)
 public class MergeMaps {
 
 	public static void main(String[] args) {
@@ -14,10 +15,10 @@ public class MergeMaps {
 
 		Map<String, Integer> resultMapNames = new HashMap<String, Integer>();
 		for (int j = 0; j < names.length; j++) {
-			String key =names[j];
-			resultMapNames.merge(key, 1, (value1,value2)->value1+value2);
+			String str =names[j];
+			resultMapNames.merge(str, 1, (value1,value2)->value1+value2);
 		}
-
+		
 		System.out.println("Distinct names in Array :" + resultMapNames );
 
 		int[] input = { 1, 2, 3, 2 ,2};
@@ -30,7 +31,7 @@ public class MergeMaps {
 		System.out.println("Distinct numbers in Array :" + resultMap + " Occur of 3:" + resultMap.get(3));
 			
 		
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+//		If the input is a map, then we can user forEach 		
 		Map<Integer, Integer> mapA = new HashMap<Integer, Integer>();
 		Map<Integer, Integer> mapB = new HashMap<Integer, Integer>();
 		
@@ -59,22 +60,9 @@ public class MergeMaps {
 		mapStringB.put("James","kan");
 		mapStringB.put("Rex","Man");
 		
-		mapStringA.forEach((k,v) -> mapStringB.merge(k, v, String::concat));		
+		mapStringA.forEach((k,v) -> mapStringB.merge(k, v, String::concat));//note the order in String.concat: v2+v1		
 		
 		System.out.println("Merged map :merge:"+mapStringB);
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
-		Map<String, String> A = new HashMap<String,String>();
-		Map<String, String> B = new HashMap<String, String>();
-		
-		A.put("James","Thara");
-		A.put("Rex","Iron");
-//		A.put("Hello","world");			//Since Hello key not there in second map, null pointer
-		
-		B.put("James","kan");
-		B.put("Rex","Man");
-		
-		A.forEach((k,v) -> B.compute(k,String::concat));		
-		
-		System.out.println("Merged map :compute:"+B);
+
 	}
 }

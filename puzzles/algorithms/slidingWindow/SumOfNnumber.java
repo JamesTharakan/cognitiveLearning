@@ -11,7 +11,7 @@ public class SumOfNnumber {
 
 		int currentWindowSize = 0;
 		int sum = 0;
-		int j = 0;
+		int leftPointer = 0;
 
 		for (int i = 0; i < input.length; i++) {
 			sum += input[i];
@@ -19,8 +19,8 @@ public class SumOfNnumber {
 		
 			if (currentWindowSize == n) {
 				System.out.println(sum);
-				sum = sum - input[j];
-				j++;
+				sum = sum - input[leftPointer];
+				leftPointer++;
 				currentWindowSize--;	//Why am i reducing the size; so that next number is added !! 
 			} 
 		}

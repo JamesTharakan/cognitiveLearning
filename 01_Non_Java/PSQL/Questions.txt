@@ -5,5 +5,3 @@
 --What are tables, View and Procedures
 --views and Materialized Views
 --cascade
-
-

@@ -8,7 +8,7 @@ Using Lambda expression as the remapping function.
 We can also use the putAll() method to merge two hashmaps.
 However, if a key is present in both hashmaps, the old value is replaced by the new value.
 
-Unlike the merge(), the putAll() method does not provide the remapping function.
+Unlike the merge()of streams, the putAll() method does not provide the remapping function.
 Hence, we cannot decide what value to store for duplicate keys.
  */
 public class MergeMapsLambda {
@@ -42,14 +42,18 @@ public class MergeMapsLambda {
 	    map2.put("C", 10);
 	    map2.put("B", 30);
 	    
+	    map2.forEach( (k,v)->System.out.println(k+","+v) );//simple print, to understand the next cmd
+	    
 //	  using forEach: take each K,V from map2
 //	  pass it to map1 for adding/merging
-//	  	If K is not present put this K,V into map
+//	  	If K is not present, put this K,V into map
 //	  	If K is already present in map1, then run the mapping function
 //	  the mapping function(lambda in this case) takes both the values and performs some action
-//	  and stores the result as final value
+//	  and stores the result as final 'value' in map1
 	    
-	    map2.forEach((key,value)->map1.merge(key, value, (v1, v2) ->(v1+v2)));
+	    map2.forEach(
+	    				(key,value) -> map1.merge(key, value, (v1, v2) ->(v1+v2))
+	    			);
 	    
 	    System.out.println("map1 : "+map1);
 	}

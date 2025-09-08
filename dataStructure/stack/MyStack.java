@@ -18,7 +18,7 @@ public class MyStack {
 			data[top]=obj;
 			//System.out.println("Pushed :: "+obj);
 		}else{
-			//System.out.println("Stack over flow");
+			System.out.println("Stack over flow");
 		}
 		return top;
 	}
@@ -31,7 +31,7 @@ public class MyStack {
 			top--;
 			//System.out.println("Popped ::"+obj);
 		}else{
-			//System.out.println("Stack under flow");
+			System.out.println("Stack under flow");
 		}
 		
 		return obj;

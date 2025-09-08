@@ -17,7 +17,7 @@ class SequencePrinter implements Runnable {
 
 	public void run() {
 
-		while (counter < 15 - 1) {
+		while (counter < 6 - 1) {
 
 			synchronized (lock) {
 

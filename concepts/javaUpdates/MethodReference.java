@@ -24,6 +24,9 @@ public class MethodReference {
 		
 //		System.out.print("\n methodReference :: Type method :");
 //		numList.forEach(printers::printMe);		//methodReference ::Type method
+		
+		
+//		so basically we need object to access non-static methods
 
 	}
 
@@ -39,6 +42,10 @@ class PrinterClass implements printers {
 
 	PrinterClass(int i) {
 		this.i = i;
+	}
+	
+	public int getI() {
+		return i;
 	}
 
 	public static void staticPrint(Object obj) {

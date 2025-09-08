@@ -3,6 +3,7 @@ package collection;
 import java.util.Iterator;
 
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.IntStream;
 
 /**
  * First of all, there is no term as fail-safe given in many places as Java SE
@@ -15,9 +16,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
  */
 public class FailSafe {
 	public static void main(String[] args) {
-		CopyOnWriteArrayList<Integer> copyOnWrite = new CopyOnWriteArrayList<Integer>(new Integer[] { 1, 2,3,4, 5 });
+		CopyOnWriteArrayList<Integer> copyOnWrite = new CopyOnWriteArrayList<Integer>(new Integer[] {1,2,3,4,5});
 		
-		System.out.println("\t1:"+copyOnWrite.hashCode());
+		System.out.println("\t 1:"+copyOnWrite.hashCode());
 
 		Iterator itr = copyOnWrite.iterator();// we get an immutable snapshot of the current list.
 		while (itr.hasNext()) {
@@ -25,10 +26,10 @@ public class FailSafe {
 			System.out.print(no + ":" + copyOnWrite.size() + " , ");
 			if (no == 3)// This will not be printed by the iterator as it is working on a separate copy of the list
 				copyOnWrite.add(14);
-			System.out.println("\t2:"+copyOnWrite.hashCode());
+			System.out.println("\t 2:"+copyOnWrite.hashCode());
 		}
 		
-		System.out.println("\t3:"+copyOnWrite.hashCode());
+		System.out.println("\t 3:"+copyOnWrite.hashCode());
 
 		// will print in the next iterator
 		Iterator itr2 = copyOnWrite.iterator();

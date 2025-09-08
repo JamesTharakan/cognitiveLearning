@@ -2,6 +2,7 @@ package streams;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class StreamExamples {
@@ -16,16 +17,18 @@ public class StreamExamples {
 		// 5. Stream from Array, sort, filter and print
 		String[] names = {"Al", "Ankit", "Kushal", "Brent", "Sarika", "amanda", "Hans", "Shivika", "Sarah"};
 		Arrays.stream(names)	// same as Stream.of(names)
-			.filter(x -> x.startsWith("S"))
-			.sorted()
-			.forEach(System.out::println);
-					
-		// 6. average of squares of an int array
-		Arrays.stream(new int[] {2, 4, 6, 8, 10})
-			.map(x -> x * x)
-			.average()
-			.ifPresent(System.out::println);
+			.filter(x -> x.startsWith("j"))
+			.forEach(name ->System.out.println("found "+name));
+
+	
 		
+		List<Integer> numbers = List.of(1, 3, 5);
+
+		// Find the first even number and print it if present
+		numbers.stream()
+		       .filter(n -> n % 2 == 0)
+		       .findFirst()
+		       .ifPresent(n -> System.out.println("First even: " + n));
 	}
 	
 }

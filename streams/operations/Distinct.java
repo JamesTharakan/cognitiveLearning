@@ -18,7 +18,7 @@ public class Distinct {
 		CustArray[2] =new Customer(1,"One");
 		
 		Arrays.stream(CustArray).distinct()
-								.forEach(cust -> System.out.println("\n"+cust));
+								.forEach(custItr -> System.out.println("\n"+custItr));
 	
 	}
 

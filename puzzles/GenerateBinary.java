@@ -6,9 +6,9 @@ public class GenerateBinary {
 
 	public static void main(String[] args) {
 		
-		int decimalNumber = 2;
+		int decimalNumber = 14;
 		
-		MyStack stack = new MyStack(10);
+		MyStack stack = new MyStack(2);
 		String binary = "";
 
 		while (decimalNumber > 0) {
